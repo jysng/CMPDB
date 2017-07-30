@@ -1,0 +1,5376 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CMPDSB_DEVIN
+</name>
+</assembly>
+<members>
+<member name="T:CMPDSB_DEVIN.My.MyWebExtension">
+ <summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:CMPDSB_DEVIN.My.MyWebExtension.Computer">
+ <summary>
+ Returns information about the host computer.
+ </summary>
+</member>
+<member name="P:CMPDSB_DEVIN.My.MyWebExtension.User">
+ <summary>
+ Returns information for the current Web user.
+ </summary>
+</member>
+<member name="P:CMPDSB_DEVIN.My.MyWebExtension.Request">
+ <summary>
+ Returns Request object.
+ </summary>
+</member>
+<member name="P:CMPDSB_DEVIN.My.MyWebExtension.Response">
+ <summary>
+ Returns Response object.
+ </summary>
+</member>
+<member name="P:CMPDSB_DEVIN.My.MyWebExtension.Log">
+ <summary>
+ Returns the Asp log object.
+ </summary>
+</member>
+<member name="T:CMPDSB_DEVIN.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:CMPDSB_DEVIN.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:CMPDSB_DEVIN.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._upnl">
+<summary>
+upnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblPlants">
+<summary>
+lblPlants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._DropDownListPlant">
+<summary>
+DropDownListPlant control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblBusinessUnit">
+<summary>
+lblBusinessUnit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._DropDownListBusinessUnit">
+<summary>
+DropDownListBusinessUnit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblPlatform">
+<summary>
+lblPlatform control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._DropDownListPlatform">
+<summary>
+DropDownListPlatform control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblProductionType">
+<summary>
+lblProductionType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._DropDownListProductionType">
+<summary>
+DropDownListProductionType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Image1">
+<summary>
+Image1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._DivProductionLines">
+<summary>
+DivProductionLines control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblProductionLineOrArea">
+<summary>
+lblProductionLineOrArea control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._ListBoxProductionLine">
+<summary>
+ListBoxProductionLine control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtProductionLine">
+<summary>
+txtProductionLine control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._btnAddProductionLine">
+<summary>
+btnAddProductionLine control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._btnDeleteProductionLine">
+<summary>
+btnDeleteProductionLine control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._BtnRefreshProductionLine">
+<summary>
+BtnRefreshProductionLine control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._DivDepartments">
+<summary>
+DivDepartments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbldepartment">
+<summary>
+lbldepartment control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._ListBoxDepartments">
+<summary>
+ListBoxDepartments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtDepartments">
+<summary>
+txtDepartments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._ButtonAddDepartments">
+<summary>
+ButtonAddDepartments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._ButtonDeleteDepartments">
+<summary>
+ButtonDeleteDepartments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._ButtonRefreshDepartments">
+<summary>
+ButtonRefreshDepartments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._DivCBN">
+<summary>
+DivCBN control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblCBN">
+<summary>
+lblCBN control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._ListBoxCNB">
+<summary>
+ListBoxCNB control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCBN">
+<summary>
+txtCBN control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._ButtonAddCBN">
+<summary>
+ButtonAddCBN control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._ButtonDeleteCBN">
+<summary>
+ButtonDeleteCBN control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._ButtonRefreshCBN">
+<summary>
+ButtonRefreshCBN control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._CheckBoxEnableAuto">
+<summary>
+CheckBoxEnableAuto control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._divEnableDisable">
+<summary>
+divEnableDisable control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtDirectory">
+<summary>
+txtDirectory control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._RadioButtonUseCorporate">
+<summary>
+RadioButtonUseCorporate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._RadioButtonSingleSource">
+<summary>
+RadioButtonSingleSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtSingleSource">
+<summary>
+txtSingleSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._files">
+<summary>
+files control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._fuGsumSmallWS">
+<summary>
+fuGsumSmallWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbls">
+<summary>
+lbls control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblfuGsumSmallWS">
+<summary>
+lblfuGsumSmallWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblGsumSmallWS">
+<summary>
+lblGsumSmallWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtGsumSmallWS">
+<summary>
+txtGsumSmallWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblCellGsumSmallWS">
+<summary>
+lblCellGsumSmallWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCellGsumSmallWS">
+<summary>
+txtCellGsumSmallWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div1">
+<summary>
+Div1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._fuGSUMMTL">
+<summary>
+fuGSUMMTL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbl_file_fuGSUMMTL">
+<summary>
+lbl_file_fuGSUMMTL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div9">
+<summary>
+Div9 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblfuGSUMMTL">
+<summary>
+lblfuGSUMMTL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblGSUMMTL">
+<summary>
+lblGSUMMTL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtGSUMMTL">
+<summary>
+txtGSUMMTL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblCellGSUMMTL">
+<summary>
+lblCellGSUMMTL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCellGSUMMTL">
+<summary>
+txtCellGSUMMTL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div2">
+<summary>
+Div2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._fuGSUMPRWS">
+<summary>
+fuGSUMPRWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbl_file_fuGSUMPRWS">
+<summary>
+lbl_file_fuGSUMPRWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div10">
+<summary>
+Div10 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblfuGSUMPRWS">
+<summary>
+lblfuGSUMPRWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblGSUMPRWS">
+<summary>
+lblGSUMPRWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtGSUMPRWS">
+<summary>
+txtGSUMPRWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblCellGSUMPRWS">
+<summary>
+lblCellGSUMPRWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCellGSUMPRWS">
+<summary>
+txtCellGSUMPRWS control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div3">
+<summary>
+Div3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._fuGSUMMFGOps">
+<summary>
+fuGSUMMFGOps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbl_file_fuGSUMMFGOps">
+<summary>
+lbl_file_fuGSUMMFGOps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div11">
+<summary>
+Div11 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblfuGSUMMFGOps">
+<summary>
+lblfuGSUMMFGOps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblGSUMMFGOps">
+<summary>
+lblGSUMMFGOps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtGSUMMFGOps">
+<summary>
+txtGSUMMFGOps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblCellGSUMMFGOps">
+<summary>
+lblCellGSUMMFGOps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCellGSUMMFGOps">
+<summary>
+txtCellGSUMMFGOps control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div4">
+<summary>
+Div4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._fuMFGDel">
+<summary>
+fuMFGDel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbl_file_fuMFGDel">
+<summary>
+lbl_file_fuMFGDel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div12">
+<summary>
+Div12 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblfuMFGDel">
+<summary>
+lblfuMFGDel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblMFGDel">
+<summary>
+lblMFGDel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtMFGDel">
+<summary>
+txtMFGDel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblCellMFGDel">
+<summary>
+lblCellMFGDel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCellMFGDel">
+<summary>
+txtCellMFGDel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div5">
+<summary>
+Div5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._fuEWPTracker">
+<summary>
+fuEWPTracker control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbl_file_fuEWPTracker">
+<summary>
+lbl_file_fuEWPTracker control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div13">
+<summary>
+Div13 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblfuEWPTracker">
+<summary>
+lblfuEWPTracker control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblEWPTracker">
+<summary>
+lblEWPTracker control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtEWPTracker">
+<summary>
+txtEWPTracker control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblCellEWPTracker">
+<summary>
+lblCellEWPTracker control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCellEWPTracker">
+<summary>
+txtCellEWPTracker control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div6">
+<summary>
+Div6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._fuGSUM_IAP">
+<summary>
+fuGSUM_IAP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbl_file_fuGSUM_IAP">
+<summary>
+lbl_file_fuGSUM_IAP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div14">
+<summary>
+Div14 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblfuGSUM_IAP">
+<summary>
+lblfuGSUM_IAP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblGSUM_IAP">
+<summary>
+lblGSUM_IAP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtGSUM_IAP">
+<summary>
+txtGSUM_IAP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblCellGSUM_IAP">
+<summary>
+lblCellGSUM_IAP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCellGSUM_IAP">
+<summary>
+txtCellGSUM_IAP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div7">
+<summary>
+Div7 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._fuRE_Implementation">
+<summary>
+fuRE_Implementation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbl_file_fuRE_Implementation">
+<summary>
+lbl_file_fuRE_Implementation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div15">
+<summary>
+Div15 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblfuRE_Implementation">
+<summary>
+lblfuRE_Implementation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblRE_Implementation">
+<summary>
+lblRE_Implementation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtRE_Implementation">
+<summary>
+txtRE_Implementation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblCellRE_Implementation">
+<summary>
+lblCellRE_Implementation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCellRE_Implementation">
+<summary>
+txtCellRE_Implementation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div8">
+<summary>
+Div8 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._fuGSUM_PRRA">
+<summary>
+fuGSUM_PRRA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lbl_file_fuGSUM_PRRA">
+<summary>
+lbl_file_fuGSUM_PRRA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._Div16">
+<summary>
+Div16 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblfuGSUM_PRRA">
+<summary>
+lblfuGSUM_PRRA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblGSUM_PRRA">
+<summary>
+lblGSUM_PRRA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtGSUM_PRRA">
+<summary>
+txtGSUM_PRRA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._lblcellGSUM_PRRA">
+<summary>
+lblcellGSUM_PRRA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._txtCellGSUM_PRRA">
+<summary>
+txtCellGSUM_PRRA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.AdministratorPlant._btnSaveSource">
+<summary>
+btnSaveSource control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._upnl">
+<summary>
+upnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._chkAdvancedMode">
+<summary>
+chkAdvancedMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._btnSerach">
+<summary>
+btnSerach control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._chkSrch">
+<summary>
+chkSrch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._divSrchExist">
+<summary>
+divSrchExist control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlPlants">
+<summary>
+DdlPlants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._ddlSrchProjectType">
+<summary>
+ddlSrchProjectType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._ddlSrchChangeType">
+<summary>
+ddlSrchChangeType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._ddlSrchBusinessUnit">
+<summary>
+ddlSrchBusinessUnit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._ddlSrchProductionLine">
+<summary>
+ddlSrchProductionLine control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._BtnSrchExistingStartup">
+<summary>
+BtnSrchExistingStartup control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._gdvSrch">
+<summary>
+gdvSrch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlPlantsInsert">
+<summary>
+DdlPlantsInsert control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._txtstartupName">
+<summary>
+txtstartupName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._txtProjectName">
+<summary>
+txtProjectName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._rbYes">
+<summary>
+rbYes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._rbNo">
+<summary>
+rbNo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlCOmplexityofStartup">
+<summary>
+DdlCOmplexityofStartup control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._rbCustom">
+<summary>
+rbCustom control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._rbSmall">
+<summary>
+rbSmall control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._rbLarge">
+<summary>
+rbLarge control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._cblGSUM">
+<summary>
+cblGSUM control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._cblEWP">
+<summary>
+cblEWP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._cblREImplementationPlan">
+<summary>
+cblREImplementationPlan control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._spanltoCBN">
+<summary>
+spanltoCBN control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._spanltoPriority">
+<summary>
+spanltoPriority control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlProjectType">
+<summary>
+DdlProjectType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlChangeType">
+<summary>
+DdlChangeType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlLinktoCBn">
+<summary>
+DdlLinktoCBn control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlPriority">
+<summary>
+DdlPriority control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._spanimpactDept">
+<summary>
+spanimpactDept control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._spanleadingDept">
+<summary>
+spanleadingDept control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlBusinessUnit">
+<summary>
+DdlBusinessUnit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlProductionLine">
+<summary>
+DdlProductionLine control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlImpactDept">
+<summary>
+DdlImpactDept control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlLeadingDept">
+<summary>
+DdlLeadingDept control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._btnMileStone">
+<summary>
+btnMileStone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._spansulCoach">
+<summary>
+spansulCoach control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._spansnSiel">
+<summary>
+spansnSiel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._spanprjMgr">
+<summary>
+spanprjMgr control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlSUL">
+<summary>
+DdlSUL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlSULCoach">
+<summary>
+DdlSULCoach control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlSNSIEL">
+<summary>
+DdlSNSIEL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._DdlPrjMgr">
+<summary>
+DdlPrjMgr control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._btnRefresh">
+<summary>
+btnRefresh control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._BtnSetTargetsandMilestones">
+<summary>
+BtnSetTargetsandMilestones control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._btnSave">
+<summary>
+btnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._BtnEditMeasures">
+<summary>
+BtnEditMeasures control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._BtnCreatePorject">
+<summary>
+BtnCreatePorject control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._BtnEditPractitioners">
+<summary>
+BtnEditPractitioners control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._BtnAdminforPlant">
+<summary>
+BtnAdminforPlant control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._trGlobal_Admin">
+<summary>
+trGlobal_Admin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._trBtnGlobal_Admin">
+<summary>
+trBtnGlobal_Admin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._BtnAdmin">
+<summary>
+BtnAdmin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._BtnSet">
+<summary>
+BtnSet control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._DDlplants">
+<summary>
+DDlplants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Dashboard._BtnReports">
+<summary>
+BtnReports control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._upnl">
+<summary>
+upnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._btnSerach">
+<summary>
+btnSerach control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._fdiv">
+<summary>
+fdiv control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._divSrchExist">
+<summary>
+divSrchExist control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblPlant">
+<summary>
+lblPlant control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlPlant">
+<summary>
+ddlPlant control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblSUL">
+<summary>
+lblSUL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlSUL">
+<summary>
+ddlSUL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblProjectStatus">
+<summary>
+lblProjectStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlProjectStatus">
+<summary>
+ddlProjectStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblLastUpdate">
+<summary>
+lblLastUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtLastUpdate">
+<summary>
+txtLastUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._btnRefineSearch">
+<summary>
+btnRefineSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._gridProjects">
+<summary>
+gridProjects control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtPCStarategyAndCommitment">
+<summary>
+txtPCStarategyAndCommitment control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblStrategy">
+<summary>
+lblStrategy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtStartUpWorkProcess">
+<summary>
+txtStartUpWorkProcess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblStartUpWorkProcess">
+<summary>
+lblStartUpWorkProcess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtStartOfProduction">
+<summary>
+txtStartOfProduction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblStartOfProduction">
+<summary>
+lblStartOfProduction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtNextVATDate">
+<summary>
+txtNextVATDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblNextVATDate">
+<summary>
+lblNextVATDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtNextConstructionDate">
+<summary>
+txtNextConstructionDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._Label4">
+<summary>
+Label4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtNextEO">
+<summary>
+txtNextEO control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._Label5">
+<summary>
+Label5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._btnMileStone">
+<summary>
+btnMileStone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtTotalSafetyIncidents">
+<summary>
+txtTotalSafetyIncidents control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblTotalSafetyIncidents">
+<summary>
+lblTotalSafetyIncidents control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtETC">
+<summary>
+txtETC control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblETC">
+<summary>
+lblETC control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtPRLast">
+<summary>
+txtPRLast control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblPRLast">
+<summary>
+lblPRLast control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtComments">
+<summary>
+txtComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._btnhg">
+<summary>
+btnhg control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._Button2">
+<summary>
+Button2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtst">
+<summary>
+txtst control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._Button3">
+<summary>
+Button3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._Button4">
+<summary>
+Button4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._Button5">
+<summary>
+Button5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._btnAcceptUpdate">
+<summary>
+btnAcceptUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._chk1">
+<summary>
+chk1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._btnimgRefresh">
+<summary>
+btnimgRefresh control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtCell1">
+<summary>
+txtCell1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile1LstUpdDte">
+<summary>
+lblFile1LstUpdDte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtCell2">
+<summary>
+txtCell2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile2LstUpdDte">
+<summary>
+lblFile2LstUpdDte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtCell3">
+<summary>
+txtCell3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile3LstUpdDte">
+<summary>
+lblFile3LstUpdDte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtCell4">
+<summary>
+txtCell4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile4LstUpdDte">
+<summary>
+lblFile4LstUpdDte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtCell5">
+<summary>
+txtCell5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile5LstUpdDte">
+<summary>
+lblFile5LstUpdDte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtCell6">
+<summary>
+txtCell6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile6LstUpdDte">
+<summary>
+lblFile6LstUpdDte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtCell7">
+<summary>
+txtCell7 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile7LstUpdDte">
+<summary>
+lblFile7LstUpdDte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtCell8">
+<summary>
+txtCell8 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile8LstUpdDte">
+<summary>
+lblFile8LstUpdDte control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._dvCellWork">
+<summary>
+dvCellWork control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtws1">
+<summary>
+txtws1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtwc1">
+<summary>
+txtwc1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtws2">
+<summary>
+txtws2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtwc2">
+<summary>
+txtwc2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtws3">
+<summary>
+txtws3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtwc3">
+<summary>
+txtwc3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtws4">
+<summary>
+txtws4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtwc4">
+<summary>
+txtwc4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtws5">
+<summary>
+txtws5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtwc5">
+<summary>
+txtwc5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtws6">
+<summary>
+txtws6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtwc6">
+<summary>
+txtwc6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtws7">
+<summary>
+txtws7 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtwc7">
+<summary>
+txtwc7 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtws8">
+<summary>
+txtws8 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtwc8">
+<summary>
+txtwc8 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile1">
+<summary>
+lblFile1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lnkFile1">
+<summary>
+lnkFile1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile2">
+<summary>
+lblFile2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lnkFile2">
+<summary>
+lnkFile2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile3">
+<summary>
+lblFile3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lnkFile3">
+<summary>
+lnkFile3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile4">
+<summary>
+lblFile4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lnkFile4">
+<summary>
+lnkFile4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile5">
+<summary>
+lblFile5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lnkFile5">
+<summary>
+lnkFile5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile6">
+<summary>
+lblFile6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lnkFile6">
+<summary>
+lnkFile6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile7">
+<summary>
+lblFile7 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lnkFile7">
+<summary>
+lnkFile7 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lblFile8">
+<summary>
+lblFile8 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._lnkFile8">
+<summary>
+lnkFile8 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox17">
+<summary>
+TextBox17 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox18">
+<summary>
+TextBox18 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox19">
+<summary>
+TextBox19 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox21">
+<summary>
+TextBox21 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox22">
+<summary>
+TextBox22 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList1">
+<summary>
+DropDownList1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox23">
+<summary>
+TextBox23 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox24">
+<summary>
+TextBox24 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList2">
+<summary>
+DropDownList2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox25">
+<summary>
+TextBox25 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox26">
+<summary>
+TextBox26 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList3">
+<summary>
+DropDownList3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox27">
+<summary>
+TextBox27 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox28">
+<summary>
+TextBox28 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList4">
+<summary>
+DropDownList4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList7">
+<summary>
+DropDownList7 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList5">
+<summary>
+DropDownList5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._TextBoxdf20">
+<summary>
+TextBoxdf20 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.EditMeasures._Button6">
+<summary>
+Button6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.ErrorPage._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.ErrorPage._btnback">
+<summary>
+btnback control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._upnl">
+<summary>
+upnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblProductionTypes">
+<summary>
+lblProductionTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxProductionType">
+<summary>
+ListBoxProductionType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtProductionTypes">
+<summary>
+txtProductionTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnAddProductionTypes">
+<summary>
+btnAddProductionTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnDeleteProductionTypes">
+<summary>
+btnDeleteProductionTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnRefreshProductionTypes">
+<summary>
+btnRefreshProductionTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblProjectTypes">
+<summary>
+lblProjectTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxprojType">
+<summary>
+ListBoxprojType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtprojectType">
+<summary>
+txtprojectType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnaddtxtprojectType">
+<summary>
+btnaddtxtprojectType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnDeletetxtprojectType">
+<summary>
+btnDeletetxtprojectType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnRefreshtxtprojectType">
+<summary>
+btnRefreshtxtprojectType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblChangeType">
+<summary>
+lblChangeType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxChangType">
+<summary>
+ListBoxChangType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtChangType">
+<summary>
+txtChangType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnAddChangType">
+<summary>
+btnAddChangType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnDeleteChangType">
+<summary>
+btnDeleteChangType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnRefreshChangType">
+<summary>
+BtnRefreshChangType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblBusinessUnits">
+<summary>
+lblBusinessUnits control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxBusinUnit">
+<summary>
+ListBoxBusinUnit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtBusinUnit">
+<summary>
+txtBusinUnit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnAddBusinUnit">
+<summary>
+btnAddBusinUnit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnDeleteBusinUnit">
+<summary>
+BtnDeleteBusinUnit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnRefreshBusinUnit">
+<summary>
+BtnRefreshBusinUnit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image1">
+<summary>
+Image1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblPlatform">
+<summary>
+lblPlatform control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxPlatform">
+<summary>
+ListBoxPlatform control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtPlatform">
+<summary>
+txtPlatform control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnAddPlatform">
+<summary>
+BtnAddPlatform control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnDeletePlatform">
+<summary>
+BtnDeletePlatform control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnRefreshPlatform">
+<summary>
+btnRefreshPlatform control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image10">
+<summary>
+Image10 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._PlantsLBL">
+<summary>
+PlantsLBL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._DropDownlblPlantsAssociateBU">
+<summary>
+DropDownlblPlantsAssociateBU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblSwp">
+<summary>
+lblSwp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxSWP">
+<summary>
+ListBoxSWP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtSWP">
+<summary>
+txtSWP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnAddSWP">
+<summary>
+BtnAddSWP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnDeleteSWP">
+<summary>
+BtnDeleteSWP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnRefreshSWP">
+<summary>
+BtnRefreshSWP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image2">
+<summary>
+Image2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblPracticionerRole">
+<summary>
+lblPracticionerRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxPracticionerRole">
+<summary>
+ListBoxPracticionerRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtPracticionerRole">
+<summary>
+txtPracticionerRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnAddPracticionerRole">
+<summary>
+btnAddPracticionerRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnDeletePracticionerRole">
+<summary>
+btnDeletePracticionerRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnRefreshPracticionerRole">
+<summary>
+BtnRefreshPracticionerRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image3">
+<summary>
+Image3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblSWP_Tool_Name">
+<summary>
+lblSWP_Tool_Name control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lbSWP_Tool_Name">
+<summary>
+lbSWP_Tool_Name control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtSWP_Tool_Name">
+<summary>
+txtSWP_Tool_Name control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnAddSWP_Tool_Name">
+<summary>
+btnAddSWP_Tool_Name control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnDeleteSWP_Tool_Name">
+<summary>
+btnDeleteSWP_Tool_Name control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnRefreshSWP_Tool_Name">
+<summary>
+btnRefreshSWP_Tool_Name control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image4">
+<summary>
+Image4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblCorporate_WS_Name">
+<summary>
+lblCorporate_WS_Name control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtCorporate_WS_Name">
+<summary>
+txtCorporate_WS_Name control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblCorporate_Cell_Location_For_Score">
+<summary>
+lblCorporate_Cell_Location_For_Score control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtCorporate_Cell_Location_For_Score">
+<summary>
+txtCorporate_Cell_Location_For_Score control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblCorporate_Tool_Source_LOcation">
+<summary>
+lblCorporate_Tool_Source_LOcation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lnkbtnFileName">
+<summary>
+lnkbtnFileName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnEdit">
+<summary>
+btnEdit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnCancel">
+<summary>
+btnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._fuCorporate_Standard_File">
+<summary>
+fuCorporate_Standard_File control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblComplexitySituation">
+<summary>
+lblComplexitySituation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxComplexitySituation">
+<summary>
+ListBoxComplexitySituation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtComplexitySituation">
+<summary>
+txtComplexitySituation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnAddComplexitySituation">
+<summary>
+BtnAddComplexitySituation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnDeleteComplexitySituation">
+<summary>
+BtnDeleteComplexitySituation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnRefreshComplexitySituation">
+<summary>
+BtnRefreshComplexitySituation control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image5">
+<summary>
+Image5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblPracticionerRoleID">
+<summary>
+lblPracticionerRoleID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ddlPracticionerRoleID">
+<summary>
+ddlPracticionerRoleID control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image6">
+<summary>
+Image6 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblPSQualificationLevel">
+<summary>
+lblPSQualificationLevel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ddlPSQualificationLevel">
+<summary>
+ddlPSQualificationLevel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblqulaificationlevel">
+<summary>
+lblqulaificationlevel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxQualificationTypes">
+<summary>
+ListBoxQualificationTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtQualificationTypes">
+<summary>
+txtQualificationTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnAddQualificationTypes">
+<summary>
+btnAddQualificationTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnDeletequalificationTypes">
+<summary>
+btnDeletequalificationTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnRefreshQualificationTypes">
+<summary>
+btnRefreshQualificationTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBox1">
+<summary>
+ListBox1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._TextBox1">
+<summary>
+TextBox1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ImageButton1">
+<summary>
+ImageButton1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ImageButton2">
+<summary>
+ImageButton2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ImageButton3">
+<summary>
+ImageButton3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Label2">
+<summary>
+Label2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxRegions">
+<summary>
+ListBoxRegions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtRegions">
+<summary>
+txtRegions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnAddRegions">
+<summary>
+btnAddRegions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnDeleteRegions">
+<summary>
+btnDeleteRegions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnRefreshRegions">
+<summary>
+btnRefreshRegions control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblPlants">
+<summary>
+lblPlants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBoxPlants">
+<summary>
+ListBoxPlants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._txtPalnts">
+<summary>
+txtPalnts control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._btnAddPlants">
+<summary>
+btnAddPlants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnDeletePlants">
+<summary>
+BtnDeletePlants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnRefreshPlants">
+<summary>
+BtnRefreshPlants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image7">
+<summary>
+Image7 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblRegion">
+<summary>
+lblRegion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ddlRegionTypes">
+<summary>
+ddlRegionTypes control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image8">
+<summary>
+Image8 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._lblBU">
+<summary>
+lblBU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.GlobalAdmin._ddlBU">
+<summary>
+ddlBU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._head">
+<summary>
+head control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._form1">
+<summary>
+form1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._ScriptManager1">
+<summary>
+ScriptManager1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._lblMessage">
+<summary>
+lblMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._name">
+<summary>
+name control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._lblUser">
+<summary>
+lblUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._lblRole">
+<summary>
+lblRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._SqlDataSource1">
+<summary>
+SqlDataSource1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._SiteMapDataSource1">
+<summary>
+SiteMapDataSource1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._Menu">
+<summary>
+Menu control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.layout._ContentPlaceHolder1">
+<summary>
+ContentPlaceHolder1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._upnl">
+<summary>
+upnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._btnSerach">
+<summary>
+btnSerach control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._divSrchExist">
+<summary>
+divSrchExist control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlSearchPlants">
+<summary>
+ddlSearchPlants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlSearchBU">
+<summary>
+ddlSearchBU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlSearchRegion">
+<summary>
+ddlSearchRegion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlSearchDept">
+<summary>
+ddlSearchDept control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlSearchSWP">
+<summary>
+ddlSearchSWP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._BtnSrchExistingStartup">
+<summary>
+BtnSrchExistingStartup control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._gridPractitioner">
+<summary>
+gridPractitioner control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._UserNameLabel">
+<summary>
+UserNameLabel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblPlant">
+<summary>
+lblPlant control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlPlant">
+<summary>
+ddlPlant control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lbllBu">
+<summary>
+lbllBu control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlBu">
+<summary>
+ddlBu control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblDepartment">
+<summary>
+lblDepartment control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlDepartment">
+<summary>
+ddlDepartment control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._Label4">
+<summary>
+Label4 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtFirstName">
+<summary>
+txtFirstName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblEmail">
+<summary>
+lblEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtInsertEmail">
+<summary>
+txtInsertEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._Label5">
+<summary>
+Label5 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtLastName">
+<summary>
+txtLastName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._LabelSWP">
+<summary>
+LabelSWP control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlSWp">
+<summary>
+ddlSWp control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblSWPRole">
+<summary>
+lblSWPRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlSWPRole">
+<summary>
+ddlSWPRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblQualificationLevel">
+<summary>
+lblQualificationLevel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlQualificationLevel">
+<summary>
+ddlQualificationLevel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblDateAdded">
+<summary>
+lblDateAdded control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtDateAdded">
+<summary>
+txtDateAdded control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblClassCompletedDates">
+<summary>
+lblClassCompletedDates control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtClassCompletedDate">
+<summary>
+txtClassCompletedDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblTargetDate">
+<summary>
+lblTargetDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtTargetDate">
+<summary>
+txtTargetDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblQualificationDate">
+<summary>
+lblQualificationDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtQualificationDate">
+<summary>
+txtQualificationDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblTechCoachEmail">
+<summary>
+lblTechCoachEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtTechCoachEmail">
+<summary>
+txtTechCoachEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblQualifier">
+<summary>
+lblQualifier control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtQualifier">
+<summary>
+txtQualifier control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._lblcomments">
+<summary>
+lblcomments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtComments">
+<summary>
+txtComments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._btnSaveRecords">
+<summary>
+btnSaveRecords control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtEmailTo">
+<summary>
+txtEmailTo control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._Label2">
+<summary>
+Label2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtEmailSubject">
+<summary>
+txtEmailSubject control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._Label3">
+<summary>
+Label3 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._txtEmailBody">
+<summary>
+txtEmailBody control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._btnSendEmail">
+<summary>
+btnSendEmail control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Report._upnl">
+<summary>
+upnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Report._ddlPlantList">
+<summary>
+ddlPlantList control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Report._ddlProject">
+<summary>
+ddlProject control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Report._ddlDepartment">
+<summary>
+ddlDepartment control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Report._ddlSUL">
+<summary>
+ddlSUL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Report._ddlStartUpStatus">
+<summary>
+ddlStartUpStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Report._btnGenrateReport">
+<summary>
+btnGenrateReport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Report._grdReport">
+<summary>
+grdReport control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Report._btnDownload">
+<summary>
+btnDownload control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._upnl">
+<summary>
+upnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._chkAdvancedMode">
+<summary>
+chkAdvancedMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._divSrchExist">
+<summary>
+divSrchExist control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._ddlReportType">
+<summary>
+ddlReportType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._dvPlant">
+<summary>
+dvPlant control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._ddlSearchPlants">
+<summary>
+ddlSearchPlants control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._dvDepartment">
+<summary>
+dvDepartment control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._ddlSearchImpDept">
+<summary>
+ddlSearchImpDept control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._dvSUL">
+<summary>
+dvSUL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._ddlSearchSUL">
+<summary>
+ddlSearchSUL control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._dvProjectManager">
+<summary>
+dvProjectManager control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._ddlSearchProManager">
+<summary>
+ddlSearchProManager control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._dvProjectStatus">
+<summary>
+dvProjectStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._ddlSearchProStatus">
+<summary>
+ddlSearchProStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._txtLastUpdate">
+<summary>
+txtLastUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._divhide">
+<summary>
+divhide control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._lstMilestone">
+<summary>
+lstMilestone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._lstcolgrid">
+<summary>
+lstcolgrid control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._btnSerach">
+<summary>
+btnSerach control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._lblReportName">
+<summary>
+lblReportName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._gridStartupMeasuresReview">
+<summary>
+gridStartupMeasuresReview control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._btnExportToExcel">
+<summary>
+btnExportToExcel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.StartupMeasuresReview._btnAddReportTemplate">
+<summary>
+btnAddReportTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._upnl">
+<summary>
+upnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._chkAdvancedMode">
+<summary>
+chkAdvancedMode control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lbltxtProject">
+<summary>
+lbltxtProject control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtProject">
+<summary>
+txtProject control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnSearch">
+<summary>
+btnSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblStartupName">
+<summary>
+lblStartupName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._ddlStartUpName">
+<summary>
+ddlStartUpName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._divStartupStatus">
+<summary>
+divStartupStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblStartUpStatus">
+<summary>
+lblStartUpStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._ddlStartUpStatus">
+<summary>
+ddlStartUpStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._divCharacterApproved">
+<summary>
+divCharacterApproved control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblCharacter">
+<summary>
+lblCharacter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._chkCharacter">
+<summary>
+chkCharacter control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblPlantAE">
+<summary>
+lblPlantAE control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._chkPlantAE">
+<summary>
+chkPlantAE control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblSAPProject">
+<summary>
+lblSAPProject control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtSAPProject">
+<summary>
+txtSAPProject control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._divEtcTargetStatus">
+<summary>
+divEtcTargetStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblETCTarger">
+<summary>
+lblETCTarger control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtETCTarget">
+<summary>
+txtETCTarget control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._diPrTargetStatus">
+<summary>
+diPrTargetStatus control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblPRTarget">
+<summary>
+lblPRTarget control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtPRTarget">
+<summary>
+txtPRTarget control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._hr1">
+<summary>
+hr1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMilestoneTarget">
+<summary>
+lblMilestoneTarget control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnFeasibility">
+<summary>
+txtMlstnFeasibility control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnConceptual">
+<summary>
+txtMlstnConceptual control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._divtxtMlstnPCStrategy">
+<summary>
+divtxtMlstnPCStrategy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnPCStrategy">
+<summary>
+txtMlstnPCStrategy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnProjectFSF">
+<summary>
+txtMlstnProjectFSF control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._divtxtMlstnStartupWorkProcess">
+<summary>
+divtxtMlstnStartupWorkProcess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnStartupWorkProcess">
+<summary>
+txtMlstnStartupWorkProcess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._divtxtMlstnStartupProduction">
+<summary>
+divtxtMlstnStartupProduction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnStartupProduction">
+<summary>
+txtMlstnStartupProduction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnSustain">
+<summary>
+txtMlstnSustain control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnPSU">
+<summary>
+txtMlstnPSU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnG2TDay1">
+<summary>
+txtMlstnG2TDay1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnG2TConstructionCompletion">
+<summary>
+txtMlstnG2TConstructionCompletion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnG2TEndofPQPhase">
+<summary>
+txtMlstnG2TEndofPQPhase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtMlstnG2T_End_of_Ininital_Verification">
+<summary>
+txtMlstnG2T_End_of_Ininital_Verification control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnFeasibility">
+<summary>
+lblMlstnFeasibility control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnConceptual">
+<summary>
+lblMlstnConceptual control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._divMlstnPCStrategy">
+<summary>
+divMlstnPCStrategy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnPCStrategy">
+<summary>
+lblMlstnPCStrategy control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnProjectFSF">
+<summary>
+lblMlstnProjectFSF control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._divMlstnStartupWorkProcess">
+<summary>
+divMlstnStartupWorkProcess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnStartupWorkProcess">
+<summary>
+lblMlstnStartupWorkProcess control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._divlblMlstnStartupProduction">
+<summary>
+divlblMlstnStartupProduction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnStartupProduction">
+<summary>
+lblMlstnStartupProduction control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnSustain">
+<summary>
+lblMlstnSustain control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnPSU">
+<summary>
+lblMlstnPSU control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnG2TDay1">
+<summary>
+lblMlstnG2TDay1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnG2TConstructionCompletion">
+<summary>
+lblMlstnG2TConstructionCompletion control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnG2TEndofPQPhase">
+<summary>
+lblMlstnG2TEndofPQPhase control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lblMlstnG2T_End_of_Ininital_Verification">
+<summary>
+lblMlstnG2T_End_of_Ininital_Verification control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtEODate">
+<summary>
+txtEODate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtDays">
+<summary>
+txtDays control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lstboxEODate">
+<summary>
+lstboxEODate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnRefreshEODate">
+<summary>
+btnRefreshEODate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnAddEODate">
+<summary>
+btnAddEODate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnDeleteEODate">
+<summary>
+btnDeleteEODate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtConstructionDate">
+<summary>
+txtConstructionDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtConstructionDays">
+<summary>
+txtConstructionDays control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lstboxConstructionDate">
+<summary>
+lstboxConstructionDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnRefreshConstructionDate">
+<summary>
+btnRefreshConstructionDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnAddConstructionDate">
+<summary>
+btnAddConstructionDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnDeleteConstructionDate">
+<summary>
+btnDeleteConstructionDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtVatDate">
+<summary>
+txtVatDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtVatDays">
+<summary>
+txtVatDays control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._lstboxVATDate">
+<summary>
+lstboxVATDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnRefreshVatDate">
+<summary>
+btnRefreshVatDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnAddVatDate">
+<summary>
+btnAddVatDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnDeleteVatDate">
+<summary>
+btnDeleteVatDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtcomments">
+<summary>
+txtcomments control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnback">
+<summary>
+btnback control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnCancel">
+<summary>
+btnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnSubmit">
+<summary>
+btnSubmit control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnApprovedPCA">
+<summary>
+btnApprovedPCA control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnPrev">
+<summary>
+btnPrev control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._txtPCAApprovedDate">
+<summary>
+txtPCAApprovedDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Startupstargets._btnNext">
+<summary>
+btnNext control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._Label2">
+<summary>
+Label2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._ddlTemplateType">
+<summary>
+ddlTemplateType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._lblReportDesc">
+<summary>
+lblReportDesc control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._FileUpload1">
+<summary>
+FileUpload1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._txtSearch">
+<summary>
+txtSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._btnSearch">
+<summary>
+btnSearch control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._btnUploadTemplate">
+<summary>
+btnUploadTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._btnReset">
+<summary>
+btnReset control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._lblMessage">
+<summary>
+lblMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BLOBUpdate._gvGrid">
+<summary>
+gvGrid control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.UploadReportTemplate._Label2">
+<summary>
+Label2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.UploadReportTemplate._ddlTemplateType">
+<summary>
+ddlTemplateType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.UploadReportTemplate._lblReportDesc">
+<summary>
+lblReportDesc control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.UploadReportTemplate._Label1">
+<summary>
+Label1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.UploadReportTemplate._FileUpload1">
+<summary>
+FileUpload1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.UploadReportTemplate._btnUploadTemplate">
+<summary>
+btnUploadTemplate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.UploadReportTemplate._btnReset">
+<summary>
+btnReset control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.UploadReportTemplate._lblMessage">
+<summary>
+lblMessage control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.UploadReportTemplate._gvGrid">
+<summary>
+gvGrid control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>

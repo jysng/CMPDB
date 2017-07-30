@@ -1,0 +1,491 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body {
+    background: #f9f9f9;
+    font-size: .80em;
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #666666;
+}
+
+a:link, a:visited {
+    color: #034af3;
+}
+
+a:hover {
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active {
+    color: #034af3;
+}
+
+p {
+    margin-bottom: 10px;
+    height: 20px;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page {
+    width: auto;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    background: #7793be;
+    width: 100%;
+}
+
+    .header h1 {
+        font-weight: 700;
+        margin: 0px;
+        padding: 0px 0px 0px 20px;
+        color: #f9f9f9;
+        border: none;
+        line-height: 2em;
+        font-size: 2em;
+    }
+
+.main {
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol {
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.footer {
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+.btn {
+    width:150px;
+    height:30px;
+
+}
+
+.btngLOBAL {
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 13.3333px;
+    line-height: normal;
+    font-family: Arial;
+    width: 24px;
+    height: 24px;
+}
+.ddl {
+    /*Font-Size:9.8px;*/
+}
+.ddlgLOBAL {
+   width:100%; height:220px;
+
+}
+
+.txtgLOBAL {
+ width:65%;
+ 
+}
+.lbl {
+    font-weight:bold;
+}
+
+/* DIV LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+#wrapper {
+    margin-left: 200px;
+}
+
+    #wrapper.leftNone {
+        margin-left: 0px;
+    }
+
+#content {
+    float: right;
+    width: 100%;
+}
+
+#sidebar {
+    float: left;
+    width: 200px;
+    margin-left: -200px;
+}
+
+#cleared {
+    clear: both;
+}
+
+
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink {
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+div.menu {
+    padding: 4px 0px 4px 8px;
+}
+
+    div.menu ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        width: auto;
+        display: none;
+    }
+
+        div.menu ul li a, div.menu ul li a:visited {
+            background-color: #465c71;
+            border: 1px #8da4bf solid;
+            display: block;
+            line-height: 1.35em;
+            padding: 4px 20px;
+            text-decoration: none;
+            white-space: nowrap;
+            display: none;
+        }
+
+            div.menu ul li a:hover {
+                background-color: #bfcbd6;
+                color: #465c71;
+                text-decoration: none;
+            }
+
+            div.menu ul li a:active {
+                background-color: #465c71;
+                color: #cfdbe6;
+                text-decoration: none;
+            }
+
+
+body {
+    font-family: Arial;
+    font-size: 10pt;
+}
+
+.main_menu {
+    width: 110px;
+    background-color: #8AE0F2;
+    color: #000;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 5px;
+    /*display: none;*/
+}
+
+.level_menu {
+    width: 150px;
+    background-color: #DDE4EC;
+    color: #fff;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+
+.level_menu_2 {
+    width: 150px;
+    background-color: #DDE4EC;
+    color: #000;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+
+.selected {
+    background-color: #DDE4EC;
+    color: #000000;
+}
+
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset {
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+    fieldset p {
+        margin: 2px 12px 10px 10px;
+    }
+
+    fieldset.login label, fieldset.register label, fieldset.changePassword label {
+        display: block;
+    }
+
+    fieldset label.inline {
+        display: inline;
+    }
+
+legend {
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry {
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry {
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo {
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear {
+    clear: both;
+}
+
+.title {
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay {
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+    .loginDisplay a:link {
+        color: white;
+    }
+
+    .loginDisplay a:visited {
+        color: white;
+    }
+
+    .loginDisplay a:hover {
+        color: white;
+    }
+
+.failureNotification {
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.submitButton {
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+.modalpopup {
+    background-color: White;
+    padding: 6px 6px 6px 6px;
+}
+
+.modalbackground {
+    background-color: Gray;
+}
+
+.float-left {
+    float: left;
+    margin-right: 20px;
+}
+
+    .float-left select, .float-left input {
+        width: 100%;
+    }
+
+.heading-margin {
+    margin: 10px 0px;
+    color: #7792BD;
+    font-variant: normal;
+}
+
+.ped15 {
+    padding-top: 15px;
+}
+
+.dis {
+    display: none;
+}
+
+.disblock {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+    .disblock input[type="text"] {
+        width: 98%;
+    }
+
+input[type="submit"] {
+    cursor: pointer !important;
+}
+
+.dxbButton {
+    -webkit-appearance: push-button;
+}
+
+
+.dxbButton {
+    padding: 0;
+}
+
+span.dx-vam, span.dx-vat, span.dx-vab, a.dx-vam, a.dx-vat, a.dx-vab {
+    padding: 0;
+}
+
+.dxbButton div.dxb {
+    padding: 1px 6px 2px 6px;
+}
+
+.dxgvControl {
+    margin-top: 15px;
+}
+
+/* GRIDVIEW  
+----------------------------------------------------------*/
+.GridViewEditRow input[type=text] {
+    width: 100px;
+}
+/* size textboxes */
+.GridViewEditRow select {
+    width: 50px;
+}
+/* size drop down lists */
+#MainContent_gvDataGovernanceTestCopy tr th{ background-color:#DCDCDC;}
+#MainContent_gvDataGovernanceTestCopy tr th a{font-size: 12px;
+    font-family: tahoma;
+    font-weight: normal;
+    color: #000; 
+    text-decoration: none;
+    }
+
+
+.DynamicMenu
+{ display: none; }
+.Message{
+    margin-left:30px;
+}
+.MainButton{
+    margin-bottom:20px;
+}
+
+ .img {
+    float: left;
+    margin-top: 120px;
+    margin-left: 5%;
+    margin-right: 10px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #8AE0F2;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #dff0d8;
+    width: 12%;
+    margin-top: 71px;
+    margin-left: 23px;
+    position: absolute;
+    right: 30px;
+    text-align: center;
+    color: black;
+}
+
+

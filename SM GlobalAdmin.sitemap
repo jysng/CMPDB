@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode>
+    <siteMapNode url="~/DashBoard.aspx" title="HOME" >
+    </siteMapNode>
+
+    <siteMapNode title="Practitioners">
+      <siteMapNode url="~/EditMeasures.aspx" title="EditMeasures" ></siteMapNode>
+     <siteMapNode url="~/Startupstargets.aspx" title="StartUp Targets" ></siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="Launch Leaders or GSUM+ SWPO">
+      <siteMapNode url="~/Admin_Project.aspx" title="Create Project" ></siteMapNode>
+      <siteMapNode url="~/Practitioner.aspx" title="Edit Practitioners" ></siteMapNode>
+      <siteMapNode url="~/AdministratorPlant.aspx" title="Admin for Plant" ></siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode title="Global/Regional SWPO">
+      <siteMapNode url="~/GlobalAdmin.aspx" title="GlobalAdmin" ></siteMapNode>
+      <siteMapNode title="Reports">
+        <siteMapNode title="Upload Template" url="~/UploadReportTemplate.aspx"></siteMapNode>
+        <siteMapNode url="~/Report.aspx?s=PTR" title="Report" ></siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Bulk Update" url="~/BLOBUpdate.aspx"></siteMapNode>
+
+    </siteMapNode>
+    <!--<siteMapNode title="Masters">
+      <siteMapNode  title="Admin">
+        <siteMapNode url ="" title="Production_Types"></siteMapNode>
+        <siteMapNode url ="" title="Project_Types"></siteMapNode>
+        <siteMapNode url ="" title="Change_Types"></siteMapNode>
+        <siteMapNode url ="" title="Platforms"></siteMapNode>
+        <siteMapNode url ="" title="SWP"></siteMapNode>
+        <siteMapNode url ="" title="Practitioner_Roles"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>-->
+
+  </siteMapNode>
+
+</siteMap>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode>
+    <siteMapNode url="~/DashBoard.aspx" title="HOME" > </siteMapNode>
+      <siteMapNode title="Practitioners">
+        <siteMapNode url="~/EditMeasures.aspx" title="EditMeasures" ></siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Launch Leaders or GSUM+ SWPO">
+        <siteMapNode url="~/Admin_Project.aspx" title="Create Project" ></siteMapNode>
+        <siteMapNode url="~/Practitioner.aspx" title="Edit Practitioners" ></siteMapNode>
+        <siteMapNode url="~/AdministratorPlant.aspx" title="Admin for Plant"  ></siteMapNode>
+        <siteMapNode url="~/Startupstargets.aspx" title="StartUp Targets" ></siteMapNode>
+      </siteMapNode>          
+   
+    <!--<siteMapNode title="Plants">
+      <siteMapNode  title="Admin">
+        <siteMapNode url ="" title="Site_Production_Lines"></siteMapNode>
+        <siteMapNode url ="" title="Site_Departments"></siteMapNode>
+        <siteMapNode url ="" title="Site_CBNs"></siteMapNode>
+        <siteMapNode url ="" title="Source_Files"></siteMapNode>
+        <siteMapNode url ="" title="Practitioners"></siteMapNode>
+        <siteMapNode url ="" title="Site_Practitioners"></siteMapNode>
+        <siteMapNode url ="" title="Site_All_Change_Definitions"></siteMapNode>
+      </siteMapNode>
+    </siteMapNode>-->
+ 
+
+  </siteMapNode>
+</siteMap>
