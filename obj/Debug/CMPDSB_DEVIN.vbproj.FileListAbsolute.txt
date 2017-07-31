@@ -92,3 +92,4 @@ D:\corbus\CMPDB\CMPDB\obj\Debug\CMPDSB_DEVIN.vbproj.GenerateResource.Cache
 D:\corbus\CMPDB\CMPDB\obj\Debug\CMPDSB_DEVIN.dll
 D:\corbus\CMPDB\CMPDB\obj\Debug\CMPDSB_DEVIN.xml
 D:\corbus\CMPDB\CMPDB\obj\Debug\CMPDSB_DEVIN.pdb
+D:\corbus\CMPDB\CMPDB\obj\Debug\CMPDSB_DEVIN.vbprojResolveAssemblyReference.cache

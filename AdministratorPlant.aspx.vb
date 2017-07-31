@@ -29,12 +29,12 @@ Public Class AdministratorPlant
             ToBeRemovedInTheEnd()
             SetTools()
             Session("HasFiles") = 0
-			PopulateDD(DropDownListPlant, "CMPDB_tblPlants", "Plant_ID", "Plant")
-			If Session("plant_Set") <> "" Then
-				PopulateDD(DropDownListPlant, "CMPDB_tblPlants", "Plant_ID", "Plant")
-				DropDownListPlant.SelectedValue = Session("plant_Set")
-			End If
-			PopulateDD(DropDownListProductionType, "CMPDB_tblProduction_Types", "Production_Type_ID", "Production_Type")
+            PopulateDD(DropDownListPlant, "CMPDB_tblPlants", "Plant_ID", "Plant")
+            If Session("plant_Set") <> "" Then
+                PopulateDD(DropDownListPlant, "CMPDB_tblPlants", "Plant_ID", "Plant")
+                DropDownListPlant.SelectedValue = Session("plant_Set")
+            End If
+            PopulateDD(DropDownListProductionType, "CMPDB_tblProduction_Types", "Production_Type_ID", "Production_Type")
             PopulateDD(DropDownListBusinessUnit, "CMPDB_tblBusiness_Unit", "Business_Unit_ID", "Business_Unit")
             SetDefaultPlant(DropDownListPlant)
             LoadAllDependents()
@@ -84,7 +84,7 @@ Public Class AdministratorPlant
     Private Sub SetDefaultPlant(ByRef dropDownListPlant As DropDownList)
         If Session("User_ID") Is Nothing Then
         Else
-            dropDownListPlant.SelectedValue = GetSingleValue("Select Plant_ID from CMPDB_tblDefault_Locations where User_ID=" + Session("User_ID").ToString())
+            dropDownListPlant.SelectedValue = GetSingleValue($"Select Plant_ID from CMPDB_tblDefault_Locations where User_ID='{Session("User_ID").ToString()}'")
             DropDownListPlant_SelectedIndexChanged(New Object(), EventArgs.Empty)
         End If
     End Sub
