@@ -6,6 +6,8 @@
     <style>
         .row{
             margin-top:20px;
+            margin-right:5px;
+            margin-left:5px;
         }
 
         .rowGrid{
@@ -83,12 +85,23 @@
                     </div>
                 </div>
                 
-                <div class=" row rowGrid">
+                <div class=" row">
                     <h3>Grid Results</h3>
                     <br />
                     <br />
                     <div class="col">
-                        <asp:GridView  Width="100%" ID="grdReport" runat="server" AutoGenerateColumns="true" >
+                        <asp:GridView  Width="100%" ID="grdReport" runat="server" AutoGenerateColumns="false" >
+
+                            <Columns>
+                                <asp:BoundField DataField="Date" HeaderText="Last Update" />
+                                <asp:BoundField DataField="In_All_Change" HeaderText="In All Change" />
+                                <asp:BoundField DataField="Startup_Name" HeaderText="Startup Name" />
+                                <asp:BoundField DataField="Production_Line" HeaderText="Production Line" />
+                                <asp:BoundField DataField="Business_Unit" HeaderText="Business Unit" />
+                                <asp:BoundField DataField="Email" HeaderText="Practioner" />
+                                <asp:BoundField DataField="Qualification_Level" HeaderText="Qualification Level" />
+                                <asp:BoundField DataField="Project_Status" HeaderText="Status" />
+                            </Columns>
                             <EmptyDataTemplate>
                                 <div  class="well">No records found.</div>
                             </EmptyDataTemplate>

@@ -120,6 +120,7 @@
     <Content Include="bin\CMPDSB_DEVIN.pdb" />
     <Content Include="bin\CMPDSB_DEVIN.xml" />
     <Content Include="bin\EPPlus.dll" />
+    <Content Include="BulkDataUpload.aspx" />
     <Content Include="content\css\bootstrap-theme.css" />
     <Content Include="content\css\bootstrap-theme.min.css" />
     <Content Include="content\css\bootstrap.css" />
@@ -164,6 +165,13 @@
     <Compile Include="Admin_Project.aspx.vb">
       <DependentUpon>Admin_Project.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BulkDataUpload.aspx.designer.vb">
+      <DependentUpon>BulkDataUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkDataUpload.aspx.vb">
+      <DependentUpon>BulkDataUpload.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Dashboard.aspx.designer.vb">
       <DependentUpon>Dashboard.aspx</DependentUpon>
