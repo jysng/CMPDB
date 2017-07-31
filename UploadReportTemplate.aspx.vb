@@ -1,5 +1,6 @@
-﻿Imports System.Data.SqlClient
+Imports System.Data.SqlClient
 Imports System.IO
+Import System.Data;
 
 Public Class UploadReportTemplate
     Inherits System.Web.UI.Page
