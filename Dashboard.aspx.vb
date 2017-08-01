@@ -62,6 +62,6 @@ Public Class Dashboard
     End Sub
 
     Protected Sub BtnReports_Click(sender As Object, e As EventArgs)
-        Response.Redirect("StartupMeasuresReview.aspx")
+        Response.Redirect("Report.aspx")
     End Sub
 End Class

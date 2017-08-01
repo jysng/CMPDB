@@ -695,12 +695,12 @@ Public Class GlobalAdmin
         If btnAddSWP_Tool_Name.ImageUrl = xAddImagePath Then
             AddUpdateRecordsSWPToolName("I")
         ElseIf btnAddSWP_Tool_Name.ImageUrl = xUpdateImagePath Then
-            If txtSWP_Tool_Name.Text <> lbSWP_Tool_Name.SelectedItem.Text Then
-                AddUpdateRecordsSWPToolName("U")
-            Else
-                MessageBox("Duplicate Record.")
-                Exit Sub
-            End If
+            ' If txtSWP_Tool_Name.Text <> lbSWP_Tool_Name.SelectedItem.Text Then
+            AddUpdateRecordsSWPToolName("U")
+            'Else
+            ' MessageBox("Duplicate Record.")
+            '    Exit Sub
+            'End If
         End If
         btnRefreshSWP_Tool_Name_Click(sender, EventArgs.Empty)
     End Sub

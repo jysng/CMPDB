@@ -109,8 +109,8 @@ Public Class AdministratorPlant
             lblGSUM_IAP.Text = dt.Rows(6)("name").ToString()
             list.Add(New KeyValuePair(Of String, Integer)(dt.Rows(7)("name").ToString(), dt.Rows(7)("id").ToString()))
             lblRE_Implementation.Text = dt.Rows(7)("name").ToString()
-            list.Add(New KeyValuePair(Of String, Integer)(dt.Rows(8)("name").ToString(), dt.Rows(8)("id").ToString()))
-            lblGSUM_PRRA.Text = dt.Rows(8)("name").ToString()
+            'list.Add(New KeyValuePair(Of String, Integer)(dt.Rows(8)("name").ToString(), dt.Rows(8)("id").ToString()))
+            'lblGSUM_PRRA.Text = dt.Rows(8)("name").ToString()
             Session("ToolList") = list
         End If
     End Sub
@@ -499,7 +499,7 @@ Public Class AdministratorPlant
         txtCellEWPTracker.Text = dtBLOBDetails.Rows(5)(mWorksheetCell).ToString()
         txtCellGSUM_IAP.Text = dtBLOBDetails.Rows(6)(mWorksheetCell).ToString()
         txtCellRE_Implementation.Text = dtBLOBDetails.Rows(7)(mWorksheetCell).ToString()
-        txtCellGSUM_PRRA.Text = dtBLOBDetails.Rows(8)(mWorksheetCell).ToString()
+        'txtCellGSUM_PRRA.Text = dtBLOBDetails.Rows(8)(mWorksheetCell).ToString()
 
         txtGsumSmallWS.Text = dtBLOBDetails.Rows(0)(mWorksheetName).ToString()
         txtGSUMMTL.Text = dtBLOBDetails.Rows(1)(mWorksheetName).ToString()
@@ -509,7 +509,7 @@ Public Class AdministratorPlant
         txtEWPTracker.Text = dtBLOBDetails.Rows(5)(mWorksheetName).ToString()
         txtGSUM_IAP.Text = dtBLOBDetails.Rows(6)(mWorksheetName).ToString()
         txtRE_Implementation.Text = dtBLOBDetails.Rows(7)(mWorksheetName).ToString()
-        txtGSUM_PRRA.Text = dtBLOBDetails.Rows(8)(mWorksheetName).ToString()
+        'txtGSUM_PRRA.Text = dtBLOBDetails.Rows(8)(mWorksheetName).ToString()
 
         lblfuGsumSmallWS.Text = dtBLOBDetails.Rows(0)(mFileName).ToString()
         lbl_file_fuGSUMMTL.Text = dtBLOBDetails.Rows(1)(mFileName).ToString()
@@ -519,7 +519,7 @@ Public Class AdministratorPlant
         lbl_file_fuEWPTracker.Text = dtBLOBDetails.Rows(5)(mFileName).ToString()
         lbl_file_fuGSUM_IAP.Text = dtBLOBDetails.Rows(6)(mFileName).ToString()
         lbl_file_fuRE_Implementation.Text = dtBLOBDetails.Rows(7)(mFileName).ToString()
-        lbl_file_fuGSUM_PRRA.Text = dtBLOBDetails.Rows(8)(mFileName).ToString()
+        'lbl_file_fuGSUM_PRRA.Text = dtBLOBDetails.Rows(8)(mFileName).ToString()
     End Sub
 
     Protected Sub btnSaveSource_Click(sender As Object, e As EventArgs)

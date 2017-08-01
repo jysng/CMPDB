@@ -29,6 +29,11 @@
             float: left;
             margin-bottom: 20px;
         }
+        a:link{
+            color:#666666;
+            text-decoration:none;
+
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -38,23 +43,20 @@
                 <h2> Bulk Data Upload </h2>
             </div>
         </div>
-        <%-- <div class="ContainerOne">
+         <div class="ContainerOne">
             <div class="col2">
-                <asp:Label ID="Label2" Font-Bold="true" runat="server" Text="Choose BLOB Table:"></asp:Label>
+                <asp:Label ID="Label2" Font-Bold="true" runat="server" Text="Choose Master Table:"></asp:Label>
                 <asp:DropDownList ID="ddlTemplateType" AppendDataBoundItems="true" runat="server" AutoPostBack="True">
                     <asp:ListItem Text="-Select-" Value=""></asp:ListItem>
-                    <asp:ListItem Text="Project Table" Value="CMPDB_tblStartupBLOBFiles"></asp:ListItem>
-                    <asp:ListItem Text="Plant Table" Value="CMPDB_tblBLOBFiles"></asp:ListItem>
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator ControlToValidate="ddlTemplateType" InitialValue="" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
+                <%--<asp:RequiredFieldValidator ControlToValidate="ddlTemplateType" InitialValue="" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>--%>
                 <br />
                 <br />
                 <asp:Label Font-Bold="true" ID="lblReportDesc" runat="server" Text=""></asp:Label>
 
-
             </div>
 
-        </div>--%>
+        </div>
         <div class="ContainerOne">
             <div class="col1">
                 <asp:Label ID="Label1" Font-Bold="true" runat="server" Text="Choose Template :"></asp:Label>
@@ -62,7 +64,9 @@
             <div class="col1">
                 <asp:FileUpload ID="FileUpload1" runat="server" />
             </div>
-
+            <div class="col1">
+                <asp:Button runat="server" OnClick="btnLoadTables_Click" ID="btnLoadTables" Text="Load Tables" />
+            </div>
         </div>
 
         <%--<div class="ContainerOne">
@@ -85,17 +89,17 @@
         </div>
 
         <div class="ContainerOne">
-            <asp:GridView CssClass="table" OnSelectedIndexChanged="gvGrid_SelectedIndexChanged" AutoGenerateSelectButton="true" OnRowCommand="gvGrid_RowCommand" AutoGenerateColumns="true" ID="gvGrid" runat="server" EmptyDataText="No records found for the selected builder" AllowSorting="true" ShowHeader="true">
+            <asp:GridView AutoGenerateSelectButton="true" CssClass="table" OnSelectedIndexChanged="gvGrid_SelectedIndexChanged"  AutoGenerateColumns="false" OnRowCommand="gvGrid_RowCommand" ID="gvGrid" runat="server" EmptyDataText="No records found" AllowSorting="true" ShowHeader="true">
                 <Columns>
                     <asp:BoundField DataField="BLOBFile_ID" HeaderText="ID" />
                     <asp:TemplateField HeaderText="Download Here">
                         <ItemTemplate>
-                            <asp:LinkButton ID="lnkDownload" runat="server" CausesValidation="False" CommandArgument='<%# Eval("BLOBFile_ID") %>'
+                            <asp:LinkButton ForeColor="Blue" ID="lnkDownload" runat="server" CausesValidation="False" CommandArgument='<%# Eval("BLOBFile_ID") %>'
                                 CommandName="Download" Text='<%# Eval("FileName") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <%--  <asp:BoundField DataField="Report_Desc" HeaderText="Report Desc" />
-                            <asp:BoundField DataField="UpdateDate" HeaderText="Update Date" />
+                      <asp:BoundField DataField="DateUploaded" HeaderText="Upload Date" />
+                           <%-- <asp:BoundField DataField="UpdateDate" HeaderText="Update Date" />
                             <asp:BoundField DataField="CreateDate" HeaderText="Create Date" />--%>
                 </Columns>
             </asp:GridView>

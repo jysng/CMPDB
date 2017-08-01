@@ -21,6 +21,7 @@
         <siteMapNode url="~/Report.aspx?s=PTR" title="Report" ></siteMapNode>
       </siteMapNode>
       <siteMapNode title="Bulk Update" url="~/BLOBUpdate.aspx"></siteMapNode>
+      <siteMapNode title="Bulk Master Data Upload" url="~/BulkDataUpload.aspx"></siteMapNode>
 
     </siteMapNode>
     <!--<siteMapNode title="Masters">

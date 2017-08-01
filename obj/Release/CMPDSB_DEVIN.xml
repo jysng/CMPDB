@@ -1538,6 +1538,33 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:CMPDSB_DEVIN.BulkDataUpload._Label2">
+<summary>
+Label2 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BulkDataUpload._ddlTemplateType">
+<summary>
+ddlTemplateType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BulkDataUpload._lblReportDesc">
+<summary>
+lblReportDesc control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:CMPDSB_DEVIN.BulkDataUpload._Label1">
 <summary>
 Label1 control.
@@ -1550,6 +1577,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:CMPDSB_DEVIN.BulkDataUpload._FileUpload1">
 <summary>
 FileUpload1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.BulkDataUpload._btnLoadTables">
+<summary>
+btnLoadTables control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -4309,6 +4345,21 @@ btnDownload control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member>
+<member name="M:CMPDSB_DEVIN.Functions.FromExcelToTable(System.String,System.Byte[],System.Boolean)">
+ <summary>
+ From Bytes to Table with a table name and Byte array Object
+ </summary>
+ <param name="mTable">Table Name</param>
+ <param name="fu">Byte Array</param>
+ <returns></returns>
+</member>
+<member name="M:CMPDSB_DEVIN.Functions.GetSheets(System.Byte[])">
+ <summary>
+ Get total sheets 
+ </summary>
+ <param name="excel"></param>
+ <returns></returns>
 </member>
 <member name="F:CMPDSB_DEVIN.StartupMeasuresReview._upnl">
 <summary>

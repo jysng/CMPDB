@@ -15,6 +15,8 @@ Public Class Report
     Dim xTblSUL = "CMPDB_tblPractitioner"
 
 #End Region
+
+#Region "Common Section"
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Not IsPostBack Then
             grdReport.DataBind()
@@ -73,6 +75,7 @@ Public Class Report
 
 
     End Sub
+#End Region
 
     Protected Sub ddlPlantList_SelectedIndexChanged(sender As Object, e As EventArgs)
         PopulateDD(ddlDepartment, xTblDepartment, "Site_Department_ID", "Site_Department", "Site_ID", ddlPlantList.SelectedItem.Value)

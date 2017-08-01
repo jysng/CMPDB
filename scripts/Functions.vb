@@ -185,57 +185,6 @@ Module Functions
         End Try
     End Function
 
-    '<System.Runtime.CompilerServices.Extension>
-    'Public Function ToDataTable(package As ExcelPackage) As DataTable
-    '    Dim workSheet As ExcelWorksheet = package.Workbook.Worksheets.First()
-    '    Dim table As New DataTable()
-    '    For Each firstRowCell In workSheet.Cells(1, 1, 1, workSheet.Dimension.[End].Column)
-    '        table.Columns.Add(firstRowCell.Text)
-    '    Next
-    '    For rowNumber = 2 To workSheet.Dimension.[End].Row
-    '        Dim row = workSheet.Cells(rowNumber, 1, rowNumber, workSheet.Dimension.[End].Column)
-    '        Dim newRow = table.NewRow()
-    '        For Each cell In row
-    '            newRow(cell.Start.Column - 1) = cell.Text
-    '        Next
-    '        table.Rows.Add(newRow)
-    '    Next
-    '    Return table
-    'End Function
-
-    'Public Function FromExcelToTable(mTable As String, fu As FileUpload)
-    '    Try
-    '        If fu.HasFile Then
-    '            If Path.GetExtension(fu.FileName).ToLower.Equals(".xlsx") Or Path.GetExtension(fu.FileName).ToLower.Equals(".xlsm") Then
-    '                Dim excel = New ExcelPackage(fu.FileContent)
-    '                Dim dt = excel.ToDataTable()
-    '                Dim table = mTable
-    '                Using conn = New SqlConnection(strConnectionString)
-    '                    Dim bulkCopy = New SqlBulkCopy(conn)
-    '                    bulkCopy.BulkCopyTimeout = 1500
-    '                    bulkCopy.BatchSize = 1000
-
-    '                    bulkCopy.DestinationTableName = table
-    '                    conn.Open()
-    '                    Dim schema = conn.GetSchema("Columns", {Nothing, Nothing, table, Nothing})
-    '                    For Each sourceColumn As DataColumn In dt.Columns
-    '                        For Each row As DataRow In schema.Rows
-    '                            If String.Equals(sourceColumn.ColumnName, DirectCast(row("COLUMN_NAME"), String), StringComparison.OrdinalIgnoreCase) Then
-    '                                bulkCopy.ColumnMappings.Add(sourceColumn.ColumnName, DirectCast(row("COLUMN_NAME"), String).Replace("'", ""))
-    '                                Exit For
-    '                            End If
-    '                        Next
-    '                    Next
-    '                    bulkCopy.WriteToServer(dt)
-    '                End Using
-    '            End If
-    '        End If
-    '        Return "Done"
-    '    Catch ex As Exception
-    '        Return ex.Message
-    '    End Try
-    'End Function
-
     Public Function RunSQLQuery(query As String)
         Dim con As New SqlConnection(strConnectionString)
         Dim ret = String.Empty
@@ -639,6 +588,23 @@ Module Functions
         Return table
     End Function
 
+    <System.Runtime.CompilerServices.Extension>
+    Public Function ToDataTable(package As ExcelPackage, mSheetName As String) As DataTable
+        Dim workSheet As ExcelWorksheet = package.Workbook.Worksheets(mSheetName)
+        Dim table As New DataTable()
+        For Each firstRowCell In workSheet.Cells(1, 1, 1, workSheet.Dimension.[End].Column)
+            table.Columns.Add(firstRowCell.Text)
+        Next
+        For rowNumber = 2 To workSheet.Dimension.[End].Row
+            Dim row = workSheet.Cells(rowNumber, 1, rowNumber, workSheet.Dimension.[End].Column)
+            Dim newRow = table.NewRow()
+            For Each cell In row
+                newRow(cell.Start.Column - 1) = cell.Text
+            Next
+            table.Rows.Add(newRow)
+        Next
+        Return table
+    End Function
     Public Function FromExcelToTable(mTable As String, fu As FileUpload)
         Try
             If fu.HasFile Then
@@ -672,8 +638,49 @@ Module Functions
             Return ex.Message
         End Try
     End Function
+    ''' <summary>
+    ''' From Bytes to Table with a table name and Byte array Object
+    ''' </summary>
+    ''' <param name="mTable">Table Name</param>
+    ''' <param name="fu">Byte Array</param>
+    ''' <returns></returns>
+    Public Function FromExcelToTable(mTable As String, fu As Byte(), TruncateTable As Boolean)
+        Try
+            If TruncateTable Then
+                RunSQLQuery("truncate table " + mTable)
+            End If
+            'If fu.HasFile Then
 
+            '    If Path.GetExtension(fu.FileName).ToLower.Equals(".xlsx") Or Path.GetExtension(fu.FileName).ToLower.Equals(".xlsm") Then
+            Dim ms As New MemoryStream(fu)
+            Dim excel As New ExcelPackage(ms)
+            Dim dt = excel.ToDataTable(mTable)
+            Dim table = mTable
+            Using conn = New SqlConnection(strConnectionString)
+                Dim bulkCopy = New SqlBulkCopy(conn)
+                bulkCopy.BulkCopyTimeout = 1500
+                bulkCopy.BatchSize = 1000
 
+                bulkCopy.DestinationTableName = table
+                conn.Open()
+                Dim schema = conn.GetSchema("Columns", {Nothing, Nothing, table, Nothing})
+                For Each sourceColumn As DataColumn In dt.Columns
+                    For Each row As DataRow In schema.Rows
+                        If String.Equals(sourceColumn.ColumnName, DirectCast(row("COLUMN_NAME"), String), StringComparison.OrdinalIgnoreCase) Then
+                            bulkCopy.ColumnMappings.Add(sourceColumn.ColumnName, DirectCast(row("COLUMN_NAME"), String).Replace("'", ""))
+                            Exit For
+                        End If
+                    Next
+                Next
+                bulkCopy.WriteToServer(dt)
+            End Using
+            '    End If
+            'End If
+            Return "Done"
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+    End Function
 
     Public Function CreateExcelFromDataTable(table As DataTable, fileName As String)
         Using wb As New XLWorkbook()
@@ -757,6 +764,26 @@ Module Functions
             End If
         End Using
     End Function
+
+    ''' <summary>
+    ''' Get total sheets 
+    ''' </summary>
+    ''' <param name="excel"></param>
+    ''' <returns></returns>
+    Public Function GetSheets(excel As Byte())
+        Dim ms As New MemoryStream(excel)
+        Dim dt As New DataTable
+        dt.Columns.Add("ID")
+        dt.Columns.Add("Value")
+        Using pck As New ExcelPackage(ms)
+            For Each ws As ExcelWorksheet In pck.Workbook.Worksheets
+                dt.Rows.Add(ws.Name, ws.Index.ToString)
+            Next
+        End Using
+        dt.AcceptChanges()
+        Return dt
+    End Function
+
 #End Region
 
 

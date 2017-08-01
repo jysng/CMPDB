@@ -1,32 +1,24 @@
-﻿Public Class BulkDataUpload
+﻿Imports System.Data.SqlClient
+Imports System.IO
+
+Public Class BulkDataUpload
     Inherits System.Web.UI.Page
+    Dim xtblMasterData = "CMPDB_tblMasterData"
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        GetParentSiteMapNode()
+        If Not IsPostBack Then
+            CreateGrid("")
+        End If
+    End Sub
 
-    'Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-    '    GetParentSiteMapNode()
-
-    '    If Not IsPostBack Then
-    '        FillDropDown()
-    '    End If
-    'End Sub
-
-    'Private Sub FillDropDown()
-    '    'Dim dt As DataTable = GetDataTableFromSQL("select report_code,report_desc from CMPDB_tblsystem_generated_report_processing_configurations")
-    '    'ddlTemplateType.DataSource = dt
-    '    'ddlTemplateType.DataTextField = "report_code"
-    '    'ddlTemplateType.DataValueField = "report_desc"
-    '    'ddlTemplateType.DataBind()
-
-    'End Sub
+    Private Sub FillDropDown(dt As DataTable)
+        PopulateDDFromDataTable(ddlTemplateType, dt)
+    End Sub
 
     Protected Sub btnUploadTemplate_Click(sender As Object, e As EventArgs) Handles btnUploadTemplate.Click
-        '    Try
-        '        UploadToDB(FileUpload1)
-        '        ' UpdateReportConfigTable()
+        ' ReadFromDB()
 
-        '    Catch ex As Exception
-        '        Response.Write(ex)
-        '    End Try
-
+        FromExcelToTable(ddlTemplateType.SelectedItem.Text, GetFileObject, True)
     End Sub
 
     'Private Sub UpdateReportConfigTable()
@@ -79,40 +71,35 @@
         'txtSearch.Text = String.Empty
     End Sub
 
-    'Protected Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
-    '    'ddlTemplateType.SelectedIndex = 0
-    '    'lblMessage.Text = ""
-    '    'lblReportDesc.Text = ""
-    'End Sub
+    Protected Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
+        ddlTemplateType.SelectedIndex = 0
+        lblMessage.Text = ""
+        lblReportDesc.Text = ""
+    End Sub
 
-    'Private Function CreateGrid(key As String) As DataTable
-    '    Dim dt As DataTable
-    '    Try
-    '        If String.IsNullOrEmpty(key) Then
-    '            dt = GetDataTableFromSQL($"Select BLOBFile_ID,FileName,FileUploaded from {ddlTemplateType.Text} Where IsActive='True'")
-
-    '        Else
-    '            dt = GetDataTableFromSQL($"Select BLOBFile_ID,FileName,FileUploaded from {ddlTemplateType.Text} Where IsActive='True' and BLOBFile_ID={key}")
-    '        End If
-    '        gvGrid.DataSource = dt
-    '        gvGrid.DataBind()
-    '    Catch ex As Exception
-    '        Response.Write(ex)
-    '    End Try
-    'End Function
+    Private Function CreateGrid(key As String) As DataTable
+        Dim dt As DataTable
+        Try
+            dt = GetDataTableFromSQL($"select * from {xtblMasterData} ")
+            gvGrid.DataSource = dt
+            gvGrid.DataBind()
+        Catch ex As Exception
+            Response.Write(ex)
+        End Try
+    End Function
 
     Protected Sub gvGrid_RowCommand(sender As Object, e As GridViewCommandEventArgs)
-        '    gvGrid.RowStyle.BackColor = Drawing.Color.FromName("#f9f9f9")
-        '    If e.CommandName <> "Select" Then
-        '        Dim bytes As Byte()
-        '        Dim dt = GetDataTableFromSQL($"select * from {ddlTemplateType.Text} where BLOBFile_ID= {e.CommandArgument}")
-        '        bytes = DirectCast(dt.Rows(0)("FileObject"), Byte())
-        '        Dim filename = DirectCast(dt.Rows(0)("FileName"), String)
-        '        'Put excel as bytes array into memory stream
-        '        Dim ms As New MemoryStream(bytes)
+        gvGrid.RowStyle.BackColor = Drawing.Color.FromName("#f9f9f9")
+        If e.CommandName <> "Select" Then
+            Dim bytes As Byte()
+            Dim dt = GetDataTableFromSQL($"select * from CMPDB_tblMasterData where BLOBFile_ID= {e.CommandArgument}")
+            bytes = DirectCast(dt.Rows(0)("FileObject"), Byte())
+            Dim filename = DirectCast(dt.Rows(0)("FileName"), String)
+            'Put excel as bytes array into memory stream
+            Dim ms As New MemoryStream(bytes)
 
-        '        DownloadFileFromMemoryStream(ms, filename)
-        '    End If
+            DownloadFileFromMemoryStream(ms, filename)
+        End If
 
     End Sub
 
@@ -121,13 +108,33 @@
     'End Sub
 
     Protected Sub gvGrid_SelectedIndexChanged(sender As Object, e As EventArgs)
-        '    lblReportDesc.Text = $"Upload New File For : {gvGrid.SelectedRow.Cells(4).Text}"
-        '    If btnUploadTemplate.Enabled = False Then
-        '        btnUploadTemplate.Enabled = True
-        '    End If
+        'lblReportDesc.Text = $"Upload New File For : {gvGrid.SelectedRow.Cells(2).Text}"
+        If btnUploadTemplate.Enabled = False Then
+            btnUploadTemplate.Enabled = True
+        End If
+        FillDropDown(GetSheets(GetFileObject()))
     End Sub
+
+    Private Function GetFileObject()
+        Dim dt As DataTable = GetDataTableFromSQL($"Select * from {xtblMasterData} where BLOBFile_ID={gvGrid.SelectedRow.Cells(1).Text}")
+        Dim FileObj = dt.Rows(0)("FileObject")
+        Return FileObj
+    End Function
 
     Protected Sub btnSearch_Click(sender As Object, e As EventArgs)
         'CreateGrid(txtSearch.Text)
+    End Sub
+
+    Protected Sub btnLoadTables_Click(sender As Object, e As EventArgs)
+        FillDropDown(GetSheets(FileUpload1.FileBytes))
+        SaveToDatabase()
+        CreateGrid("")
+    End Sub
+
+    Private Sub SaveToDatabase()
+        Dim params As New List(Of SqlParameter)
+        params.Add(New SqlParameter("BLOBFile", FileUpload1.FileBytes))
+        params.Add(New SqlParameter("FileName", FileUpload1.FileName))
+        ExecuteProcedure("CMPDB_sp_MasterData", params)
     End Sub
 End Class

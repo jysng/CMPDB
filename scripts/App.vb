@@ -1,8 +1,10 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 Imports System.Net.Mail
+Imports OfficeOpenXml
 
 Module App
+#Region "Excel Common Tasks"
     Public Function ReadFromDB(mReportTempleteCode As String)
         Dim mSystem_generated_report_processing_configurations = "CMPDB_tblsystem_generated_report_processing_configurations"
         Dim mReport_template_lib = "[CMPDB_tblreport_template_lib]"
@@ -33,7 +35,9 @@ Module App
             Return mTemplateData
         End Using
     End Function
+#End Region
 
+#Region "Page Level Security Tasks"
 
     Public Sub GetParentSiteMapNode()
         HttpContext.Current.Session("url") = False
@@ -81,12 +85,13 @@ Module App
         Next
 
     End Sub
+#End Region
 
+#Region "Common MessageBox"
     'Public Sub MessageBox(str As String)
     '    Dim page As Page = HttpContext.Current.Handler
     '    page.ClientScript.RegisterClientScriptBlock(HttpContext.Current.[GetType](), "validation", $"<script language='javascript'>alert('{str}')</script>")
     'End Sub
-
 
     Public Sub MessageBox(str As String)
         Try
@@ -103,7 +108,9 @@ Module App
         Dim page As Page = HttpContext.Current.Handler
         ScriptManager.RegisterStartupScript(page, up.[GetType](), "validation", $"<script language='javascript'>alert('{str}')</script>", False)
     End Sub
+#End Region
 
+#Region "Grid Common Tasks"
     Dim previousSelected As Integer
     Public Sub HighlightRow(gridPractitioner As GridView, e As GridViewCommandEventArgs)
         Dim rows As GridViewRow = DirectCast(DirectCast(e.CommandSource, LinkButton).NamingContainer, GridViewRow)
@@ -118,7 +125,9 @@ Module App
 
     End Sub
 
+#End Region
 
+#Region "Error Logging"
     Public NotInheritable Class Logger
         Private Sub New()
         End Sub
@@ -210,5 +219,7 @@ Module App
             smtp_server.Send(e_mail)
         End Sub
     End Class
+
+#End Region
 End Module
 
