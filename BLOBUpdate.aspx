@@ -47,6 +47,7 @@
                     <asp:ListItem Text="-Select-" Value=""></asp:ListItem>
                     <asp:ListItem Text="Project Table" Value="CMPDB_tblStartupBLOBFiles"></asp:ListItem>
                     <asp:ListItem Text="Plant Table" Value="CMPDB_tblBLOBFiles"></asp:ListItem>
+                    <asp:ListItem Text="Corporate Sources Table" Value="CMPDB_tblCorporateSourcesBLOBFiles"></asp:ListItem>
                 </asp:DropDownList>
                 <asp:RequiredFieldValidator ControlToValidate="ddlTemplateType" InitialValue="" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                 <br />

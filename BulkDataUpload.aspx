@@ -38,7 +38,7 @@
                 <h2> Bulk Data Upload </h2>
             </div>
         </div>
-       <%-- <div class="ContainerOne">
+        <%-- <div class="ContainerOne">
             <div class="col2">
                 <asp:Label ID="Label2" Font-Bold="true" runat="server" Text="Choose BLOB Table:"></asp:Label>
                 <asp:DropDownList ID="ddlTemplateType" AppendDataBoundItems="true" runat="server" AutoPostBack="True">
