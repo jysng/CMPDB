@@ -47,6 +47,7 @@ Public Class BulkDataUpload
         str.Append(",")
         str.Append(mStartupName)
         str.Append(",")
+        str.Append(mProjectName)
 
         lblMessage.Text = str.ToString
         'ExistsInTable(mPlantText, xTblPlants, "Plant_ID", "Plant")

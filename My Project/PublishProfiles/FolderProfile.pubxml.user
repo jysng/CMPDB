@@ -26,16 +26,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/05/2017 09:09:42</publishTime>
     </File>
     <File Include="bin/CMPDSB_DEVIN.dll">
-      <publishTime>08/01/2017 19:49:28</publishTime>
+      <publishTime>08/02/2017 18:43:16</publishTime>
     </File>
     <File Include="bin/CMPDSB_DEVIN.dll.config">
       <publishTime>07/28/2017 21:10:49</publishTime>
     </File>
     <File Include="bin/CMPDSB_DEVIN.pdb">
-      <publishTime>08/01/2017 19:49:28</publishTime>
+      <publishTime>08/02/2017 18:43:16</publishTime>
     </File>
     <File Include="bin/CMPDSB_DEVIN.xml">
-      <publishTime>08/01/2017 19:49:28</publishTime>
+      <publishTime>08/02/2017 18:43:16</publishTime>
     </File>
     <File Include="bin/DocumentFormat.OpenXml.dll">
       <publishTime>07/05/2017 09:09:44</publishTime>
@@ -45,6 +45,36 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>03/08/2017 19:26:22</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.ConnectionInfo.dll">
+      <publishTime>05/17/2017 04:51:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Diagnostics.STrace.dll">
+      <publishTime>04/24/2017 19:33:40</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Dmf.Common.dll">
+      <publishTime>05/17/2017 04:51:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Management.Sdk.Sfc.dll">
+      <publishTime>05/17/2017 04:51:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Management.SmoMetadataProvider.dll">
+      <publishTime>05/17/2017 04:51:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Management.SqlParser.dll">
+      <publishTime>05/17/2017 04:51:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.ServiceBrokerEnum.dll">
+      <publishTime>05/17/2017 04:51:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Smo.dll">
+      <publishTime>05/17/2017 04:51:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.SqlClrProvider.dll">
+      <publishTime>05/17/2017 04:51:54</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.SqlEnum.dll">
+      <publishTime>05/17/2017 04:51:54</publishTime>
     </File>
     <File Include="bin/Microsoft.VisualStudio.CoreUtility.dll">
       <publishTime>06/14/2017 10:00:42</publishTime>
@@ -116,10 +146,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/27/2017 14:51:57</publishTime>
     </File>
     <File Include="Dashboard.aspx">
-      <publishTime>07/05/2017 09:09:40</publishTime>
+      <publishTime>08/02/2017 15:24:09</publishTime>
     </File>
     <File Include="EditMeasures.aspx">
-      <publishTime>07/12/2017 17:08:45</publishTime>
+      <publishTime>08/02/2017 18:12:31</publishTime>
     </File>
     <File Include="ErrorPage.aspx">
       <publishTime>07/11/2017 14:14:59</publishTime>
