@@ -136,8 +136,8 @@
                     </tr>
                 </table>
 
-                <%--<asp:FileUpload ID="fuFile" runat="server" />--%>
-        <asp:Button ID="btnID" Visible="false" runat="server" Text="Genrate Scripts" OnClick="btnID_Click1" />
+                <%--<asp:FileUpload ID="fuFile" runat="server" />
+        <asp:Button ID="btnID" runat="server" Text="Upload" OnClick="btnID_Click" />--%>
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>

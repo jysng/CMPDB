@@ -1718,15 +1718,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.Dashboard._btnID">
-<summary>
-btnID control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:CMPDSB_DEVIN.EditMeasures._upnl">
 <summary>
 upnl control.
