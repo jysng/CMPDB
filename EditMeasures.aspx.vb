@@ -257,7 +257,13 @@ Public Class EditMeasures
                         em.mDateLable.Visible = True
                         em.mlnkbtnFileName.Text = row("SWP_Tool_Name")
                         em.mWorkSheetName.Text = row("Project_WS_Name")
+
+                        If row("cellvalue") Is DBNull.Value Then
+                            row("cellvalue") = ""
+                        End If
                         em.mCellAddress.Text = row("Project_CellAddress")
+                        em.mtxtBox.Text = row("cellvalue")
+
                         em.mlnkbtnFileName.Visible = True
                         em.mlblFileName.Visible = False
                         em.mlnkbtnFileName.CommandArgument = row("startupsBLOBFiles_ID")
