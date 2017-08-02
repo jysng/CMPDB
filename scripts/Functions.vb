@@ -4,7 +4,25 @@ Imports System.Net.Mail
 Imports ClosedXML.Excel
 Imports OfficeOpenXml
 
+
 Module Functions
+    Public xTblNameProduction_Types = "CMPDB_tblProduction_Types"
+    Public xTblNameBusiness_Unit = "CMPDB_tblBusiness_Unit"
+    Public xTblNamePlatforms = "CMPDB_tblPlatforms"
+    Public xTblNameProject_Types = "CMPDB_tblProject_Types"
+    Public xTblNameChange_Types = "CMPDB_tblChange_Types"
+    Public xTblNameSWP = "CMPDB_tblSWP"
+    Public xTblNamePractitioner_Roles = "CMPDB_tblPractitioner_Roles"
+    Public xTblNameQualification_Level = "CMPDB_tblQualification_Level"
+    Public xTblcmpdb_ComplexityLevel = "CMPDB_tblComplexityLevel"
+    Public xTblcmpdb_CorporateSources = "CMPDB_tblCorporateSources"
+    Public xtblSWPToolName = "CMPDB_tblSWP_Tool_Names"
+    Public xTblBLOBFiles = "CMPDB_tblBLOBFiles"
+    Public xTblRegion = "CMPDB_tblRegion"
+    Public xTblQualification = "CMPDB_tblQualification_Level"
+    Public xTblPlants = "CMPDB_tblPlants"
+    Public xTblPLantsAssoBU = "CMPDB_tblBUPlant"
+
     'Public Const strConnectionString As String = "Data Source=BDC-SQLP044\DRNAP4415;Initial Catalog=MSO_Forecast;Persist Security Info=True;User ID=FCS_Admin;Password=t0day@123"
     'Public Const strConnectionString As String = "Data Source=sitecoresql;Initial Catalog=MSO_Forecast;Persist Security Info=True;User ID=FCS_User;Password=t0day@123"
     Public strConnectionString As String = ConfigurationManager.ConnectionStrings("constr").ConnectionString
@@ -746,6 +764,7 @@ Module Functions
     End Function
 
     Public Function ReadCellValueFromWorkSheetNameAndAddContentToCell(excel As Byte(), excelTabName As String, excelCellAddress As String, cellContent As String)
+        ' excelCellAddress = ""
         Dim buffer() As Byte = excel
         Dim lst As New List(Of Object)
         Dim excelStream As New MemoryStream()

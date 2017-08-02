@@ -144,7 +144,7 @@ Public Class AdministratorPlant
         txtCellEWPTracker.Text = dt.Rows(5)("cell").ToString()
         txtCellGSUM_IAP.Text = dt.Rows(6)("cell").ToString()
         txtCellRE_Implementation.Text = dt.Rows(7)("cell").ToString()
-        txtCellGSUM_PRRA.Text = dt.Rows(8)("cell").ToString()
+        'txtCellGSUM_PRRA.Text = dt.Rows(8)("cell").ToString()
 
 
         txtGsumSmallWS.Text = dt.Rows(0)("cname").ToString()
@@ -155,7 +155,7 @@ Public Class AdministratorPlant
         txtEWPTracker.Text = dt.Rows(5)("cname").ToString()
         txtGSUM_IAP.Text = dt.Rows(6)("cname").ToString()
         txtRE_Implementation.Text = dt.Rows(7)("cname").ToString()
-        txtGSUM_PRRA.Text = dt.Rows(8)("cname").ToString()
+        'txtGSUM_PRRA.Text = dt.Rows(8)("cname").ToString()
 
 
         lblfuGsumSmallWS.Text = dt.Rows(0)("fname").ToString()
@@ -191,9 +191,9 @@ Public Class AdministratorPlant
         'lbl_file_fuRE_Implementation.ID = lbl_file_fuRE_Implementation.ID + " " + dt.Rows(7)("tid").ToString()
         listBlob.Add(New KeyValuePair(Of String, Integer)(dt.Rows(7)("fname").ToString(), dt.Rows(7)("fid").ToString()))
 
-        lbl_file_fuGSUM_PRRA.Text = dt.Rows(8)("fname").ToString()
+        'lbl_file_fuGSUM_PRRA.Text = dt.Rows(8)("fname").ToString()
         'lbl_file_fuGSUM_PRRA.ID = lbl_file_fuGSUM_PRRA.ID + " " + dt.Rows(8)("tid").ToString()
-        listBlob.Add(New KeyValuePair(Of String, Integer)(dt.Rows(8)("fname").ToString(), dt.Rows(8)("fid").ToString()))
+        'listBlob.Add(New KeyValuePair(Of String, Integer)(dt.Rows(8)("fname").ToString(), dt.Rows(8)("fid").ToString()))
 
         Session("Blobfile") = listBlob
 

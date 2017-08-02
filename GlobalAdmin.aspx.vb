@@ -8,22 +8,7 @@ Public Class GlobalAdmin
 #Region "Variables"
     Dim xUpdateImagePath = "~/images/Update.png"
     Dim xAddImagePath = "~/images/Add.png"
-    Dim xTblNameProduction_Types = "CMPDB_tblProduction_Types"
-    Dim xTblNameBusiness_Unit = "CMPDB_tblBusiness_Unit"
-    Dim xTblNamePlatforms = "CMPDB_tblPlatforms"
-    Dim xTblNameProject_Types = "CMPDB_tblProject_Types"
-    Dim xTblNameChange_Types = "CMPDB_tblChange_Types"
-    Dim xTblNameSWP = "CMPDB_tblSWP"
-    Dim xTblNamePractitioner_Roles = "CMPDB_tblPractitioner_Roles"
-    Dim xTblNameQualification_Level = "CMPDB_tblQualification_Level"
-    Dim xTblcmpdb_ComplexityLevel = "CMPDB_tblComplexityLevel"
-    Dim xTblcmpdb_CorporateSources = "CMPDB_tblCorporateSources"
-    Dim xtblSWPToolName = "CMPDB_tblSWP_Tool_Names"
-    Dim xTblBLOBFiles = "CMPDB_tblBLOBFiles"
-    Dim xTblRegion = "CMPDB_tblRegion"
-    Dim xTblQualification = "CMPDB_tblQualification_Level"
-    Dim xTblPlants = "CMPDB_tblPlants"
-    Dim xTblPLantsAssoBU = "CMPDB_tblBUPlant"
+
 
 #End Region
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load

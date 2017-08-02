@@ -1,4 +1,8 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
+Imports Microsoft.SqlServer.Management.Sdk.Sfc
+
+Imports Microsoft.SqlServer.Management.Smo
 
 Public Class Dashboard
     Inherits System.Web.UI.Page
@@ -62,6 +66,83 @@ Public Class Dashboard
     End Sub
 
     Protected Sub BtnReports_Click(sender As Object, e As EventArgs)
+
         Response.Redirect("Report.aspx")
     End Sub
+
+    Protected Sub btnID_Click1(sender As Object, e As EventArgs)
+        Dim var = GenrateScripts()
+        File.AppendAllText(Server.MapPath("~/Jai2.sql"), var, Encoding.UTF8)
+    End Sub
+
+    Private Function GenrateScripts()
+        ' Connect to the local, default instance of SQL Server. 
+        Dim str = "sitecoresql"
+        Dim srv As New Server(str)
+
+        ' Reference the database.  
+        Dim db As Database = srv.Databases("cmpdb_dev")
+
+        Dim scrp As New Scripter(srv)
+        scrp.Options.ScriptDrops = True
+        scrp.Options.WithDependencies = True
+        scrp.Options.Indexes = True
+        ' To include indexes
+        scrp.Options.DriAllConstraints = True
+        ' to include referential constraints in the script
+        scrp.Options.Triggers = True
+        scrp.Options.FullTextIndexes = True
+        scrp.Options.NoCollation = False
+        scrp.Options.Bindings = True
+        scrp.Options.IncludeIfNotExists = False
+        scrp.Options.ScriptBatchTerminator = True
+        scrp.Options.ExtendedProperties = True
+        scrp.Options.DriForeignKeys = False
+        scrp.Options.ScriptData = True
+
+        scrp.PrefetchObjects = True
+        ' some sources suggest this may speed things up
+        Dim urns = New List(Of Urn)()
+
+        ' Iterate through the tables in database and script each one   
+        For Each tb As Table In db.Tables
+            ' check if the table is not a system table
+            If tb.IsSystemObject = False Then
+                urns.Add(tb.Urn)
+            End If
+        Next
+
+        ' Iterate through the views in database and script each one. Display the script.   
+        For Each view As View In db.Views
+            ' check if the view is not a system object
+            If view.IsSystemObject = False Then
+                urns.Add(view.Urn)
+            End If
+        Next
+
+        ' Iterate through the stored procedures in database and script each one. Display the script.   
+        For Each sp As StoredProcedure In db.StoredProcedures
+            ' check if the procedure is not a system object
+            If sp.IsSystemObject = False Then
+                urns.Add(sp.Urn)
+            End If
+        Next
+
+
+
+        Dim builder As New StringBuilder()
+        Dim sc As System.Collections.Specialized.StringCollection = scrp.Script(urns.ToArray())
+        For Each st As String In sc
+            ' It seems each string is a sensible batch, and putting GO after it makes it work in tools like SSMS.
+            ' Wrapping each string in an 'exec' statement would work better if using SqlCommand to run the script.
+            builder.AppendLine(st)
+            builder.AppendLine("GO")
+        Next
+
+
+
+
+        Return builder.ToString()
+
+    End Function
 End Class
