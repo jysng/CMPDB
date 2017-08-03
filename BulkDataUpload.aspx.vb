@@ -16,40 +16,42 @@ Public Class BulkDataUpload
     End Sub
 
     Protected Sub btnUploadTemplate_Click(sender As Object, e As EventArgs) Handles btnUploadTemplate.Click
-        ' ReadFromDB()
-        'FromExcelToTable(ddlTemplateType.SelectedItem.Text, GetFileObject, True)
-        Dim mFileObj = GetFileObject()
-        Dim mSheetName = ddlTemplateType.SelectedItem.Text
-        Dim mPlantText = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "A15")
+        '' ReadFromDB()
+        ''FromExcelToTable(ddlTemplateType.SelectedItem.Text, GetFileObject, True)
+        'Dim mFileObj = GetFileObject()
+        'Dim mSheetName = ddlTemplateType.SelectedItem.Text
+        'Dim mPlantText = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "A15")
 
-        Dim mProjectName = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "B15")
-        Dim mStartupName = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "C15")
-        Dim mAllInChange = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "D15")
-        Dim mBU = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "G15")
-        Dim mPlatform = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "H15")
-        Dim mLeadingDepartment = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "K15")
-        Dim mProductionLine = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "L15")
-        Dim mProjectType = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "M15")
-        Dim mChangeType = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "N15")
-        Dim mCBN = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "O15")
-        Dim mSUL = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "Q15")
-        Dim mProjectLevelComplexity = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "T15")
-        Dim mQualificationLevel = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "U15")
+        'Dim mProjectName = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "B15")
+        'Dim mStartupName = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "C15")
+        'Dim mAllInChange = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "D15")
+        'Dim mBU = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "G15")
+        'Dim mPlatform = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "H15")
+        'Dim mLeadingDepartment = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "K15")
+        'Dim mProductionLine = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "L15")
+        'Dim mProjectType = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "M15")
+        'Dim mChangeType = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "N15")
+        'Dim mCBN = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "O15")
+        'Dim mSUL = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "Q15")
+        'Dim mProjectLevelComplexity = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "T15")
+        'Dim mQualificationLevel = ReadCellValueFromWorkSheetName(mFileObj, mSheetName, "U15")
 
-        'If ExistsInTable(mPlantText) Then
+        ''If ExistsInTable(mPlantText) Then
 
-        'End If
-        Dim str As New StringBuilder
+        ''End If
+        'Dim str As New StringBuilder
 
 
-        mPlantText = ExistsInTable(mPlantText, xTblPlants, "Plant_ID", "Plant")
-        str.Append(mPlantText)
-        str.Append(",")
-        str.Append(mStartupName)
-        str.Append(",")
+        'mPlantText = ExistsInTable(mPlantText, xTblPlants, "Plant_ID", "Plant")
+        'str.Append(mPlantText)
+        'str.Append(",")
+        'str.Append(mStartupName)
+        'str.Append(",")
 
-        lblMessage.Text = str.ToString
+        'lblMessage.Text = str.ToString
         'ExistsInTable(mPlantText, xTblPlants, "Plant_ID", "Plant")
+        FromExcelToTable("temp_proj", FileUpload1.FileBytes, False)
+
 
     End Sub
 
