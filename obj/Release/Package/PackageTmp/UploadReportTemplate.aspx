@@ -76,7 +76,7 @@
               </div>
 
        <div class="ContainerOne">
-           <asp:GridView CssClass="table" OnRowCommand="gvGrid_RowCommand" AutoGenerateColumns="true" ID="gvGrid" runat="server" EmptyDataText="No records found for the selected builder"  AllowSorting="true" ShowHeader="true"  >
+           <asp:GridView CssClass="table" OnRowCommand="gvGrid_RowCommand" AutoGenerateColumns="false" ID="gvGrid" runat="server" EmptyDataText="No records found."  AllowSorting="true" ShowHeader="true"  >
                         <Columns>
                             <asp:BoundField DataField="Lib_ref_ID" HeaderText="ID" />
                            <asp:TemplateField HeaderText="Download Here">  
@@ -85,6 +85,7 @@
                                             CommandName="Download" Text='<%# Eval("application") %>' />  
                                     </ItemTemplate>  
                                 </asp:TemplateField>  
+                            <asp:BoundField DataField="Report_code" HeaderText="Report Type" />
                             <asp:BoundField DataField="Report_Desc" HeaderText="Report Desc" />
                             <asp:BoundField DataField="UpdateDate" HeaderText="Update Date" />
                             <asp:BoundField DataField="CreateDate" HeaderText="Create Date" />

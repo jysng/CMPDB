@@ -98,7 +98,7 @@ Public Class UploadReportTemplate
 
     Private Function CreateGrid() As DataTable
         Try
-            CreateGrid = GetDataTableFromSQL("select r.Lib_ref_id,application,report_desc,UpdateDate,CreateDate from CMPDB_tblreport_template_lib r join CMPDB_tblsystem_generated_report_processing_configurations s on r.lib_ref_id=s.report_template_id")
+            CreateGrid = GetDataTableFromSQL("select Report_code,r.Lib_ref_id,application,report_desc,UpdateDate,CreateDate from CMPDB_tblreport_template_lib r join CMPDB_tblsystem_generated_report_processing_configurations s on r.lib_ref_id=s.report_template_id")
             gvGrid.DataSource = CreateGrid
             gvGrid.DataBind()
         Catch ex As Exception

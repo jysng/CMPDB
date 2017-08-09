@@ -48,11 +48,14 @@ Public Class BulkDataUpload
         'str.Append(mStartupName)
         'str.Append(",")
 
-        'lblMessage.Text = str.ToString
+        'lblMessage.Text = sBtr.ToString
         'ExistsInTable(mPlantText, xTblPlants, "Plant_ID", "Plant")
-        FromExcelToTable("temp_proj", FileUpload1.FileBytes, False)
-
-
+        ' Dim file = FileUpload1.FileBytes
+        'SaveToDatabase()
+        FromExcelToTable("temp_proj", GetFileObject, True)
+        FromExcelToTable("temp_Practioner", GetFileObject, True)
+        ExecuteProc("CMPDB_sp_InsertBulkDataPractionerMain")
+        ExecuteProc("CMPDB_sp_InsertBulkDataProjectMain")
     End Sub
 
     Private Function ExistsInTable(mPlantText As String, mTableName As String, mColumnName As String, mColumnNameWhere As String) As String
