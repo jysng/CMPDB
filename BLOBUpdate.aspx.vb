@@ -24,12 +24,11 @@ Public Class BLOBUpdate
     Protected Sub btnUploadTemplate_Click(sender As Object, e As EventArgs) Handles btnUploadTemplate.Click
         Try
             UploadToDB(FileUpload1)
+            CreateGrid("")
             ' UpdateReportConfigTable()
-
         Catch ex As Exception
             Response.Write(ex)
         End Try
-
     End Sub
 
     Private Sub UpdateReportConfigTable()
@@ -113,7 +112,6 @@ Public Class BLOBUpdate
             Dim filename = DirectCast(dt.Rows(0)("FileName"), String)
             'Put excel as bytes array into memory stream
             Dim ms As New MemoryStream(bytes)
-
             DownloadFileFromMemoryStream(ms, filename)
         End If
 

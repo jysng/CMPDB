@@ -105,7 +105,7 @@ Public Class Admin_Project
         End If
     End Sub
 
-    Protected Sub BtnSetTargetsandMilestones_Click(sender As Object, e As EventArgs) Handles BtnSetTargetsandMilestones.Click, btnSave.Click
+    Protected Sub BtnSetTargetsandMilestones_Click(sender As Object, e As EventArgs) Handles BtnSetTargetsandMilestones.Click
         Dim params As New List(Of SqlParameter)
 
         Dim Str = (GetSingleValue("select Plant from CMPDB_tblStartups where Plant=" + DdlPlantsInsert.SelectedItem.Value))
@@ -636,5 +636,9 @@ Public Class Admin_Project
 
         Dim SULID = GetSingleValue("select max(Practitioner_ID) from CMPDB_tblPractitioner")
         DdlSUL.SelectedValue = SULID
+    End Sub
+
+    Private Sub gdvSrch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gdvSrch.SelectedIndexChanged
+
     End Sub
 End Class

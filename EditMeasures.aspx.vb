@@ -133,7 +133,6 @@ Public Class EditMeasures
         params.Add(New SqlParameter("@Type", "D"))
         Dim dtMeasures As DataTable = ExecuteProcedureForDataTable("CMPDB_sp_GetProcessMeasures", params)
 
-
         If dtMeasures.Rows.Count > 0 Then
             Dim bytes() As Byte = CType(dtMeasures.Rows(0)("FileObject"), Byte())
             download(bytes, dtMeasures.Rows(0)("filename").ToString())
@@ -336,8 +335,8 @@ Public Class EditMeasures
     Private Sub SaveMeasuresValues()
 
         Dim params As New List(Of SqlParameter)
-        Dim mb As New System.Text.StringBuilder
-        Dim sb As New System.Text.StringBuilder
+        Dim mb As New StringBuilder
+        Dim sb As New StringBuilder
 
         mb.AppendLine("<?xml version=""1.0"" ?>")
         sb.AppendLine("<?xml version=""1.0"" ?>")

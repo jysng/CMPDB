@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 Imports System.Net.Mail
-Imports OfficeOpenXml
 
 Module App
 #Region "Excel Common Tasks"
@@ -157,8 +156,8 @@ Module App
             Dim user_id = HttpContext.Current.Session("User_ID")
             Log.[Error](ex.Message, ex)
 
-            Dim ToEmailID = "vaishali.pareek027@gmail.com"
-            Dim CCEmailID = "vaishali.pareek027@gmail.com"
+            Dim ToEmailID = "jmsingh@corbus.com"
+            Dim CCEmailID = "jmsingh@corbus.com"
             Dim Subject = "this is test"
             Dim Body = "Hi this is test"
 
