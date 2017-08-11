@@ -34,6 +34,15 @@ Module App
             Return mTemplateData
         End Using
     End Function
+
+    Public Function AppendCustomDataToExcel(file1 As Object, mBLOBFile As String, FileName As String, mTableName As String) As Object
+        '
+        file1 = WriteToExcelCell1(file1, mBLOBFile, "ConnectSheet", "A2")
+        file1 = WriteToExcelCell1(file1, mTableName, "ConnectSheet", "F2")
+        file1 = WriteToExcelCell1(file1, FileName, "ConnectSheet", "G2")
+        Return file1
+    End Function
+
 #End Region
 
 #Region "Page Level Security Tasks"

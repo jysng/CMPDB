@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+
 Public Class GlobalAdmin
     Inherits System.Web.UI.Page
     Dim pages As Page
@@ -759,24 +760,17 @@ Public Class GlobalAdmin
 
     Protected Sub lnkbtnFileName_click(sender As Object, e As EventArgs) Handles lnkbtnFileName.Click
 
-        Dim dt As DataTable = GetDataTableFromSQL("Select a.filename, a.FileObject, a.FileUploaded from CMPDB_tblCorporateSourcesBLOBFiles a
+        Dim dt As DataTable = GetDataTableFromSQL("Select a.filename, a.FileObject, a.FileUploaded,a.BLOBFile_ID from CMPDB_tblCorporateSourcesBLOBFiles a
 							inner join CMPDB_tblCorporateSources b  on a.BLOBFile_ID = b.BLOBFile_ID where a.FileName='" + lnkbtnFileName.Text + "' and b.Corporate_Cell_Location_For_Score ='" + txtCorporate_Cell_Location_For_Score.Text + "'	and b.Corporate_WS_Name='" + txtCorporate_WS_Name.Text + "' ")
         If dt.Rows.Count > 0 Then
-            download(dt)
+            Dim mBLOBFile = dt.Rows(0)("BLOBFile_ID")
+            Dim File1 = dt.Rows(0)("FileObject")
+            'Append Table name BLOB ID and File Name to the template Excel File
+            Dim FileName = dt.Rows(0)("FileName")
+            File1 = AppendCustomDataToExcel(File1, mBLOBFile, FileName, "CMPDB_tblCorporateSourcesBLOBFiles")
+            download(File1, dt.Rows(0)("FileName"))
         End If
     End Sub
-    Protected Sub download(ByVal dt As DataTable)
-        Dim bytes() As Byte = CType(dt.Rows(0)("FileObject"), Byte())
-        Response.Buffer = True
-        Response.Charset = ""
-        Response.Cache.SetCacheability(HttpCacheability.NoCache)
-        Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-        Response.AddHeader("content-disposition", "attachment;filename=" & dt.Rows(0)("filename").ToString())
-        Response.BinaryWrite(bytes)
-        Response.Flush()
-        Response.End()
-    End Sub
-
     Protected Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
         fuCorporate_Standard_File.Attributes.Add("style", "display:block")
         lnkbtnFileName.Visible = False

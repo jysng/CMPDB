@@ -749,21 +749,41 @@ Module Functions
         End Using
     End Function
 
-    Private Function WriteToExcelCell(ByRef pck As ExcelPackage, cellContent As String)
+    Public Function WriteToExcelCell(excel As Byte(), cellContent As String, cellExcelTabName As String, contentAddress As String)
         Dim consh As ExcelWorksheet
-        If pck.Workbook.Worksheets("ConnectSheet") Is Nothing Then
-            consh = pck.Workbook.Worksheets.Add("ConnectSheet")
+        Dim excelStream As New MemoryStream()
+        excelStream.Write(excel, 0, excel.Length)
+        Dim exlpck As New ExcelPackage(excelStream)
+        If exlpck.Workbook.Worksheets(cellExcelTabName) Is Nothing Then
+            consh = exlpck.Workbook.Worksheets.Add(cellExcelTabName)
         Else
-            consh = pck.Workbook.Worksheets("ConnectSheet")
+            consh = exlpck.Workbook.Worksheets(cellExcelTabName)
         End If
-
-        consh.Cells("A2").Value = cellContent
-        pck.Save()
-        Dim s = New MemoryStream(pck.GetAsByteArray())
+        consh.Cells(contentAddress).Value = cellContent
+        exlpck.Save()
+        Dim s = New MemoryStream(exlpck.GetAsByteArray())
         Return s
     End Function
 
-    Public Function ReadCellValueFromWorkSheetNameAndAddContentToCell(excel As Byte(), excelTabName As String, excelCellAddress As String, cellContent As String)
+
+
+    Public Function WriteToExcelCell1(excel As Byte(), cellContent As String, cellExcelTabName As String, contentAddress As String)
+        Dim consh As ExcelWorksheet
+        Dim excelStream As New MemoryStream()
+        excelStream.Write(excel, 0, excel.Length)
+        Dim exlpck As New ExcelPackage(excelStream)
+        If exlpck.Workbook.Worksheets(cellExcelTabName) Is Nothing Then
+            consh = exlpck.Workbook.Worksheets.Add(cellExcelTabName)
+        Else
+            consh = exlpck.Workbook.Worksheets(cellExcelTabName)
+        End If
+        consh.Cells(contentAddress).Value = cellContent
+        exlpck.Save()
+        Return exlpck.GetAsByteArray()
+
+    End Function
+
+    Public Function ReadCellValueFromWorkSheetNameAndAddContentToCell(excel As Byte(), dataAppendSheet As String, dataAppendCellAddress As String, excelTabName As String, excelCellAddress As String, cellContent As String)
         ' excelCellAddress = ""
         Dim buffer() As Byte = excel
         Dim lst As New List(Of Object)
@@ -775,7 +795,8 @@ Module Functions
             If ws IsNot Nothing Then
                 Dim val = ws.Cells(excelCellAddress).Text
                 lst.Add(val)
-                lst.Add(WriteToExcelCell(pck, cellContent))
+                'Write to connect sheet
+                lst.Add(WriteToExcelCell(excel, cellContent, dataAppendSheet, dataAppendCellAddress))
                 Return lst
             Else
                 Return Nothing
@@ -783,6 +804,8 @@ Module Functions
             End If
         End Using
     End Function
+
+
 
     ''' <summary>
     ''' Get total sheets 

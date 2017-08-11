@@ -710,13 +710,12 @@ Public Class AdministratorPlant
         End If
         Dim mQry = ""
         If RadioButtonUseCorporate.Checked Then
-            mQry = $"select crtnid.SWP_Tool_Name_ID,tfile.filename,tfile.FileObject,tfile.FileUploaded from  
+            mQry = $"select crtnid.SWP_Tool_Name_ID,crtnid.BLOBFile_ID,tfile.filename,tfile.FileObject,tfile.FileUploaded from  
                     CMPDB_tblCorporateSourcesBLOBFiles tfile inner join CMPDB_tblCorporateSources crtnid 
                     on tfile.BLOBFile_ID=crtnid.SWP_Tool_Name_ID  where crtnid.SWP_Tool_Name_ID='{id}'"
         Else
             mQry = $"SELECT 
-                    crtnid.SWP_Tool_Name_ID,tfile.filename,tfile.FileObject,tfile.FileUploaded 
-                    FROM 
+                    crtnid.SWP_Tool_Name_ID,tfile.filename,crtnid.BLOBFile_ID,tfile.FileObject,tfile.FileUploaded FROM 
                     CMPDB_tblBLOBFiles tfile inner join 
                     CMPDB_tblSource_Files crtnid ON 
                     tfile.BLOBFile_ID=crtnid.BLOBFile_ID
@@ -725,6 +724,9 @@ Public Class AdministratorPlant
         Dim dt As DataTable = GetDataTableFromSQL(mQry)
         If dt.Rows.Count > 0 Then
             Dim bytes() = CType(dt.Rows(0)("FileObject"), Byte())
+            Dim mFileName = dt.Rows(0)("filename")
+            Dim mBLOBFileID = dt.Rows(0)("BLOBFile_ID")
+            bytes = AppendCustomDataToExcel(bytes, mBLOBFileID, mFileName, "CMPDB_tblBLOBFiles")
             download(bytes, dt.Rows(0)("filename").ToString())
         End If
     End Sub

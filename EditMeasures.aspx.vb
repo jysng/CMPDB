@@ -152,9 +152,7 @@ Public Class EditMeasures
                 Dim list As KeyValuePair(Of String, Integer) = New KeyValuePair(Of String, Integer)(lblAssaignedto.Text, MeasuresEditid)
                 Session("projectID") = list
                 FillData(MeasuresEditid)
-
             End If
-
         End If
     End Sub
     Protected Sub gridProjects_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles gridProjects.RowDataBound
@@ -192,8 +190,6 @@ Public Class EditMeasures
         btnMileStone.Enabled = True
         btnAcceptUpdate.Enabled = True
     End Sub
-
-
 
 
     Private Sub GetMeasuresValues(mStartupID As String, ParamArray mEditMeasursesData() As EditMeasuresData)
@@ -242,8 +238,13 @@ Public Class EditMeasures
                         list.Add(row("SWP_Tool_Name_ID"))
 
                         Session("SaveList") = list
-
-                        Dim lst As List(Of Object) = ReadCellValueFromWorkSheetNameAndAddContentToCell(row("FileObject"), row("Project_WS_Name"), row("Project_CellAddress"), row("BLOBFile_ID"))
+                        ' Append Value in excel and using
+                        Dim lst As List(Of Object) = ReadCellValueFromWorkSheetNameAndAddContentToCell(row("FileObject"),
+                                                                                                       "ConnectSheet",
+                                                                                                       "A2",
+                                                                                                       row("Project_WS_Name"),
+                                                                                                       row("Project_CellAddress"),
+                                                                                                       row("BLOBFile_ID"))
                         em.mtxtBox.Text = lst(0)
 
                         paramsNew.Add(New SqlParameter("@Table_Name", "CMPDB_tblStartupBLOBFiles"))

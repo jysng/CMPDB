@@ -112,7 +112,8 @@ Public Class BLOBUpdate
             Dim filename = DirectCast(dt.Rows(0)("FileName"), String)
             'Put excel as bytes array into memory stream
             Dim ms As New MemoryStream(bytes)
-            DownloadFileFromMemoryStream(ms, filename)
+            bytes = AppendCustomDataToExcel(bytes, e.CommandArgument, filename, ddlTemplateType.Text)
+            download(bytes, filename)
         End If
 
     End Sub

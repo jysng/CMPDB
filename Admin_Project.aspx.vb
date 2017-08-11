@@ -280,11 +280,9 @@ Public Class Admin_Project
                     cblGSUM.Items.FindByValue(j).Selected = True
                 Next
             End If
-
             Dim list As KeyValuePair(Of String, Integer) = New KeyValuePair(Of String, Integer)(txtstartupName.Text, Startup_ID)
             Session("projectID") = list
             btnMileStone.Enabled = True
-
             btnSave.Text = "Update"
         End If
     End Sub
