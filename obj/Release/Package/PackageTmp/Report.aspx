@@ -94,10 +94,10 @@
 
                             <Columns>
                                 <asp:BoundField DataField="Date" HeaderText="Last Update" />
-                                <asp:BoundField DataField="In_All_Change" HeaderText="In All Change" />
+                                <%--<asp:BoundField DataField="In_All_Change" HeaderText="In All Change" />--%>
                                 <asp:BoundField DataField="Startup_Name" HeaderText="Startup Name" />
                                 <asp:BoundField DataField="Production_Line" HeaderText="Production Line" />
-                                <asp:BoundField DataField="Business_Unit" HeaderText="Business Unit" />
+                                <%--<asp:BoundField DataField="Business_Unit" HeaderText="Business Unit" />--%>
                                 <asp:BoundField DataField="Email" HeaderText="Practioner" />
                                 <asp:BoundField DataField="Qualification_Level" HeaderText="Qualification Level" />
                                 <asp:BoundField DataField="Project_Status" HeaderText="Status" />

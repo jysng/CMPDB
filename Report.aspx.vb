@@ -94,7 +94,7 @@ Public Class Report
         Else
             params.Add(New SqlParameter("@plant", DBNull.Value))
         End If
-        params.Add(New SqlParameter("@gridtype", "A"))
+        params.Add(New SqlParameter("@gridtype", "E"))
         Dim dt As DataTable = ExecuteProcedureForDataTable(ViewState("storedproc"), params)
         If dt.Rows.Count > 0 Then
             grdReport.DataSource = dt

@@ -43,20 +43,20 @@
                 <h2> Bulk Data Upload </h2>
             </div>
         </div>
-         <div class="ContainerOne">
+         <%--<div class="ContainerOne">
             <div class="col2">
                 <asp:Label ID="Label2" Font-Bold="true" runat="server" Text="Choose Master Table:"></asp:Label>
-                <asp:DropDownList ID="ddlTemplateType" AppendDataBoundItems="true" runat="server" AutoPostBack="True">
+             <asp:DropDownList ID="ddlTemplateType" AppendDataBoundItems="true" runat="server" AutoPostBack="True">
                     <asp:ListItem Text="-Select-" Value=""></asp:ListItem>
                 </asp:DropDownList>
-                <%--<asp:RequiredFieldValidator ControlToValidate="ddlTemplateType" InitialValue="" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>--%>
+                <asp:RequiredFieldValidator ControlToValidate="ddlTemplateType" InitialValue="" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
                 <br />
                 <br />
                 <asp:Label Font-Bold="true" ID="lblReportDesc" runat="server" Text=""></asp:Label>
 
             </div>
 
-        </div>
+        </div>--%>
         <div class="ContainerOne">
             <div class="col1">
                 <asp:Label ID="Label1" Font-Bold="true" runat="server" Text="Choose Template :"></asp:Label>
@@ -65,7 +65,7 @@
                 <asp:FileUpload ID="FileUpload1" runat="server" />
             </div>
             <div class="col1">
-                <asp:Button runat="server" OnClick="btnLoadTables_Click" ID="btnLoadTables" Text="Load Tables" />
+                <asp:Button runat="server" Visible="false" OnClick="btnLoadTables_Click" ID="btnLoadTables" Text="Load Tables" />
             </div>
         </div>
 

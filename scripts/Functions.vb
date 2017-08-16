@@ -558,6 +558,8 @@ Module Functions
         HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache)
         HttpContext.Current.Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         HttpContext.Current.Response.AddHeader("content-disposition", "attachment;filename=" & mfileName)
+        HttpContext.Current.Response.ContentEncoding = Encoding.GetEncoding(1252)
+
         HttpContext.Current.Response.BinaryWrite(bytes)
         HttpContext.Current.Response.Flush()
         HttpContext.Current.Response.End()

@@ -1,5 +1,4 @@
-﻿Imports System.Data.SqlClient
-Imports System.IO
+﻿Imports System.IO
 
 Public Class BulkDataUpload
     Inherits System.Web.UI.Page
@@ -7,12 +6,12 @@ Public Class BulkDataUpload
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         GetParentSiteMapNode()
         If Not IsPostBack Then
-            CreateGrid("")
+            ' CreateGrid("")
         End If
     End Sub
 
     Private Sub FillDropDown(dt As DataTable)
-        PopulateDDFromDataTable(ddlTemplateType, dt)
+        ' PopulateDDFromDataTable(ddlTemplateType, dt)
     End Sub
 
     Protected Sub btnUploadTemplate_Click(sender As Object, e As EventArgs) Handles btnUploadTemplate.Click
@@ -52,8 +51,13 @@ Public Class BulkDataUpload
         'ExistsInTable(mPlantText, xTblPlants, "Plant_ID", "Plant")
         ' Dim file = FileUpload1.FileBytes
         'SaveToDatabase()
-        FromExcelToTable("temp_proj", GetFileObject, True)
-        FromExcelToTable("temp_Practioner", GetFileObject, True)
+        'FromExcelToTable("temp_proj", GetFileObject, True)
+        'FromExcelToTable("temp_Practioner", GetFileObject, True)
+        'ExecuteProc("CMPDB_sp_InsertBulkDataPractionerMain")
+        'ExecuteProc("CMPDB_sp_InsertBulkDataProjectMain")
+
+        FromExcelToTable("temp_proj", FileUpload1.FileBytes, True)
+        FromExcelToTable("temp_Practioner", FileUpload1.FileBytes, True)
         ExecuteProc("CMPDB_sp_InsertBulkDataPractionerMain")
         ExecuteProc("CMPDB_sp_InsertBulkDataProjectMain")
     End Sub
@@ -118,9 +122,9 @@ Public Class BulkDataUpload
     End Sub
 
     Protected Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
-        ddlTemplateType.SelectedIndex = 0
+        '  ddlTemplateType.SelectedIndex = 0
         lblMessage.Text = ""
-        lblReportDesc.Text = ""
+        'lblReportDesc.Text = ""
     End Sub
 
     Private Function CreateGrid(key As String) As DataTable
@@ -172,15 +176,15 @@ Public Class BulkDataUpload
     End Sub
 
     Protected Sub btnLoadTables_Click(sender As Object, e As EventArgs)
-        FillDropDown(GetSheets(FileUpload1.FileBytes))
-        SaveToDatabase()
-        CreateGrid("")
+        'FillDropDown(GetSheets(FileUpload1.FileBytes))
+        'SaveToDatabase()
+        'CreateGrid("")
     End Sub
 
     Private Sub SaveToDatabase()
-        Dim params As New List(Of SqlParameter)
-        params.Add(New SqlParameter("BLOBFile", FileUpload1.FileBytes))
-        params.Add(New SqlParameter("FileName", FileUpload1.FileName))
-        ExecuteProcedure("CMPDB_sp_MasterData", params)
+        'Dim params As New List(Of SqlParameter)
+        'params.Add(New SqlParameter("BLOBFile", FileUpload1.FileBytes))
+        'params.Add(New SqlParameter("FileName", FileUpload1.FileName))
+        'ExecuteProcedure("CMPDB_sp_MasterData", params)
     End Sub
 End Class

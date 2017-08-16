@@ -874,6 +874,7 @@
             <asp:PostBackTrigger ControlID="lbl_file_fuGSUM_IAP" />
             <asp:PostBackTrigger ControlID="lbl_file_fuRE_Implementation" />
             <asp:PostBackTrigger ControlID="lbl_file_fuGSUM_PRRA" />
+            <asp:PostBackTrigger ControlID="lbl_file_fuGSUMPRWS" />
         </Triggers>
     </asp:UpdatePanel>
 </asp:Content>
