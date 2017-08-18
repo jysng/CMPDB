@@ -103,3 +103,4 @@ D:\corbus\CMPDB\CMPDB\obj\Debug\CMPDSB_DEVIN.dll
 D:\corbus\CMPDB\CMPDB\obj\Debug\CMPDSB_DEVIN.xml
 D:\corbus\CMPDB\CMPDB\obj\Debug\CMPDSB_DEVIN.pdb
 D:\corbus\CMPDB\CMPDB\obj\Debug\CMPDSB_DEVIN.vbprojResolveAssemblyReference.cache
+D:\corbus\CMPDB\CMPDB\bin\PoorMansTSqlFormatterLib35.dll

@@ -158,18 +158,63 @@ Public Class Report
         End Using
     End Function
 
+    Private Function ReadFromDBbytes()
+
+        Dim bytes As Byte()
+        Dim fileName As String, contentType As String
+
+
+        Dim con As New SqlConnection(strConnectionString)
+
+        con.Open()
+        Dim mMaxValue As String = ViewState("librefid")
+        Using cmd As New SqlCommand()
+            cmd.CommandText = "select application, file_data, file_type from CMPDB_tblreport_template_lib where [Lib_ref_id]=@Id"
+            cmd.Parameters.AddWithValue("@Id", mMaxValue)
+            cmd.Connection = con
+            'con.Open();
+            Dim adapter As New SqlDataAdapter(cmd)
+            Dim DS As New DataSet
+            adapter.Fill(DS)
+
+            bytes = DirectCast(DS.Tables(0).Rows(0)("file_data"), Byte())
+            contentType = DS.Tables(0).Rows(0)("file_type").ToString()
+            fileName = DS.Tables(0).Rows(0)("application").ToString()
+            'Put excel as bytes array into memory stream
+
+            'Put memory stream into in new workbook object so that we can append data into it
+            Return bytes
+
+        End Using
+    End Function
+
     Protected Sub btnDownload_Click(sender As Object, e As EventArgs)
         Try
+
+
+
             Dim strExcelTabName As String = ViewState("exceltabname")
             Dim strOutputFileExtension As String = ViewState("outputfileextension")
 
-            '            Dim strFileName As String = strExcelTabName + ".xlsx"
+            'Dim strFileName As String = strExcelTabName + ".xlsx"
             Dim strFileName As String = strExcelTabName + "." + strOutputFileExtension
+            InsertDataForDates()
 
             AppendToExcel(ReadFromDB(), strFileName, strExcelTabName)
+
+
+
             'AppendToExcel(ReadFromDB(), "xx.xlsx", "Portfolio Raw")
         Catch ex As Exception
             Throw ex
         End Try
+    End Sub
+
+    Private Sub InsertDataForDates()
+        '  RunSQLQuery("truncate table temp_report_dates")
+        Dim RangeElements As List(Of String) = ReadCellRangeValueFromWorkSheetName(ReadFromDBbytes, "Change Masterplan and Dashboard", "")
+        For Each item In RangeElements
+            AddUpdateRecordsListControls("temp_report_dates" + ",'" + item + "',I")
+        Next
     End Sub
 End Class

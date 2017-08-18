@@ -179,7 +179,8 @@ Public Class Admin_Project
         params.Add(New SqlParameter("@gridtype", "A"))
         Dim dt As DataTable = ExecuteProcedureForDataTable("CMPDB_sp_GetSearchProjectAdminnew", params)
         If dt.Rows.Count > 0 Then
-            gdvSrch.DataSource = dt
+            Session("SortTable") = dt
+            gdvSrch.DataSource = Session("SortTable")
             gdvSrch.DataBind()
             'gdvSrch.Columns(5).Visible = False
             'gdvSrch.Columns(6).Visible = False
@@ -194,6 +195,7 @@ Public Class Admin_Project
     Private Sub ShowGridHeader()
         gdvSrch.DataSource = New List(Of String)
         gdvSrch.DataBind()
+        Session("SortTable") = vbNull
 
         gdvSrch.ShowHeaderWhenEmpty = True
     End Sub
@@ -639,4 +641,47 @@ Public Class Admin_Project
     Private Sub gdvSrch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gdvSrch.SelectedIndexChanged
 
     End Sub
+
+    Protected Sub gdvSrch_Sorting(sender As Object, e As GridViewSortEventArgs)
+        'Retrieve the table from the session object.
+        Dim dt = TryCast(Session("SortTable"), DataTable)
+
+        If dt IsNot Nothing Then
+
+            'Sort the data.
+            dt.DefaultView.Sort = e.SortExpression & " " & GetSortDirection(e.SortExpression)
+            gdvSrch.DataSource = Session("SortTable")
+            gdvSrch.DataBind()
+
+        End If
+    End Sub
+    Private Function GetSortDirection(ByVal column As String) As String
+
+        ' By default, set the sort direction to ascending.
+        Dim sortDirection = "DESC"
+
+        ' Retrieve the last column that was sorted.
+        Dim sortExpression = TryCast(ViewState("SortExpression"), String)
+
+        If sortExpression IsNot Nothing Then
+            ' Check if the same column is being sorted.
+            ' Otherwise, the default value can be returned.
+            If sortExpression = column Then
+                Dim lastDirection = TryCast(ViewState("SortDirection"), String)
+                If lastDirection IsNot Nothing _
+          AndAlso lastDirection = "DESC" Then
+
+                    sortDirection = "ASC"
+
+                End If
+            End If
+        End If
+
+        ' Save new values in ViewState.
+        ViewState("SortDirection") = sortDirection
+        ViewState("SortExpression") = column
+
+        Return sortDirection
+
+    End Function
 End Class

@@ -70,6 +70,7 @@ Public Class Practicioners
     Private Sub ShowGridHeader()
         gridPractitioner.DataSource = New List(Of String)
         gridPractitioner.DataBind()
+        Session("SortTable") = vbNull
         gridPractitioner.ShowHeaderWhenEmpty = True
     End Sub
     Private Sub populateQualificationRoles()
@@ -165,11 +166,13 @@ Public Class Practicioners
             params.Add(New SqlParameter("@typegrid", "F"))
             dt = ExecuteProcedureForDataTable("CMPDB_sp_ShowPractitioner", params)
             If dt.Rows.Count > 0 Then
-                gridPractitioner.DataSource = dt
+                Session("SortTable") = dt
+                gridPractitioner.DataSource = Session("SortTable")
                 gridPractitioner.DataBind()
             Else
                 gridPractitioner.DataSource = New List(Of String)
                 gridPractitioner.DataBind()
+                Session("SortTable") = vbNull
                 gridPractitioner.ShowHeaderWhenEmpty = True
 
             End If
@@ -193,12 +196,15 @@ Public Class Practicioners
 
         dt = ExecuteProcedureForDataTable("CMPDB_sp_ShowPractitioner", params)
         If dt.Rows.Count > 0 Then
-            gridPractitioner.DataSource = dt
+            Session("SortTable") = dt
+            gridPractitioner.DataSource = Session("SortTable")
+
             gridPractitioner.DataBind()
         Else
 
             gridPractitioner.DataSource = New List(Of String)
             gridPractitioner.DataBind()
+            Session("SortTable") = vbNull
             gridPractitioner.ShowHeaderWhenEmpty = True
         End If
 
@@ -507,4 +513,47 @@ Public Class Practicioners
         FilteredGrid()
         '  FilteredGrid(ddlPlant.SelectedValue, ddlBu.SelectedValue, ddlRegion.SelectedValue, ddlDepartment.SelectedValue, ddlSWp.SelectedValue, ddlSWPRole.SelectedValue)
     End Sub
+
+    Protected Sub gridPractitioner_Sorting(sender As Object, e As GridViewSortEventArgs)
+        'Retrieve the table from the session object.
+        Dim dt = TryCast(Session("SortTable"), DataTable)
+
+        If dt IsNot Nothing Then
+
+            'Sort the data.
+            dt.DefaultView.Sort = e.SortExpression & " " & GetSortDirection(e.SortExpression)
+            gridPractitioner.DataSource = Session("SortTable")
+            gridPractitioner.DataBind()
+
+        End If
+    End Sub
+    Private Function GetSortDirection(ByVal column As String) As String
+
+        ' By default, set the sort direction to ascending.
+        Dim sortDirection = "DESC"
+
+        ' Retrieve the last column that was sorted.
+        Dim sortExpression = TryCast(ViewState("SortExpression"), String)
+
+        If sortExpression IsNot Nothing Then
+            ' Check if the same column is being sorted.
+            ' Otherwise, the default value can be returned.
+            If sortExpression = column Then
+                Dim lastDirection = TryCast(ViewState("SortDirection"), String)
+                If lastDirection IsNot Nothing _
+          AndAlso lastDirection = "DESC" Then
+
+                    sortDirection = "ASC"
+
+                End If
+            End If
+        End If
+
+        ' Save new values in ViewState.
+        ViewState("SortDirection") = sortDirection
+        ViewState("SortExpression") = column
+
+        Return sortDirection
+
+    End Function
 End Class

@@ -340,70 +340,70 @@
                     <div class="col1new">
                             <h2>Search Results</h2>
                      </div>
-                      <asp:GridView ID="gdvSrch" Width="100%" AutoGenerateColumns="False" OnRowCommand="gdvSrch_RowCommand" runat="server" ShowHeaderWhenEmpty="true">
+                      <asp:GridView ID="gdvSrch" Width="100%" AutoGenerateColumns="False" AllowSorting="true" OnSorting="gdvSrch_Sorting" OnRowCommand="gdvSrch_RowCommand" runat="server" ShowHeaderWhenEmpty="true">
                             <Columns>
 
 
 
-                                <asp:TemplateField HeaderText="Project">
+                                <asp:TemplateField HeaderText="Project" SortExpression="project_name" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="btnEdit" runat="server" Text='<%#Eval("project_name") %>' CommandName="EditDetails" CommandArgument='<%# Eval("Startup_ID") %>'
                                           ></asp:LinkButton>
 
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Plant">
+                                <asp:TemplateField HeaderText="Plant" SortExpression="plant" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("plant") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                 <asp:TemplateField HeaderText="Startup Name">
+                                 <asp:TemplateField HeaderText="Startup Name" SortExpression="Startup_Name" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Startup_Name") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                 <asp:TemplateField HeaderText="Project Name">
+                                 <asp:TemplateField HeaderText="Project Name" SortExpression="project_name" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Project_Name") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                   <asp:TemplateField HeaderText="Project Type">
+                                   <asp:TemplateField HeaderText="Project Type" SortExpression="Project_Type" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Project_Type") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
 
-                                <asp:TemplateField HeaderText="Project %">
+                                <asp:TemplateField HeaderText="Project %" SortExpression="Project_Target" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Project_Target") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                   <asp:TemplateField HeaderText="Project Status">
+                                   <asp:TemplateField HeaderText="Project Status" SortExpression="Project_Status" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Project_Status") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                  <asp:TemplateField HeaderText="Change Type">
+                                  <asp:TemplateField HeaderText="Change Type" SortExpression="Change_Type" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Change_Type") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="Business Unit">
+                                    <asp:TemplateField HeaderText="Business Unit" SortExpression="Business_Unit" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Business_Unit") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="SUL">
+                                <asp:TemplateField HeaderText="SUL" SortExpression="email" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("email") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                   <asp:TemplateField HeaderText="Production Line">
+                                   <asp:TemplateField HeaderText="Production Line" SortExpression="Production_Line" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Production_Line") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                   <asp:TemplateField HeaderText="Startup Id">
+                                   <asp:TemplateField HeaderText="Startup Id" SortExpression="Startup_ID" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Startup_ID") %>
                                     </ItemTemplate>

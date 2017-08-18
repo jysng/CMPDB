@@ -40,3 +40,4 @@ D:\corbus\CMPDB\CMPDB\bin\Microsoft.SqlServer.SqlEnum.dll
 D:\corbus\CMPDB\CMPDB\bin\Microsoft.SqlServer.Diagnostics.STrace.dll
 D:\corbus\CMPDB\CMPDB\bin\Microsoft.SqlServer.Dmf.Common.dll
 D:\corbus\CMPDB\CMPDB\bin\Microsoft.SqlServer.ServiceBrokerEnum.dll
+D:\corbus\CMPDB\CMPDB\bin\PoorMansTSqlFormatterLib35.dll

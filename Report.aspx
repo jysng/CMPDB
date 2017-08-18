@@ -93,7 +93,7 @@
                         <asp:GridView  Width="100%" ID="grdReport" runat="server" AutoGenerateColumns="false" >
 
                             <Columns>
-                                <asp:BoundField DataField="Date" HeaderText="Last Update" />
+                                <asp:BoundField DataField="Update_Date" HeaderText="Last Update" />
                                 <%--<asp:BoundField DataField="In_All_Change" HeaderText="In All Change" />--%>
                                 <asp:BoundField DataField="Startup_Name" HeaderText="Startup Name" />
                                 <asp:BoundField DataField="Production_Line" HeaderText="Production Line" />

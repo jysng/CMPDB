@@ -87,7 +87,7 @@ Public Class BLOBUpdate
         lblReportDesc.Text = ""
     End Sub
 
-    Private Function CreateGrid(key As String) As DataTable
+    Private Sub CreateGrid(key As String)
         Dim dt As DataTable
         Try
             If String.IsNullOrEmpty(key) Then
@@ -101,7 +101,7 @@ Public Class BLOBUpdate
         Catch ex As Exception
             Response.Write(ex)
         End Try
-    End Function
+    End Sub
 
     Protected Sub gvGrid_RowCommand(sender As Object, e As GridViewCommandEventArgs)
         gvGrid.RowStyle.BackColor = Drawing.Color.FromName("#f9f9f9")

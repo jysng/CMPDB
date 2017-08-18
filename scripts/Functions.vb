@@ -743,7 +743,29 @@ Module Functions
             Dim ws As ExcelWorksheet = pck.Workbook.Worksheets(excelTabName)
             If ws IsNot Nothing Then
                 Dim val = ws.Cells(excelCellAddress).Text
+
                 Return val
+            Else
+                Return Nothing
+                HttpContext.Current.Response.Write("Cannot find the specified sheet.")
+            End If
+        End Using
+    End Function
+
+    Public Function ReadCellRangeValueFromWorkSheetName(excel As Byte(), excelTabName As String, excelCellAddress As String)
+        Dim buffer() As Byte = excel
+        Dim RangeElements As New List(Of String)
+        Dim excelStream As New MemoryStream()
+        excelStream.Write(buffer, 0, buffer.Length)
+        Using pck As New ExcelPackage(excelStream)
+            Dim ws As ExcelWorksheet = pck.Workbook.Worksheets(excelTabName)
+            If ws IsNot Nothing Then
+                Dim a As String = ""
+                Dim val As ExcelRange = ws.Cells(3, 18, 3, 35)
+                For Each ran In val
+                    RangeElements.Add(ran.Text)
+                Next
+                Return RangeElements
             Else
                 Return Nothing
                 HttpContext.Current.Response.Write("Cannot find the specified sheet.")

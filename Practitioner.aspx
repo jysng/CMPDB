@@ -189,7 +189,7 @@
                     <div class="col1new">
                         <h2>Search Results</h2>
                     </div>
-                    <asp:GridView ID="gridPractitioner" Width="100%" DataKeyNames="Practitioner_ID" OnRowCommand="gridPractitioner_RowCommand" AutoGenerateColumns="False" runat="server" ShowHeaderWhenEmpty="true">
+                    <asp:GridView ID="gridPractitioner" Width="100%" DataKeyNames="Practitioner_ID" AllowSorting="true" OnSorting="gridPractitioner_Sorting" OnRowCommand="gridPractitioner_RowCommand" AutoGenerateColumns="False" runat="server" ShowHeaderWhenEmpty="true">
                         <Columns>
 
                             <asp:TemplateField HeaderText="Check">
@@ -202,80 +202,80 @@
 
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Email">
+                            <asp:TemplateField HeaderText="Email" SortExpression="Email" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <asp:LinkButton ID="btnEdit" runat="server" Text='<%#Eval("Email") %>' CommandName="EditDetails"
                                         CommandArgument='<%# Eval("Practitioner_ID") %>'></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Plant">
+                            <asp:TemplateField HeaderText="Plant" SortExpression="Plant" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <asp:Label ID="lblGridPlant" runat="server" Text='<%# Eval("Plant") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="BU">
+                            <asp:TemplateField HeaderText="BU" SortExpression="Business_Unit" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("Business_Unit") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Region">
+                            <asp:TemplateField HeaderText="Region" SortExpression="Region" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("Region") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Department">
+                            <asp:TemplateField HeaderText="Department" SortExpression="Site_Department" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("Site_Department") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Date Added">
+                            <asp:TemplateField HeaderText="Date Added" SortExpression="DateAdded" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("DateAdded", "{0:MM-dd-yyyy}") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="SWP">
+                            <asp:TemplateField HeaderText="SWP" SortExpression="swp" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("swp") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="SWP Role">
+                            <asp:TemplateField HeaderText="SWP Role" SortExpression="Practitioner_Role" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("Practitioner_Role") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Full Name">
+                            <asp:TemplateField HeaderText="Full Name" SortExpression="FirstName" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%# Eval("FirstName") + " " + Eval("LastName")%>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Qualification Date">
+                            <asp:TemplateField HeaderText="Qualification Date" SortExpression="QualificationDate" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("QualificationDate", "{0:MM-dd-yyyy}") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Qualifier">
+                            <asp:TemplateField HeaderText="Qualifier" SortExpression="Qualifier" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("Qualifier") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Target Date">
+                            <asp:TemplateField HeaderText="Target Date" SortExpression="TargetedDate" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("TargetedDate", "{0:MM-dd-yyyy}") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Class Completed Date">
+                            <asp:TemplateField HeaderText="Class Completed Date" SortExpression="ClassCompletedDate" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("ClassCompletedDate", "{0:MM-dd-yyyy}") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Tech Coach Email">
+                            <asp:TemplateField HeaderText="Tech Coach Email" SortExpression="TechCoachEmail" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("TechCoachEmail") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Comments">
+                            <asp:TemplateField HeaderText="Comments" SortExpression="Comments" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("Comments") %>
                                 </ItemTemplate>
