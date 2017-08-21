@@ -3833,15 +3833,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.Practicioners._ddlSearchRegion">
-<summary>
-ddlSearchRegion control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:CMPDSB_DEVIN.Practicioners._ddlSearchDept">
 <summary>
 ddlSearchDept control.

@@ -6,17 +6,13 @@ Public Class Practicioners
 
 #Region "Common"
     Private Sub LoadAllDependents(type As String)
-
-
         If type = 1 Then
             populateDepartments(ddlPlant.SelectedItem.Value, "1")
+            populateBusinessUnit(ddlPlant.SelectedItem.Value, "1")
         Else
             populateDepartments(ddlSearchPlants.SelectedItem.Value, "2")
+            populateBusinessUnit(ddlSearchPlants.SelectedItem.Value, "2")
         End If
-
-
-
-
     End Sub
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         GetParentSiteMapNode()
@@ -25,14 +21,13 @@ Public Class Practicioners
             PopulateDD(ddlPlant, "CMPDB_tblPlants", "Plant_ID", "Plant")
             PopulateDD(ddlSearchPlants, "CMPDB_tblPlants", "Plant_ID", "Plant")
 
-            PopulateDD(ddlSearchRegion, "CMPDB_tblRegion", "Region_ID", "Region")
-
             '  PopulateDD(ddlAddPlant, "CMPDB_tblPlants", "Plant_ID", "Plant")
             populateSWP()
             populateQualificationRoles()
-            PopulateDD(ddlSearchDept, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
-            PopulateDD(ddlBu, "CMPDB_tblBusiness_Unit", "Business_Unit_ID", "Business_Unit")
-            PopulateDD(ddlSearchBU, "CMPDB_tblBusiness_Unit", "Business_Unit_ID", "Business_Unit")
+
+            ' PopulateDD(ddlSearchDept, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
+            ' PopulateDD(ddlBu, "CMPDB_tblBusiness_Unit", "Business_Unit_ID", "Business_Unit")
+            ' PopulateDD(ddlSearchBU, "CMPDB_tblBusiness_Unit", "Business_Unit_ID", "Business_Unit")
             PopulateDD(ddlSearchSWP, xTblNameSWP, "SWP_ID", "SWP")
             ShowGridHeader()
             If Session("plant_Set") <> "" Then
@@ -47,14 +42,22 @@ Public Class Practicioners
 #Region "Populates"
     Private Sub populateDepartments(key As String, type As String)
         If type = "1" Then
-            PopulateDD(ddlDepartment, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
+            PopulateDD(ddlDepartment, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department", "Site_ID", key)
+            ' PopulateDD(ddlDepartment, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
         Else
-            PopulateDD(ddlSearchDept, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
-
+            PopulateDD(ddlSearchDept, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department", "Site_ID", key)
+            '  PopulateDD(ddlSearchDept, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
         End If
-
-
     End Sub
+
+    Private Sub populateBusinessUnit(key As String, type As String)
+        If type = "1" Then
+            PopulateDD(ddlBu, "CMPDB_vwBu_Dependent_Plants", "Business_Unit_ID", "Business_Unit", "Plant_ID", key)
+        Else
+            PopulateDD(ddlSearchBU, "CMPDB_vwBu_Dependent_Plants", "Business_Unit_ID", "Business_Unit", "Plant_ID", key)
+        End If
+    End Sub
+
 #End Region
 #Region "Variables"
     Dim xTblNameQualification_Level = "CMPDB_tblQualification_Level"
@@ -94,6 +97,7 @@ Public Class Practicioners
                 ddlSearchPlants.SelectedValue = Session("plant_Set")
             End If
         End If
+        ddlSearchPlants_SelectedIndexChanged(sender, EventArgs.Empty)
         UserNameLabel.Text = "Add Practitioner"
     End Sub
 
@@ -143,12 +147,9 @@ Public Class Practicioners
         Else
             params.Add(New SqlParameter("@bu", DBNull.Value))
         End If
-        If (ddlSearchRegion.SelectedValue > 0) Then
-            params.Add(New SqlParameter("@region", ddlSearchRegion.SelectedValue))
-            check = 1
-        Else
-            params.Add(New SqlParameter("@region", DBNull.Value))
-        End If
+
+        params.Add(New SqlParameter("@region", DBNull.Value))
+
         If (ddlSearchDept.SelectedValue > 0) Then
             params.Add(New SqlParameter("@department", ddlSearchDept.SelectedValue))
             check = 1

@@ -59,15 +59,6 @@ Partial Public Class Practicioners
     Protected WithEvents ddlSearchBU As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''ddlSearchRegion control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ddlSearchRegion As Global.System.Web.UI.WebControls.DropDownList
-    
-    '''<summary>
     '''ddlSearchDept control.
     '''</summary>
     '''<remarks>

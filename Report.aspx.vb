@@ -211,7 +211,7 @@ Public Class Report
     End Sub
 
     Private Sub InsertDataForDates()
-        '  RunSQLQuery("truncate table temp_report_dates")
+        RunSQLQuery("truncate table temp_report_dates")
         Dim RangeElements As List(Of String) = ReadCellRangeValueFromWorkSheetName(ReadFromDBbytes, "Change Masterplan and Dashboard", "")
         For Each item In RangeElements
             AddUpdateRecordsListControls("temp_report_dates" + ",'" + item + "',I")

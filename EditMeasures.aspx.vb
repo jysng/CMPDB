@@ -136,7 +136,6 @@ Public Class EditMeasures
             Dim bytes() As Byte = CType(dtMeasures.Rows(0)("FileObject"), Byte())
             download(bytes, dtMeasures.Rows(0)("filename").ToString())
         End If
-
     End Sub
     Protected Sub gridProjects_Sorting(ByVal sender As Object, ByVal e As GridViewSortEventArgs)
 
@@ -528,4 +527,6 @@ Public Class EditMeasures
         gridProjects_RowCommand(sender, EventArgs.Empty)
     End Sub
 #End Region
+
+
 End Class
