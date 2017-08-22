@@ -157,22 +157,20 @@
 
                         <span class="lbl">Plant</span>
                         <span class="lbl">Business Unit</span>
-                        <span class="lbl">Region</span>
+                       
                         <span class="lbl">Department</span>
                         <span class="lbl">SWP</span>
 
 
                     </div>
                     <div class="col3">
-                        <asp:DropDownList ID="ddlSearchPlants" OnSelectedIndexChanged="ddlSearchPlants_SelectedIndexChanged" AppendDataBoundItems="true" AutoPostBack="true" runat="server" Width="250px" Height="25px" Style="display: block">
+                        <asp:DropDownList ID="ddlSearchPlants" OnSelectedIndexChanged="ddlSearchPlants_SelectedIndexChanged" Enabled="false" AppendDataBoundItems="true" AutoPostBack="true" runat="server" Width="250px" Height="25px" Style="display: block">
                             <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
                         </asp:DropDownList>
                         <asp:DropDownList ID="ddlSearchBU" AppendDataBoundItems="true" runat="server" Width="250px" Style="display: block" Height="25px">
                             <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
                         </asp:DropDownList>
-                        <asp:DropDownList ID="ddlSearchRegion" AppendDataBoundItems="true" runat="server" Height="25px" Style="display: block" Width="250px">
-                            <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
-                        </asp:DropDownList>
+                    
                         <asp:DropDownList ID="ddlSearchDept" AppendDataBoundItems="true" AutoPostBack="true" Width="250px" Style="display: block" Height="25px" runat="server">
                             <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
 
@@ -181,7 +179,7 @@
                             <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
                         </asp:DropDownList>
                         <br />
-                        <br />
+                      
                     </div>
                     <div class="col3" style="margin-left: 75px">
                         <asp:Button ID="BtnSrchExistingStartup" OnClick="BtnSrchExistingPractitioner_Click" runat="server" Text="Search" Width="120px" Height="25px" />
@@ -218,7 +216,7 @@
                                     <%#Eval("Business_Unit") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Region" SortExpression="Region" HeaderStyle-ForeColor="Gray">
+                            <asp:TemplateField HeaderText="Region" SortExpression="Region" Visible="false" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
                                     <%#Eval("Region") %>
                                 </ItemTemplate>

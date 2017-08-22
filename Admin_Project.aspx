@@ -586,7 +586,7 @@
                     </div>
                     <div class="col3">
                         <%-- <asp:Button ID="BtnFilterbyBU"  runat="server" Text="Filter by BU" Height="25px" />--%>
-                         <asp:Button ID="btnMileStone" runat="server" Enabled="false" OnClick="btnMileStone_Click" Text="Request Target Or Milestone Change"></asp:Button>
+                       <%--  <asp:Button ID="btnMileStone" runat="server" Enabled="false" OnClick="btnMileStone_Click" Text="Request Target Or Milestone Change"></asp:Button>--%>
                     </div>
                 </div>
                 <hr />
@@ -634,8 +634,14 @@
                     </div>
                 </div>
                 <div style="text-align: right;">
-                    <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" Width="180px" Height="25px" />
+                    <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" Width="180px" Height="25px" />                     
                 </div>
+                <br />
+                  <div style="text-align: right;">
+                 
+                      <asp:Button ID="btnMileStone" runat="server" Enabled="false" OnClick="btnMileStone_Click" Text="Request Target Or Milestone Change"></asp:Button>
+                 
+                      </div>
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>

@@ -447,22 +447,22 @@
                                 </div>
                                 <div class="add2">
                                     <div class="col2small">
-                                        <asp:Label ID="lblMlstnG2TDay1" Text="Optionl:G2T Day1" runat="server"></asp:Label>
+                                        <asp:Label ID="lblMlstnG2TDay1" Text="Optional:G2T Day1" runat="server"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="add2">
                                     <div class="col2small">
-                                        <asp:Label ID="lblMlstnG2TConstructionCompletion" Text="Optionl:G2T Construction Completion" runat="server"></asp:Label>
+                                        <asp:Label ID="lblMlstnG2TConstructionCompletion" Text="Optional:G2T Construction Completion" runat="server"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="add2">
                                     <div class="col2small">
-                                        <asp:Label ID="lblMlstnG2TEndofPQPhase" Text="Optionl:G2T End of PQ Phase" runat="server"></asp:Label>
+                                        <asp:Label ID="lblMlstnG2TEndofPQPhase" Text="Optional:G2T End of PQ Phase" runat="server"></asp:Label>
                                     </div>
                                 </div>
                                 <div class="add2">
                                     <div class="col2small">
-                                        <asp:Label ID="lblMlstnG2T_End_of_Ininital_Verification" Text="Optionl:G2T End of Initial Verification Completion Phase" runat="server"></asp:Label>
+                                        <asp:Label ID="lblMlstnG2T_End_of_Ininital_Verification" Text="Optional:G2T End of Initial Verification Completion Phase" runat="server"></asp:Label>
                                     </div>
                                 </div>
                             </div>

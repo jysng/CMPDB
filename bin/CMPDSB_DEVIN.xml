@@ -1439,15 +1439,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.Admin_Project._btnMileStone">
-<summary>
-btnMileStone control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:CMPDSB_DEVIN.Admin_Project._spansulCoach">
 <summary>
 spansulCoach control.
@@ -1532,6 +1523,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:CMPDSB_DEVIN.Admin_Project._btnSave">
 <summary>
 btnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._btnMileStone">
+<summary>
+btnMileStone control.
 </summary>
 <remarks>
 Auto-generated field.
