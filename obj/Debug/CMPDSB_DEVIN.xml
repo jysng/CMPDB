@@ -2528,171 +2528,171 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox17">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtETCTGT">
 <summary>
-TextBox17 control.
+txtETCTGT control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox18">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtETCActual">
 <summary>
-TextBox18 control.
+txtETCActual control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox19">
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlETC">
 <summary>
-TextBox19 control.
+ddlETC control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox21">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtPRTGT">
 <summary>
-TextBox21 control.
+txtPRTGT control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox22">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtPRActual">
 <summary>
-TextBox22 control.
+txtPRActual control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList1">
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlPR">
 <summary>
-DropDownList1 control.
+ddlPR control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox23">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtGSUMTGT">
 <summary>
-TextBox23 control.
+txtGSUMTGT control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox24">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtGSUMActual">
 <summary>
-TextBox24 control.
+txtGSUMActual control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList2">
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlGSUM">
 <summary>
-DropDownList2 control.
+ddlGSUM control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox25">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtSOPTGT">
 <summary>
-TextBox25 control.
+txtSOPTGT control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox26">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtSOPActual">
 <summary>
-TextBox26 control.
+txtSOPActual control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList3">
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlSOP">
 <summary>
-DropDownList3 control.
+ddlSOP control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox27">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtSafetyOfIncidentsTGT">
 <summary>
-TextBox27 control.
+txtSafetyOfIncidentsTGT control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBox28">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtSafetyOfIncidentsActual">
 <summary>
-TextBox28 control.
+txtSafetyOfIncidentsActual control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList4">
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlSafetyOfIncidents">
 <summary>
-DropDownList4 control.
+ddlSafetyOfIncidents control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList7">
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlHSE">
 <summary>
-DropDownList7 control.
+ddlHSE control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._DropDownList5">
+<member name="F:CMPDSB_DEVIN.EditMeasures._ddlQuality">
 <summary>
-DropDownList5 control.
+ddlQuality control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._TextBoxdf20">
+<member name="F:CMPDSB_DEVIN.EditMeasures._txtSmallStartupCriteriaMet">
 <summary>
-TextBoxdf20 control.
+txtSmallStartupCriteriaMet control.
 </summary>
 <remarks>
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.EditMeasures._Button6">
+<member name="F:CMPDSB_DEVIN.EditMeasures._btnCloseProject">
 <summary>
-Button6 control.
+btnCloseProject control.
 </summary>
 <remarks>
 Auto-generated field.

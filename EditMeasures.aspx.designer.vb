@@ -842,173 +842,173 @@ Partial Public Class EditMeasures
     Protected WithEvents lnkFile8 As Global.System.Web.UI.WebControls.LinkButton
     
     '''<summary>
-    '''TextBox17 control.
+    '''txtETCTGT control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox17 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtETCTGT As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''TextBox18 control.
+    '''txtETCActual control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox18 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtETCActual As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''TextBox19 control.
+    '''ddlETC control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox19 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents ddlETC As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''TextBox21 control.
+    '''txtPRTGT control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox21 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtPRTGT As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''TextBox22 control.
+    '''txtPRActual control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox22 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtPRActual As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''DropDownList1 control.
+    '''ddlPR control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents ddlPR As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''TextBox23 control.
+    '''txtGSUMTGT control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox23 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtGSUMTGT As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''TextBox24 control.
+    '''txtGSUMActual control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox24 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtGSUMActual As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''DropDownList2 control.
+    '''ddlGSUM control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropDownList2 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents ddlGSUM As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''TextBox25 control.
+    '''txtSOPTGT control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox25 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtSOPTGT As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''TextBox26 control.
+    '''txtSOPActual control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox26 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtSOPActual As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''DropDownList3 control.
+    '''ddlSOP control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropDownList3 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents ddlSOP As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''TextBox27 control.
+    '''txtSafetyOfIncidentsTGT control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox27 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtSafetyOfIncidentsTGT As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''TextBox28 control.
+    '''txtSafetyOfIncidentsActual control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBox28 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtSafetyOfIncidentsActual As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''DropDownList4 control.
+    '''ddlSafetyOfIncidents control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropDownList4 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents ddlSafetyOfIncidents As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''DropDownList7 control.
+    '''ddlHSE control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropDownList7 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents ddlHSE As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''DropDownList5 control.
+    '''ddlQuality control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropDownList5 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents ddlQuality As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''TextBoxdf20 control.
+    '''txtSmallStartupCriteriaMet control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextBoxdf20 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtSmallStartupCriteriaMet As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Button6 control.
+    '''btnCloseProject control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Button6 As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnCloseProject As Global.System.Web.UI.WebControls.Button
 End Class

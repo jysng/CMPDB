@@ -170,8 +170,7 @@
               width: 100%;
               float: left;
               /*margin-bottom: 10px;*/
-
-              line-height:25px;
+              line-height: 25px;
           }
 
           .add2 {
@@ -233,7 +232,7 @@
     <asp:UpdatePanel UpdateMode="Always" runat="server" ID="upnl">
         <ContentTemplate>
             <div class="container">
-                  <div class="ContainerOne">
+                <div class="ContainerOne">
                 <h2>CMPDB: Edit Startup Status and Measures</h2>
                     <br />
                        <div class="ContainerOne TopHead">
@@ -552,7 +551,6 @@
                             </div>
                           </div>
                     <div class="midfix3" style="float: right;">
-
                         <div class="merge" style="margin-top: 10px; width: 500px;">
                             Comments or major deliverables working on/completed
                         </div>
@@ -926,7 +924,7 @@
                 </div>
                                     </div>
                     </div>
-            <br />
+                <br />
                 <div class="ContainerOne">
                     <h2>Output Measures
                     </h2>
@@ -963,20 +961,16 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="TextBox17" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtETCTGT" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="TextBox18" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtETCActual" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="TextBox19" Width="60px" runat="server">
-                                    <asp:ListItem>
-                                        Yes
-                                    </asp:ListItem>
-                                    <asp:ListItem>
-                                        No
-                                    </asp:ListItem>
+                                <asp:DropDownList ID="ddlETC" Width="60px" runat="server">
+                                   <asp:ListItem Value="1" Text="Yes"/>
+                                        <asp:ListItem Value="0" Text="No"/>
                                 </asp:DropDownList>
 
                             </div>
@@ -993,20 +987,16 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="TextBox21" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtPRTGT" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="TextBox22" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtPRActual" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="DropDownList1" Width="60px" runat="server">
-                                    <asp:ListItem>
-                                        Yes
-                                    </asp:ListItem>
-                                    <asp:ListItem>
-                                        No
-                                    </asp:ListItem>
+                                <asp:DropDownList ID="ddlPR" Width="60px" runat="server">
+                                  <asp:ListItem Value="1" Text="Yes"/>
+                                        <asp:ListItem Value="0" Text="No"/>
                                 </asp:DropDownList>
 
                             </div>
@@ -1022,20 +1012,16 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="TextBox23" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtGSUMTGT" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="TextBox24" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtGSUMActual" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="DropDownList2" Width="60px" runat="server">
-                                    <asp:ListItem>
-                                        Yes
-                                    </asp:ListItem>
-                                    <asp:ListItem>
-                                        No
-                                    </asp:ListItem>
+                                <asp:DropDownList ID="ddlGSUM" Width="60px" runat="server">
+                                   <asp:ListItem Value="1" Text="Yes"/>
+                                   <asp:ListItem Value="0" Text="No"/>
                                 </asp:DropDownList>
 
                             </div>
@@ -1052,20 +1038,16 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="TextBox25" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSOPTGT" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="TextBox26" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSOPActual" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="DropDownList3" Width="60px" runat="server">
-                                    <asp:ListItem>
-                                        Yes
-                                    </asp:ListItem>
-                                    <asp:ListItem>
-                                        No
-                                    </asp:ListItem>
+                                <asp:DropDownList ID="ddlSOP" Width="60px" runat="server">
+                                 <asp:ListItem Value="1" Text="Yes"/>
+                                 <asp:ListItem Value="0" Text="No"/>
                                 </asp:DropDownList>
 
                             </div>
@@ -1081,20 +1063,16 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="TextBox27" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSafetyOfIncidentsTGT" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="TextBox28" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSafetyOfIncidentsActual" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="DropDownList4" Width="60px" runat="server">
-                                    <asp:ListItem>
-                                        Yes
-                                    </asp:ListItem>
-                                    <asp:ListItem>
-                                        No
-                                    </asp:ListItem>
+                                <asp:DropDownList ID="ddlSafetyOfIncidents" Width="60px" runat="server">
+                                  <asp:ListItem Value="1" Text="Yes"/>
+                                  <asp:ListItem Value="0" Text="No"/>
                                 </asp:DropDownList>
 
                             </div>
@@ -1113,25 +1091,20 @@
                             <div class="col1" style="width: 70px;">
                                 <span style="width: 60px;"></span>
                             </div>
-                            <div class="col2" style="width: 70px;">
+                            <div class="col2" style="width: 140px;">
 
                                 <span style="width: 60px;"></span>
                             </div>
-
-                            <div class="col3new">
+                            <div class="col3" style="width: 70px;">
+                                    <asp:DropDownList ID="ddlHSE" Width="60px" runat="server">
+                                        <asp:ListItem Value="1" Text="Yes"/>
+                                        <asp:ListItem Value="0" Text="No"/>
+                                    </asp:DropDownList>
+                                </div>
+                            <div class="col4new">
                                 <span>HS_E
                                 </span>
-                                <div class="col4new" style="width: 70px;">
-                                    <asp:DropDownList ID="DropDownList7" Width="60px" runat="server">
-                                        <asp:ListItem>
-                                        Yes
-                                        </asp:ListItem>
-                                        <asp:ListItem>
-                                        No
-                                        </asp:ListItem>
-                                    </asp:DropDownList>
-
-                                </div>
+                                
 
                             </div>
                         </div>
@@ -1143,27 +1116,19 @@
                             <div class="col1" style="width: 70px;">
                                 <span style="width: 60px;"></span>
                             </div>
-                            <div class="col2" style="width: 70px;">
+                            <div class="col2" style="width: 140px;">
 
                                 <span style="width: 60px;"></span>
                             </div>
-
-                            <div class="col3new">
-                                <span>Quantitys
-                                </span>
-                                <div class="col4new" style="width: 70px;">
-                                    <asp:DropDownList ID="DropDownList5" Width="60px" runat="server">
-                                        <asp:ListItem>
-                                        Yes
-                                        </asp:ListItem>
-                                        <asp:ListItem>
-                                        No
-                                        </asp:ListItem>
+                            <div class="col3" style="width: 71px;">
+                                <asp:DropDownList ID="ddlQuality" Width="60px" runat="server">
+                                        <asp:ListItem Value="1" Text="Yes"/>
+                                        <asp:ListItem Value="0" Text="No"/>
                                     </asp:DropDownList>
-
-                                </div>
-
                             </div>
+                            <div class="col4new" style="width: 70px;">
+                                 <span>Quality</span>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -1176,7 +1141,7 @@
                                 All  Small Start Up  Criteria Met
                             </div>
                             <div class="col2">
-                                <asp:TextBox ID="TextBoxdf20" Text="No" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtSmallStartupCriteriaMet" Text="No" Width="60px" runat="server"></asp:TextBox>
                             </div>
 
                         </div>
@@ -1185,7 +1150,7 @@
 
                         <div class="merge">
 
-                            <asp:Button ID="Button6" Text="Close Project" runat="server" />
+                            <asp:Button OnClick="btnCloseProject_Click" ID="btnCloseProject" Text="Close Project" runat="server" />
                         </div>
                     </div>
                 </div>

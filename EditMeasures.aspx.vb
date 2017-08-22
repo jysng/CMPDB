@@ -195,9 +195,36 @@ Public Class EditMeasures
                 Dim list As KeyValuePair(Of String, Integer) = New KeyValuePair(Of String, Integer)(lblAssaignedto.Text, MeasuresEditid)
                 Session("projectID") = list
                 FillData(MeasuresEditid)
+                PopulateOutputMeasuresData(Session("Startup_ID").ToString)
             End If
         End If
     End Sub
+
+    Private Sub PopulateOutputMeasuresData(StartupId As String)
+        Dim params As New List(Of SqlParameter)
+        params.Add(New SqlParameter("@Startup_ID", StartupId))
+        Dim dt As DataTable = ExecuteProcedureForDataTable("CMPDB_spGetOutputMeasures", params)
+        Dim dr = dt.Rows(0)
+        txtETCTGT.Text = dr("ETC_TGT").ToString
+        txtETCActual.Text = dr("ETC_Actual").ToString
+        ddlETC.SelectedValue = dr("ETC_Criteria_Met").ToString
+        txtPRTGT.Text = dr("PR_TGT").ToString()
+        txtPRActual.Text = dr("PR_Actual").ToString
+        ddlPR.SelectedValue = dr("PR_Criteria_Met").ToString
+        txtGSUMTGT.Text = dr("GSUMSmallProject_TGT").ToString
+        txtGSUMActual.Text = dr("GSUMSmallProject_Actual").ToString
+        ddlGSUM.SelectedValue = dr("GSUMSmallProject_Criteria_Met").ToString
+        txtSOPTGT.Text = dr("SOPDate_TGT").ToString
+        txtSOPActual.Text = dr("SOPDate_Actual").ToString
+        ddlSOP.SelectedValue = dr("SOPDate_Criteria_Met").ToString
+        txtSafetyOfIncidentsTGT.Text = dr("SafetyOfIncidents_TGT").ToString
+        txtSafetyOfIncidentsActual.Text = dr("SafetyOfIncidents_Actual").ToString
+        ddlSafetyOfIncidents.SelectedValue = dr("SafetyOfIncidents_Criteria_Met").ToString
+        ddlHSE.SelectedValue = dr("HSE").ToString
+        ddlQuality.SelectedValue = dr("Quality").ToString
+        txtSmallStartupCriteriaMet.Text = IIf(CType(dr("All_Small_Startup_Criteria_Met"), Boolean), "Yes", "No")
+    End Sub
+
     Protected Sub gridProjects_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles gridProjects.RowDataBound
         If e.Row.RowType = DataControlRowType.DataRow Then
 
@@ -217,7 +244,6 @@ Public Class EditMeasures
                 End If
             End If
         End If
-
     End Sub
     Private Sub FillData(MeasuresEditid As String)
         Dim row1 = New EditMeasuresData(txtCell1, lblFile1LstUpdDte, lnkFile1, lblFile1, txtws1, txtwc1)
@@ -526,6 +552,45 @@ Public Class EditMeasures
     Protected Sub btnimgRefresh_Click(sender As Object, e As ImageClickEventArgs)
         gridProjects_RowCommand(sender, EventArgs.Empty)
     End Sub
+
+    Protected Sub btnCloseProject_Click(sender As Object, e As EventArgs)
+        Dim params As New List(Of SqlParameter)
+
+        params.Add(New SqlParameter("@Startup_ID", Session("Startup_ID").ToString()))
+        params.Add(New SqlParameter("@ETC_TGT", txtETCTGT.Text))
+        params.Add(New SqlParameter("@ETC_Actual", txtETCActual.Text))
+        params.Add(New SqlParameter("@ETC_Criteria_Met", ddlETC.SelectedItem.Value))
+        params.Add(New SqlParameter("@PR_TGT", txtPRTGT.Text))
+        params.Add(New SqlParameter("@PR_Actual", txtPRActual.Text))
+        params.Add(New SqlParameter("@PR_Criteria_Met", ddlPR.SelectedItem.Value))
+        params.Add(New SqlParameter("@GSUMSmallProject_TGT", txtGSUMTGT.Text))
+        params.Add(New SqlParameter("@GSUMSmallProject_Actual", txtGSUMActual.Text))
+        params.Add(New SqlParameter("@GSUMSmallProject_Criteria_Met", ddlGSUM.SelectedItem.Value))
+        params.Add(New SqlParameter("@SOPDate_TGT", txtSOPTGT.Text))
+        params.Add(New SqlParameter("@SOPDate_Actual", txtSOPActual.Text))
+        params.Add(New SqlParameter("@SOPDate_Criteria_Met", ddlSOP.SelectedItem.Value))
+        params.Add(New SqlParameter("@SafetyOfIncidents_TGT", txtSafetyOfIncidentsTGT.Text))
+        params.Add(New SqlParameter("@SafetyOfIncidents_Actual", txtSafetyOfIncidentsActual.Text))
+        params.Add(New SqlParameter("@SafetyOfIncidents_Criteria_Met", ddlSafetyOfIncidents.SelectedItem.Value))
+        params.Add(New SqlParameter("@HSE", ddlHSE.SelectedItem.Value))
+        params.Add(New SqlParameter("@Quality", ddlQuality.SelectedItem.Value))
+        params.Add(New SqlParameter("@All_Small_Startup_Criteria_Met", GetSmallData()))
+        If Session("Startup_ID") IsNot Nothing Then
+            ExecuteProcedure("CMPDB_spInsertUpdateStartup_Output_Measures", params)
+            ResetControls(txtETCTGT, txtETCActual, txtPRTGT, txtPRActual, txtGSUMTGT, txtGSUMActual, txtSOPTGT, txtSOPActual, txtSafetyOfIncidentsTGT, txtSafetyOfIncidentsActual)
+            ResetControls(ddlETC, ddlPR, ddlQuality, ddlSOP, ddlHSE, ddlGSUM, ddlSafetyOfIncidents)
+            MessageBox("Project Closed.")
+        End If
+
+    End Sub
+
+    Private Function GetSmallData() As Int32
+        If txtSmallStartupCriteriaMet.Text = "Yes" Then
+            Return 1
+        Else
+            Return 0
+        End If
+    End Function
 #End Region
 
 
