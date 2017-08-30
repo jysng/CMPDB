@@ -3005,15 +3005,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image10">
-<summary>
-Image10 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:CMPDSB_DEVIN.GlobalAdmin._PlantsLBL">
 <summary>
 PlantsLBL control.
@@ -3143,15 +3134,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:CMPDSB_DEVIN.GlobalAdmin._BtnRefreshPracticionerRole">
 <summary>
 BtnRefreshPracticionerRole control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:CMPDSB_DEVIN.GlobalAdmin._Image3">
-<summary>
-Image3 control.
 </summary>
 <remarks>
 Auto-generated field.

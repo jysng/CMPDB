@@ -55,4 +55,22 @@ Public Class layout
         End Try
 
     End Function
+
+
+    Protected Sub Menu_MenuItemDataBound(sender As Object, e As MenuEventArgs) Handles Menu.MenuItemDataBound
+        Dim menu As System.Web.UI.WebControls.Menu = DirectCast(sender, System.Web.UI.WebControls.Menu)
+        Dim mapNode As SiteMapNode = DirectCast(e.Item.DataItem, SiteMapNode)
+        Dim itemToRemove As MenuItem = menu.FindItem(mapNode.Title)
+
+
+        If mapNode.Title = "StartUp Targets" Then
+            Dim parent As MenuItem = e.Item.Parent
+            If parent IsNot Nothing Then
+
+                parent.ChildItems.Remove(e.Item)
+
+
+            End If
+        End If
+    End Sub
 End Class

@@ -440,7 +440,7 @@
                     </div>
                     <div class="col2">
 
-                        <asp:TextBox ID="txtDateAdded" Width="200px" placeholder="MM/DD/YYYY" Height="25px" CssClass="txtgLOBAL datepicker" runat="server">
+                        <asp:TextBox ID="txtDateAdded" Enabled="false" Width="200px" placeholder="MM/DD/YYYY" Height="25px" CssClass="txtgLOBAL datepicker" runat="server">
                            
                         </asp:TextBox>
                         <%--<cc:CalendarExtender ID="CalendarExtender1" Enabled="True" Format="MM/dd/yyyy" TargetControlID="txtDateAdded" runat="server"></cc:CalendarExtender>--%>

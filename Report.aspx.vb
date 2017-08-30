@@ -120,7 +120,13 @@ Public Class Report
                 Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 Response.AddHeader("content-disposition", "filename=" + HttpUtility.UrlEncode(filename, System.Text.Encoding.UTF8))
                 ws.Cells("A4").LoadFromDataTable(CreateGrid, False)
-                'ws.Cells("R3:AI3").LoadFromCollection(Of String)(InsertDataForDates)
+
+                Dim a = ws.Cells("R3:AI3")
+                Dim i = 0
+                For Each cell As ExcelRangeBase In a
+                    cell.Value = InsertDataForDates()(i).ToString
+                    i = i + 1
+                Next
                 Dim ms = New MemoryStream()
 
 

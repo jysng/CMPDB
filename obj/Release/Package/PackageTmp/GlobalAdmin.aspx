@@ -183,9 +183,7 @@
                     <asp:ImageButton Text="Refresh" runat="server" CssClass="btngLOBAL" ImageUrl="~/images/Refresh.png" ID="btnRefreshPlatform" OnClick="btnRefreshPlatform_Click" />
                 </div>
             </div>
-             <div class="img">
-                <asp:Image ID="Image10" ImageUrl="~/images/arrow.png" runat="server" Height="32px" Width="32px" />
-            </div>
+           
             <div class="col3" style ="margin-left: 113px;margin-top: -156px;">
                 <asp:Label Visible="false" ID="PlantsLBL" CssClass="lbl" runat="server" Text="Plant Associated with Business Units"></asp:Label>
                 <asp:DropDownList Visible="false" ID="DropDownlblPlantsAssociateBU" AppendDataBoundItems="true" Width="100%" runat="server">
@@ -222,9 +220,7 @@
                     <asp:ImageButton Text="Refresh" CssClass="btngLOBAL" ImageUrl="~/images/Refresh.png" runat="server" ID="BtnRefreshPracticionerRole" OnClick="BtnRefreshPracticionerRole_Click" />
                 </div>
             </div>
-            <div class="img2">
-                <asp:Image ID="Image3" ImageUrl="~/images/arrow.png" runat="server" Height="32px" Width="32px" />
-            </div>
+          
             <div class="col3">
                 <%--<asp:Label ID="lblQualificationLevelForRole" CssClass="lbl" runat="server" Text="Qualification Level For Role"></asp:Label>
                 <asp:DropDownList ID="DropDownListQLevel" AppendDataBoundItems="true" Width="100%" runat="server">

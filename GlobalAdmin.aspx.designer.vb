@@ -302,15 +302,6 @@ Partial Public Class GlobalAdmin
     Protected WithEvents btnRefreshPlatform As Global.System.Web.UI.WebControls.ImageButton
     
     '''<summary>
-    '''Image10 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Image10 As Global.System.Web.UI.WebControls.Image
-    
-    '''<summary>
     '''PlantsLBL control.
     '''</summary>
     '''<remarks>
@@ -444,15 +435,6 @@ Partial Public Class GlobalAdmin
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents BtnRefreshPracticionerRole As Global.System.Web.UI.WebControls.ImageButton
-    
-    '''<summary>
-    '''Image3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Image3 As Global.System.Web.UI.WebControls.Image
     
     '''<summary>
     '''lblSWP_Tool_Name control.
