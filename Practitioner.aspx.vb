@@ -21,6 +21,10 @@ Public Class Practicioners
             PopulateDD(ddlPlant, "CMPDB_tblPlants", "Plant_ID", "Plant")
             PopulateDD(ddlSearchPlants, "CMPDB_tblPlants", "Plant_ID", "Plant")
 
+            PopulateDD(ddlTechCoachEmail, "CMPDB_tblPractitioner", "Practitioner_ID", "Email")
+            PopulateDD(ddlQualifier, "CMPDB_tblPractitioner", "Practitioner_ID", "Email")
+
+
             '  PopulateDD(ddlAddPlant, "CMPDB_tblPlants", "Plant_ID", "Plant")
             populateSWP()
             populateQualificationRoles()
@@ -64,7 +68,7 @@ Public Class Practicioners
     Dim xtblSWPToolName = "CMPDB_tblSWP_Tool_Names"
     Dim xTblNameSWP = "CMPDB_tblSWP"
     Dim xTblBLOBFiles = "CMPDB_tblBLOBFiles"
-    Dim xSuffixDomain = "@pg.com"
+    'Dim xSuffixDomain = "@pg.com"
 
 
 #End Region
@@ -217,45 +221,58 @@ Public Class Practicioners
 
         dt = GetDataTableFromSQL("select Practitioner_ID,plant.plant_id,p.Plant_Department,p.Business_Unit,r.Region,p.Region_ID,p.Department,convert(varchar(10), cast(DateAdded as date), 101)DateAdded,p.Email,swp.swp_ID,p.swp_role,pr.Practitioner_Role,convert(varchar(10), cast(QualificationDate as date), 101)QualificationDate,p.Qualifier,convert(varchar(10), cast(TargetedDate as date), 101)TargetedDate,convert(varchar(10), cast(ClassCompletedDate as date), 101)ClassCompletedDate,p.TechCoachEmail,p.Comments,p.FirstName,p.LastName,Qualification_Level  from CMPDB_tblPractitioner as P left join CMPDB_tblBusiness_Unit bU on bu.Business_Unit_ID=p.Business_Unit left  join CMPDB_tblPlants as plant on plant.Plant_ID=p.Plant_ID left join CMPDB_tblSite_Departments as dept on dept.Site_Department_ID=p.Department inner join CMPDB_tblSWP as swp on swp.SWP_ID=p.SWP_ID left join CMPDB_tblRegion r on r.Region_ID=p.Region_ID inner join CMPDB_tblPractitioner_Roles as pr on pr.SWP_ID=swp.SWP_ID where Practitioner_id=" + Editid + "")
         If dt.Rows.Count > 0 Then
-
             ddlPlant.SelectedValue = dt.Rows(0)("plant_id").ToString()
+            populateBusinessUnit(dt.Rows(0)("plant_id").ToString(), "1")
             ddlBu.SelectedValue = dt.Rows(0)("Business_Unit").ToString()
             ' ddlRegion.SelectedValue = dt.Rows(0)("Region_ID").ToString()
             ' ddlAddPlant.SelectedValue = dt.Rows(0)("plant_id").ToString()
-            populateDepartments(dt.Rows(0)("Department").ToString(), "1")
+            populateDepartments(dt.Rows(0)("plant_id").ToString(), "1")
             ddlDepartment.SelectedValue = dt.Rows(0)("Department").ToString()
             ddlSWp.SelectedValue = dt.Rows(0)("swp_ID").ToString()
             txtDateAdded.Text = dt.Rows(0)("DateAdded").ToString()
-            txtInsertEmail.Text = dt.Rows(0)("Email").ToString()
+            txtInsertEmail.Text = dt.Rows(0)("Email").ToString().Replace("@pg.com", "")
             txtFirstName.Text = dt.Rows(0)("FirstName").ToString()
             txtLastName.Text = dt.Rows(0)("LastName").ToString()
-
             populatePractice(dt.Rows(0)("swp_ID").ToString())
-
             ' ddlSWp_SelectedIndexChanged(New Object, EventArgs.Empty)
 
             '   populatePractice(dt.Rows(0)("swp_ID").ToString())
             ddlSWPRole.SelectedValue = dt.Rows(0)("swp_role").ToString()
             txtQualificationDate.Text = dt.Rows(0)("QualificationDate").ToString()
-            txtQualifier.Text = dt.Rows(0)("Qualifier").ToString()
+            PopulateDD(ddlTechCoachEmail, "CMPDB_tblPractitioner", "Practitioner_ID", "Email")
+            PopulateDD(ddlQualifier, "CMPDB_tblPractitioner", "Practitioner_ID", "Email")
+            If (dt.Rows(0)("Qualifier") Is DBNull.Value) Then
+                ddlQualifier.SelectedValue = 0
+            Else
+                ddlQualifier.SelectedValue = dt.Rows(0)("Qualifier").ToString()
+            End If
+            If (dt.Rows(0)("TechCoachEmail") Is DBNull.Value) Then
+                ddlTechCoachEmail.SelectedValue = 0
+            Else
+                ddlTechCoachEmail.SelectedValue = dt.Rows(0)("TechCoachEmail").ToString()
+            End If
+            ' ddlQualifier.SelectedValue = dt.Rows(0)("Qualifier").ToString()
             txtTargetDate.Text = dt.Rows(0)("TargetedDate").ToString()
             txtClassCompletedDate.Text = dt.Rows(0)("ClassCompletedDate").ToString()
-            txtTechCoachEmail.Text = dt.Rows(0)("TechCoachEmail").ToString()
             txtComments.Text = dt.Rows(0)("comments").ToString()
-            If (dt.Rows(0)("Qualification_Level") Is DBNull.Value) Then
-            Else
-                ddlQualificationLevel.SelectedValue = dt.Rows(0)("Qualification_Level").ToString()
-            End If
             btnSaveRecords.Text = "Update"
         End If
     End Sub
 
     Protected Sub gridPractitioner_RowCommand(sender As Object, e As GridViewCommandEventArgs)
+
         If e.CommandName = "EditDetails" Then
+            PractitionerEditid = Integer.Parse(e.CommandArgument.ToString())
             UserNameLabel.Text = "Update Practitioner"
             HighlightRow(gridPractitioner, e)
-            PractitionerEditid = Integer.Parse(e.CommandArgument.ToString())
+
             getdata(PractitionerEditid)
+        End If
+        If e.CommandName = "DeleteDetails" Then
+            PractitionerEditid = Integer.Parse(e.CommandArgument.ToString())
+            ExecuteProc("CMPDB_sp_Delete_Practitioner " + PractitionerEditid.ToString())
+            FilteredGrid()
+            MessageBox("Successfully Deleted !!")
         End If
 
     End Sub
@@ -342,6 +359,7 @@ Public Class Practicioners
     End Property
 
     Protected Sub btnSaveRecords_Click(sender As Object, e As EventArgs)
+        txtInsertEmail.Text = txtInsertEmail.Text.Replace("@pg.com", "")
         If ddlPlant.SelectedValue = "0" Then
             MessageBox("Please Select Plant !!")
             ddlPlant.Focus()
@@ -364,80 +382,86 @@ Public Class Practicioners
             Exit Sub
         End If
 
+
+        Dim Str = ""
+
+
         Dim params As New List(Of SqlParameter)
         If btnSaveRecords.Text = "Save" Then
             params.Add(New SqlParameter("@Operation", "I"))
-
+            Str = (GetSingleValue("select Email from CMPDB_tblPractitioner where Email='" + txtInsertEmail.Text + "@pg.com" + "'"))
         Else
             params.Add(New SqlParameter("@Operation", "U"))
-            btnSaveRecords.Text = "Save"
+            Str = (GetSingleValue("select Email from CMPDB_tblPractitioner where Email='" + txtInsertEmail.Text + "@pg.com" + "' and Practitioner_ID<>" + PractitionerEditid.ToString()))
         End If
 
-        params.Add(New SqlParameter("@Practitioner_ID", PractitionerEditid))
+        If Str <> "" Then
+            MessageBox("Practitioner Already Exist !!")
+            Exit Sub
 
+        End If
+
+
+        params.Add(New SqlParameter("@Practitioner_ID", PractitionerEditid))
         params.Add(New SqlParameter("@Plant_ID", ddlPlant.SelectedValue))
         params.Add(New SqlParameter("@Plant_Department", "Making"))
         params.Add(New SqlParameter("@Business_Unit", ddlBu.SelectedItem.Value))
-
-
         params.Add(New SqlParameter("@Department", ddlDepartment.SelectedValue))
-
         If txtDateAdded.Text = "" Then
             params.Add(New SqlParameter("@DateAdded", DBNull.Value))
         Else
             params.Add(New SqlParameter("@DateAdded", txtDateAdded.Text))
         End If
 
-        params.Add(New SqlParameter("@Email", txtInsertEmail.Text + xSuffixDomain))
+        params.Add(New SqlParameter("@Email", txtInsertEmail.Text))
         params.Add(New SqlParameter("@SWP_ID", ddlSWp.SelectedValue))
         params.Add(New SqlParameter("@SWP_Role", ddlSWPRole.SelectedValue))
-
         If ddlQualificationLevel.SelectedValue = "-Select-" Then
-
             params.Add(New SqlParameter("@Qualification_Level", DBNull.Value))
         Else
             params.Add(New SqlParameter("@Qualification_Level", ddlQualificationLevel.SelectedValue))
-
         End If
-
-
         If txtQualificationDate.Text = "" Then
             params.Add(New SqlParameter("@QualificationDate", DBNull.Value))
         Else
             params.Add(New SqlParameter("@QualificationDate", txtQualificationDate.Text))
         End If
-
-
-        params.Add(New SqlParameter("@Qualifier", IIf(String.IsNullOrEmpty(txtQualifier.Text), "", txtQualifier.Text + xSuffixDomain)))
-
+        If ddlQualifier.SelectedValue = "0" Then
+            params.Add(New SqlParameter("@Qualifier", DBNull.Value))
+        Else
+            params.Add(New SqlParameter("@Qualifier", ddlQualifier.SelectedValue))
+        End If
+        ' params.Add(New SqlParameter("@Qualifier", IIf(String.IsNullOrEmpty(txtQualifier.Text), "", txtQualifier.Text + xSuffixDomain)))
         If txtTargetDate.Text = "" Then
             params.Add(New SqlParameter("@TargetedDate", DBNull.Value))
         Else
             params.Add(New SqlParameter("@TargetedDate", txtTargetDate.Text))
         End If
-
-
         If txtClassCompletedDate.Text = "" Then
             params.Add(New SqlParameter("@ClassCompletedDate", DBNull.Value))
         Else
             params.Add(New SqlParameter("@ClassCompletedDate", txtClassCompletedDate.Text))
         End If
-
-
         params.Add(New SqlParameter("@FirstName", txtFirstName.Text))
         params.Add(New SqlParameter("@LastName", txtLastName.Text))
-
-        params.Add(New SqlParameter("@TechCoachEmail", IIf(String.IsNullOrEmpty(txtTechCoachEmail.Text), "", txtTechCoachEmail.Text + xSuffixDomain)))
+        If ddlTechCoachEmail.SelectedValue = "0" Then
+            params.Add(New SqlParameter("@TechCoachEmail", DBNull.Value))
+        Else
+            params.Add(New SqlParameter("@TechCoachEmail", ddlTechCoachEmail.SelectedValue))
+        End If
+        '  params.Add(New SqlParameter("@TechCoachEmail", IIf(String.IsNullOrEmpty(txtTechCoachEmail.Text), "", txtTechCoachEmail.Text + xSuffixDomain)))
         params.Add(New SqlParameter("@Comments", txtComments.Text))
         ExecuteProcedure("CMPDB_sp_InsertNUpdate_tblPractitioner", params)
-
         If btnSaveRecords.Text = "Save" Then
-            MessageBox("Succeessfully Saved !!")
+            MessageBox("Successfully Saved !!")
         Else
-            MessageBox("Succeessfully Updated !!")
+            MessageBox("Successfully Updated !!")
+            btnSaveRecords.Text = "Save"
         End If
-        ResetControls(ddlBu, ddlPlant, ddlDepartment, ddlSWp, ddlSWPRole, ddlQualificationLevel)
-        ResetControls(txtDateAdded, txtInsertEmail, txtQualificationDate, txtQualifier, txtTargetDate, txtClassCompletedDate, txtTechCoachEmail, txtComments)
+        PopulateDD(ddlTechCoachEmail, "CMPDB_tblPractitioner", "Practitioner_ID", "Email")
+        PopulateDD(ddlQualifier, "CMPDB_tblPractitioner", "Practitioner_ID", "Email")
+        ResetControls(ddlBu, ddlPlant, ddlDepartment, ddlSWp, ddlSWPRole, ddlQualificationLevel, ddlQualifier, ddlTechCoachEmail)
+        ResetControls(txtDateAdded, txtInsertEmail, txtQualificationDate, txtTargetDate, txtClassCompletedDate, txtComments)
         Practitioner()
         UserNameLabel.Text = "Add Practitioner"
         Dim jScript = "<script>checkCookie();</script>"

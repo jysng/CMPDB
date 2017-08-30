@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing
 Imports System.IO
 Imports OfficeOpenXml
 
@@ -112,14 +113,36 @@ Public Class Report
     End Function
 
     Private Function AppendToExcel(excel As MemoryStream, filename As String, excelTabName As String)
+        Dim mSheetName = "Change Masterplan and Dashboard"
         Using pck As New ExcelPackage(excel)
             Dim ws As ExcelWorksheet = pck.Workbook.Worksheets(excelTabName)
             If ws IsNot Nothing Then
                 Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 Response.AddHeader("content-disposition", "filename=" + HttpUtility.UrlEncode(filename, System.Text.Encoding.UTF8))
                 ws.Cells("A4").LoadFromDataTable(CreateGrid, False)
+                'ws.Cells("R3:AI3").LoadFromCollection(Of String)(InsertDataForDates)
                 Dim ms = New MemoryStream()
+
+
                 pck.SaveAs(ms)
+                Dim colors = New List(Of Color)
+                Dim textToFind = New List(Of String)
+                colors.Add(Color.FromArgb(204, 192, 218))
+                colors.Add(Color.FromArgb(51, 204, 51))
+                colors.Add(Color.FromArgb(255, 0, 255))
+                colors.Add(Color.FromArgb(255, 255, 0))
+                colors.Add(Color.FromArgb(0, 112, 192))
+
+                textToFind.Add("^1")
+                textToFind.Add("^2")
+                textToFind.Add("^3")
+                textToFind.Add("^4")
+                textToFind.Add("^5")
+                ms = FindTextInSheet(ms, textToFind, mSheetName, colors)
+                '  ms = FindTextInSheet(ms, "2", mSheetName, Color.FromArgb(204, 192, 218))
+                'ms = FindTextInSheet(ms, "3", mSheetName, Color.FromArgb(204, 192, 218))
+                'ms = FindTextInSheet(ms, "4", mSheetName, Color.FromArgb(204, 192, 218))
+                'ms = FindTextInSheet(ms, "5", mSheetName, Color.FromArgb(204, 192, 218))
                 Response.Clear()
                 ms.WriteTo(Response.OutputStream)
                 Response.End()
@@ -198,11 +221,8 @@ Public Class Report
 
             'Dim strFileName As String = strExcelTabName + ".xlsx"
             Dim strFileName As String = strExcelTabName + "." + strOutputFileExtension
-            InsertDataForDates()
 
             AppendToExcel(ReadFromDB(), strFileName, strExcelTabName)
-
-
 
             'AppendToExcel(ReadFromDB(), "xx.xlsx", "Portfolio Raw")
         Catch ex As Exception
@@ -210,11 +230,17 @@ Public Class Report
         End Try
     End Sub
 
-    Private Sub InsertDataForDates()
-        RunSQLQuery("truncate table temp_report_dates")
-        Dim RangeElements As List(Of String) = ReadCellRangeValueFromWorkSheetName(ReadFromDBbytes, "Change Masterplan and Dashboard", "")
+    Private Function InsertDataForDates()
+        'RunSQLQuery("truncate table temp_report_dates")
+        'Dim RangeElements As List(Of String) = ReadCellRangeValueFromWorkSheetName(ReadFromDBbytes, "Change Masterplan and Dashboard", "")
+        Dim RangeElements As New List(Of String)
+        For i As Int16 = -1 To 16
+            Dim temp = Now.AddMonths(i)
+            RangeElements.Add(temp.ToString("MMM-yy"))
+        Next
         For Each item In RangeElements
             AddUpdateRecordsListControls("temp_report_dates" + ",'" + item + "',I")
         Next
-    End Sub
+        Return RangeElements
+    End Function
 End Class

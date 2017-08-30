@@ -4121,9 +4121,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.Practicioners._txtTechCoachEmail">
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlTechCoachEmail">
 <summary>
-txtTechCoachEmail control.
+ddlTechCoachEmail control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -4139,9 +4139,9 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.Practicioners._txtQualifier">
+<member name="F:CMPDSB_DEVIN.Practicioners._ddlQualifier">
 <summary>
-txtQualifier control.
+ddlQualifier control.
 </summary>
 <remarks>
 Auto-generated field.

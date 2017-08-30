@@ -347,13 +347,13 @@ Partial Public Class Practicioners
     Protected WithEvents lblTechCoachEmail As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''txtTechCoachEmail control.
+    '''ddlTechCoachEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtTechCoachEmail As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents ddlTechCoachEmail As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
     '''lblQualifier control.
@@ -365,13 +365,13 @@ Partial Public Class Practicioners
     Protected WithEvents lblQualifier As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''txtQualifier control.
+    '''ddlQualifier control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtQualifier As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents ddlQualifier As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
     '''lblcomments control.

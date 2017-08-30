@@ -1,9 +1,10 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing
 Imports System.IO
 Imports System.Net.Mail
 Imports ClosedXML.Excel
 Imports OfficeOpenXml
-
+Imports OfficeOpenXml.Style
 
 Module Functions
     Public xTblNameProduction_Types = "CMPDB_tblProduction_Types"
@@ -789,6 +790,58 @@ Module Functions
         Return s
     End Function
 
+    Public Function WriteToExcelCellAndColor(excel As MemoryStream, cellContent As String, cellExcelTabName As String, contentAddress As String, color As System.Drawing.Color)
+        Dim consh As ExcelWorksheet
+
+        Dim exlpck As New ExcelPackage(excel)
+        If exlpck.Workbook.Worksheets(cellExcelTabName) Is Nothing Then
+            consh = exlpck.Workbook.Worksheets.Add(cellExcelTabName)
+        Else
+            consh = exlpck.Workbook.Worksheets(cellExcelTabName)
+        End If
+        consh.Cells(contentAddress).Value = cellContent
+        consh.Cells(contentAddress).Style.Fill.PatternType = ExcelFillStyle.Solid
+        consh.Cells(contentAddress).Style.Fill.BackgroundColor.SetColor(color)
+        exlpck.Save()
+        Dim s = New MemoryStream(exlpck.GetAsByteArray())
+        Return s
+    End Function
+    Public Function FindTextInSheet(excel As MemoryStream, textToFind As List(Of String), cellExcelTabName As String, color As List(Of Color))
+        Dim consh As ExcelWorksheet
+        'Dim excelStream As New MemoryStream()
+        'excelStream.Write(excel, 0, excel.Length)
+        Dim exlpck As New ExcelPackage(excel)
+        If exlpck.Workbook.Worksheets(cellExcelTabName) Is Nothing Then
+            consh = exlpck.Workbook.Worksheets.Add(cellExcelTabName)
+        Else
+            consh = exlpck.Workbook.Worksheets(cellExcelTabName)
+        End If
+        Dim start = consh.Dimension.Start
+        Dim [end] = consh.Dimension.[End]
+        For row As Integer = 4 To [end].Row
+            ' Row by row...
+            For col As Integer = 18 To 35
+                ' ... Cell by cell...
+                ' This got me the actual value I needed.
+                Dim cellValue As String = consh.Cells(row, col).Text
+                Dim cellAddress = consh.Cells(row, col).Address
+                Dim i = 0
+                For Each mText In textToFind
+                    If cellValue.Contains(mText) Then
+                        consh.Cells(cellAddress).Value = cellValue.Replace(mText, "")
+                        consh.Cells(cellAddress).Style.Fill.PatternType = ExcelFillStyle.Solid
+                        consh.Cells(cellAddress).Style.Fill.BackgroundColor.SetColor(color(mText.Substring(1, 1) - 1))
+                        i = i + 1
+                    End If
+                Next
+            Next
+        Next
+        'Dim exlpck1 As New ExcelPackage(e)
+        exlpck.Save()
+        Dim s = New MemoryStream(exlpck.GetAsByteArray())
+        Return s
+    End Function
+
 
 
     Public Function WriteToExcelCell1(excel As Byte(), cellContent As String, cellExcelTabName As String, contentAddress As String)
@@ -849,6 +902,28 @@ Module Functions
         dt.AcceptChanges()
         Return dt
     End Function
+
+    '''' <summary>
+    '''' Get total sheets 
+    '''' </summary>
+    '''' <param name="excel"></param>
+    '''' <returns></returns>
+    'Public Function GetSheets(excel As Byte())
+    '    Dim ms As New MemoryStream(excel)
+    '    Dim dt As New DataTable
+    '    dt.Columns.Add("ID")
+    '    dt.Columns.Add("Value")
+    '    Using pck As New ExcelPackage(ms)
+    '        For Each ws As ExcelWorksheet In pck.Workbook.Worksheets
+    '            Dim conditionalFormattingRule01 = ws.ConditionalFormatting.AddExpression(ws.Cells(4, 18, 200, 35))
+    '            conditionalFormattingRule01.Formula = "($F9<=15)"
+    '            conditionalFormattingRule01.Style.Fill.PatternType = ExcelFillStyle.Solid
+    '            conditionalFormattingRule01.Style.Fill.BackgroundColor.Color = System.Drawing.Color.FromArgb(255, 192, 0)
+    '        Next
+    '    End Using
+    '    dt.AcceptChanges()
+    '    Return dt
+    'End Function
 
 #End Region
 

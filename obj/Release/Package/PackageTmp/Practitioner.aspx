@@ -1,6 +1,4 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Practitioner.aspx.vb" MasterPageFile="~/layout.Master" Inherits="CMPDSB_DEVIN.Practicioners" %>
-
-
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="head">
     <style type="text/css">
         .container {
@@ -278,6 +276,12 @@
                                     <%#Eval("Comments") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Delete"  HeaderStyle-ForeColor="Gray">
+                                <ItemTemplate>
+                                     <asp:LinkButton ID="btnDelete" runat="server" Text="Delete" CommandName="DeleteDetails"
+                                        CommandArgument='<%# Eval("Practitioner_ID") %>'></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
 
 
                         </Columns>
@@ -493,9 +497,9 @@
 
                     </div>
                     <div class="col2">
-                        <asp:TextBox ID="txtTechCoachEmail" placeholder="don't add @pg.com" Width="200px" Height="25px" class="txtgLOBAL" runat="server">
-                           
-                        </asp:TextBox>
+                        <asp:DropDownList ID="ddlTechCoachEmail" AppendDataBoundItems="true" Width="200px" Height="25px" class="txtgLOBAL" runat="server">
+                            <asp:ListItem Value="0">-Select-</asp:ListItem>
+                        </asp:DropDownList>
                         <%-- <input id="txtClassCompletedDate" type="date" Width="200px"   Height="25px"  class="txtgLOBAL" runat="server" />--%>
                     </div>
                     <div class="col3">
@@ -504,9 +508,9 @@
 
                     </div>
                     <div class="col4">
-                        <asp:TextBox ID="txtQualifier" Width="200px" placeholder="don't add @pg.com" Height="25px" class="txtgLOBAL" runat="server">
-                            
-                        </asp:TextBox>
+                        <asp:DropDownList ID="ddlQualifier" Width="200px" AppendDataBoundItems="true" Height="25px" class="txtgLOBAL" runat="server">
+                             <asp:ListItem Value="0">-Select-</asp:ListItem>
+                        </asp:DropDownList>
 
                     </div>
                 </div>
@@ -529,9 +533,9 @@
                 </div>
                 <br />
                 <br />
-                <div class="ContainerOne" style="text-align: left; margin-left: 818px;">
+                <div class="col4" style="text-align: right; margin-left: 635px;">
 
-                    <asp:Button ID="btnSaveRecords" OnClick="btnSaveRecords_Click" runat="server" Text="Save" />
+                    <asp:Button ID="btnSaveRecords"  OnClick="btnSaveRecords_Click" runat="server" Text="Save" />
 
                 </div>
 

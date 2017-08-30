@@ -204,34 +204,34 @@ Public Class EditMeasures
         Dim params As New List(Of SqlParameter)
         params.Add(New SqlParameter("@Startup_ID", StartupId))
         Dim dt As DataTable = ExecuteProcedureForDataTable("CMPDB_spGetOutputMeasures", params)
-        Dim dr = dt.Rows(0)
-        txtETCTGT.Text = dr("ETC_TGT").ToString
-        txtETCActual.Text = dr("ETC_Actual").ToString
-        ddlETC.SelectedValue = dr("ETC_Criteria_Met").ToString
-        txtPRTGT.Text = dr("PR_TGT").ToString()
-        txtPRActual.Text = dr("PR_Actual").ToString
-        ddlPR.SelectedValue = dr("PR_Criteria_Met").ToString
-        txtGSUMTGT.Text = dr("GSUMSmallProject_TGT").ToString
-        txtGSUMActual.Text = dr("GSUMSmallProject_Actual").ToString
-        ddlGSUM.SelectedValue = dr("GSUMSmallProject_Criteria_Met").ToString
-        txtSOPTGT.Text = dr("SOPDate_TGT").ToString
-        txtSOPActual.Text = dr("SOPDate_Actual").ToString
-        ddlSOP.SelectedValue = dr("SOPDate_Criteria_Met").ToString
-        txtSafetyOfIncidentsTGT.Text = dr("SafetyOfIncidents_TGT").ToString
-        txtSafetyOfIncidentsActual.Text = dr("SafetyOfIncidents_Actual").ToString
-        ddlSafetyOfIncidents.SelectedValue = dr("SafetyOfIncidents_Criteria_Met").ToString
-        ddlHSE.SelectedValue = dr("HSE").ToString
-        ddlQuality.SelectedValue = dr("Quality").ToString
-        txtSmallStartupCriteriaMet.Text = IIf(CType(dr("All_Small_Startup_Criteria_Met"), Boolean), "Yes", "No")
+        If dt.Rows.Count > 0 Then
+            Dim dr = dt.Rows(0)
+            txtETCTGT.Text = dr("ETC_TGT").ToString
+            txtETCActual.Text = dr("ETC_Actual").ToString
+            ddlETC.SelectedValue = dr("ETC_Criteria_Met").ToString
+            txtPRTGT.Text = dr("PR_TGT").ToString()
+            txtPRActual.Text = dr("PR_Actual").ToString
+            ddlPR.SelectedValue = dr("PR_Criteria_Met").ToString
+            txtGSUMTGT.Text = dr("GSUMSmallProject_TGT").ToString
+            txtGSUMActual.Text = dr("GSUMSmallProject_Actual").ToString
+            ddlGSUM.SelectedValue = dr("GSUMSmallProject_Criteria_Met").ToString
+            txtSOPTGT.Text = dr("SOPDate_TGT").ToString
+            txtSOPActual.Text = dr("SOPDate_Actual").ToString
+            ddlSOP.SelectedValue = dr("SOPDate_Criteria_Met").ToString
+            txtSafetyOfIncidentsTGT.Text = dr("SafetyOfIncidents_TGT").ToString
+            txtSafetyOfIncidentsActual.Text = dr("SafetyOfIncidents_Actual").ToString
+            ddlSafetyOfIncidents.SelectedValue = dr("SafetyOfIncidents_Criteria_Met").ToString
+            ddlHSE.SelectedValue = dr("HSE").ToString
+            ddlQuality.SelectedValue = dr("Quality").ToString
+            txtSmallStartupCriteriaMet.Text = IIf(CType(dr("All_Small_Startup_Criteria_Met"), Boolean), "Yes", "No")
+        End If
+
     End Sub
 
     Protected Sub gridProjects_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles gridProjects.RowDataBound
         If e.Row.RowType = DataControlRowType.DataRow Then
-
-
             Dim _row As DataRowView = e.Row.DataItem
             If _row IsNot Nothing Then
-
 
                 Dim _field = _row.Row("PCA_Approved")
                 If _field Is DBNull.Value Then
