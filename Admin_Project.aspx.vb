@@ -638,6 +638,30 @@ Public Class Admin_Project
         DdlSUL.SelectedValue = SULID
     End Sub
 
+    Protected Sub btnCoachRefresh_Click(sender As Object, e As ImageClickEventArgs)
+        Dim SULConfigValues = {"CMPDB_tblPractitioner", "Practitioner_ID", "Email", "Plant_ID", DdlPlantsInsert.SelectedValue}
+        PopulateDD(DdlSUL, SULConfigValues(0), SULConfigValues(1), SULConfigValues(2), SULConfigValues(3), SULConfigValues(4))
+
+        Dim SULID = GetSingleValue("select max(Practitioner_ID) from CMPDB_tblPractitioner")
+        DdlSULCoach.SelectedValue = SULID
+    End Sub
+
+    Protected Sub btnSNSIELRefresh_Click(sender As Object, e As ImageClickEventArgs)
+        Dim SULConfigValues = {"CMPDB_tblPractitioner", "Practitioner_ID", "Email", "Plant_ID", DdlPlantsInsert.SelectedValue}
+        PopulateDD(DdlSUL, SULConfigValues(0), SULConfigValues(1), SULConfigValues(2), SULConfigValues(3), SULConfigValues(4))
+
+        Dim SULID = GetSingleValue("select max(Practitioner_ID) from CMPDB_tblPractitioner")
+        DdlSNSIEL.SelectedValue = SULID
+    End Sub
+
+    Protected Sub btnPrjMgrRefresh_Click(sender As Object, e As ImageClickEventArgs)
+        Dim SULConfigValues = {"CMPDB_tblPractitioner", "Practitioner_ID", "Email", "Plant_ID", DdlPlantsInsert.SelectedValue}
+        PopulateDD(DdlSUL, SULConfigValues(0), SULConfigValues(1), SULConfigValues(2), SULConfigValues(3), SULConfigValues(4))
+
+        Dim SULID = GetSingleValue("select max(Practitioner_ID) from CMPDB_tblPractitioner")
+        DdlPrjMgr.SelectedValue = SULID
+    End Sub
+
     Private Sub gdvSrch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gdvSrch.SelectedIndexChanged
 
     End Sub

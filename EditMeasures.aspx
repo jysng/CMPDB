@@ -170,7 +170,8 @@
               width: 100%;
               float: left;
               /*margin-bottom: 10px;*/
-              line-height: 25px;
+
+              line-height:25px;
           }
 
           .add2 {
@@ -232,7 +233,7 @@
     <asp:UpdatePanel UpdateMode="Always" runat="server" ID="upnl">
         <ContentTemplate>
             <div class="container">
-                <div class="ContainerOne">
+                  <div class="ContainerOne">
                 <h2>CMPDB: Edit Startup Status and Measures</h2>
                     <br />
                        <div class="ContainerOne TopHead">
@@ -353,24 +354,30 @@
                         <asp:GridView ID="gridProjects" Width="100%" AutoGenerateColumns="False" OnRowCommand="gridProjects_RowCommand" runat="server" AllowSorting="true" OnSorting="gridProjects_Sorting" ShowHeaderWhenEmpty="true">
                             <Columns>
 
-                               
 
-                                <asp:TemplateField HeaderText="Startup Name" SortExpression="Startup_Name" HeaderStyle-ForeColor="Gray">
+                                  <asp:TemplateField HeaderText="Project" SortExpression="project_name" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="btnEdit" runat="server" Text='<%#Eval("Startup_Name") %>' CommandName="EditDetails"
-                                            CommandArgument='<%# Eval("Startup_ID") %>'></asp:LinkButton>
+                                        <asp:LinkButton ID="btnEdit" runat="server" Text='<%#Eval("project_name") %>' CommandName="EditDetails" CommandArgument='<%# Eval("Startup_ID") %>'
+                                          ></asp:LinkButton>
 
                                     </ItemTemplate>
                                 </asp:TemplateField>
+
+                               
+
+                               
                                  <asp:TemplateField HeaderText="Plant" SortExpression="plant" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("plant") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                              
-                                     
-                                
-                              
+                                      <asp:TemplateField HeaderText="Startup Name" SortExpression="Startup_Name" HeaderStyle-ForeColor="Gray">
+                                    <ItemTemplate>
+                                        <%#Eval("Startup_Name") %>
+
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                  <asp:TemplateField HeaderText="Project Name" SortExpression="project_name" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("project_name") %>
@@ -384,6 +391,11 @@
                                    <asp:TemplateField HeaderText="Project Type" SortExpression="Project_Type" HeaderStyle-ForeColor="Gray">
                                     <ItemTemplate>
                                         <%#Eval("Project_Type") %>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                  <asp:TemplateField HeaderText="Project %" SortExpression="Project_Target" HeaderStyle-ForeColor="Gray">
+                                    <ItemTemplate>
+                                        <%#Eval("Project_Target") %>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                    <asp:TemplateField HeaderText="Project Status" SortExpression="Project_Status"  HeaderStyle-ForeColor="Gray">
@@ -551,6 +563,7 @@
                             </div>
                           </div>
                     <div class="midfix3" style="float: right;">
+
                         <div class="merge" style="margin-top: 10px; width: 500px;">
                             Comments or major deliverables working on/completed
                         </div>
@@ -924,7 +937,7 @@
                 </div>
                                     </div>
                     </div>
-                <br />
+            <br />
                 <div class="ContainerOne">
                     <h2>Output Measures
                     </h2>
@@ -961,16 +974,20 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="txtETCTGT" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox17" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="txtETCActual" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox18" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="ddlETC" Width="60px" runat="server">
-                                   <asp:ListItem Value="1" Text="Yes"/>
-                                        <asp:ListItem Value="0" Text="No"/>
+                                <asp:DropDownList ID="TextBox19" Width="60px" runat="server">
+                                    <asp:ListItem>
+                                        Yes
+                                    </asp:ListItem>
+                                    <asp:ListItem>
+                                        No
+                                    </asp:ListItem>
                                 </asp:DropDownList>
 
                             </div>
@@ -987,16 +1004,20 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="txtPRTGT" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox21" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="txtPRActual" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox22" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="ddlPR" Width="60px" runat="server">
-                                  <asp:ListItem Value="1" Text="Yes"/>
-                                        <asp:ListItem Value="0" Text="No"/>
+                                <asp:DropDownList ID="DropDownList1" Width="60px" runat="server">
+                                    <asp:ListItem>
+                                        Yes
+                                    </asp:ListItem>
+                                    <asp:ListItem>
+                                        No
+                                    </asp:ListItem>
                                 </asp:DropDownList>
 
                             </div>
@@ -1012,16 +1033,20 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="txtGSUMTGT" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox23" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="txtGSUMActual" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox24" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="ddlGSUM" Width="60px" runat="server">
-                                   <asp:ListItem Value="1" Text="Yes"/>
-                                   <asp:ListItem Value="0" Text="No"/>
+                                <asp:DropDownList ID="DropDownList2" Width="60px" runat="server">
+                                    <asp:ListItem>
+                                        Yes
+                                    </asp:ListItem>
+                                    <asp:ListItem>
+                                        No
+                                    </asp:ListItem>
                                 </asp:DropDownList>
 
                             </div>
@@ -1038,16 +1063,20 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="txtSOPTGT" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox25" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="txtSOPActual" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox26" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="ddlSOP" Width="60px" runat="server">
-                                 <asp:ListItem Value="1" Text="Yes"/>
-                                 <asp:ListItem Value="0" Text="No"/>
+                                <asp:DropDownList ID="DropDownList3" Width="60px" runat="server">
+                                    <asp:ListItem>
+                                        Yes
+                                    </asp:ListItem>
+                                    <asp:ListItem>
+                                        No
+                                    </asp:ListItem>
                                 </asp:DropDownList>
 
                             </div>
@@ -1063,16 +1092,20 @@
                     <div class="midfix">
                         <div class="add">
                             <div class="col1" style="width: 70px;">
-                                <asp:TextBox ID="txtSafetyOfIncidentsTGT" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox27" Width="60px" runat="server"></asp:TextBox>
                             </div>
                             <div class="col2" style="width: 70px;">
-                                <asp:TextBox ID="txtSafetyOfIncidentsActual" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBox28" Width="60px" runat="server"></asp:TextBox>
 
                             </div>
                             <div class="col3" style="width: 70px;">
-                                <asp:DropDownList ID="ddlSafetyOfIncidents" Width="60px" runat="server">
-                                  <asp:ListItem Value="1" Text="Yes"/>
-                                  <asp:ListItem Value="0" Text="No"/>
+                                <asp:DropDownList ID="DropDownList4" Width="60px" runat="server">
+                                    <asp:ListItem>
+                                        Yes
+                                    </asp:ListItem>
+                                    <asp:ListItem>
+                                        No
+                                    </asp:ListItem>
                                 </asp:DropDownList>
 
                             </div>
@@ -1091,20 +1124,25 @@
                             <div class="col1" style="width: 70px;">
                                 <span style="width: 60px;"></span>
                             </div>
-                            <div class="col2" style="width: 140px;">
+                            <div class="col2" style="width: 70px;">
 
                                 <span style="width: 60px;"></span>
                             </div>
-                            <div class="col3" style="width: 70px;">
-                                    <asp:DropDownList ID="ddlHSE" Width="60px" runat="server">
-                                        <asp:ListItem Value="1" Text="Yes"/>
-                                        <asp:ListItem Value="0" Text="No"/>
-                                    </asp:DropDownList>
-                                </div>
-                            <div class="col4new">
+
+                            <div class="col3new">
                                 <span>HS_E
                                 </span>
-                                
+                                <div class="col4new" style="width: 70px;">
+                                    <asp:DropDownList ID="DropDownList7" Width="60px" runat="server">
+                                        <asp:ListItem>
+                                        Yes
+                                        </asp:ListItem>
+                                        <asp:ListItem>
+                                        No
+                                        </asp:ListItem>
+                                    </asp:DropDownList>
+
+                                </div>
 
                             </div>
                         </div>
@@ -1116,19 +1154,27 @@
                             <div class="col1" style="width: 70px;">
                                 <span style="width: 60px;"></span>
                             </div>
-                            <div class="col2" style="width: 140px;">
+                            <div class="col2" style="width: 70px;">
 
                                 <span style="width: 60px;"></span>
                             </div>
-                            <div class="col3" style="width: 71px;">
-                                <asp:DropDownList ID="ddlQuality" Width="60px" runat="server">
-                                        <asp:ListItem Value="1" Text="Yes"/>
-                                        <asp:ListItem Value="0" Text="No"/>
+
+                            <div class="col3new">
+                                <span>Quantitys
+                                </span>
+                                <div class="col4new" style="width: 70px;">
+                                    <asp:DropDownList ID="DropDownList5" Width="60px" runat="server">
+                                        <asp:ListItem>
+                                        Yes
+                                        </asp:ListItem>
+                                        <asp:ListItem>
+                                        No
+                                        </asp:ListItem>
                                     </asp:DropDownList>
-                            </div>
-                            <div class="col4new" style="width: 70px;">
-                                 <span>Quality</span>
+
                                 </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1141,7 +1187,7 @@
                                 All  Small Start Up  Criteria Met
                             </div>
                             <div class="col2">
-                                <asp:TextBox ID="txtSmallStartupCriteriaMet" Text="No" Width="60px" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="TextBoxdf20" Text="No" Width="60px" runat="server"></asp:TextBox>
                             </div>
 
                         </div>
@@ -1150,7 +1196,7 @@
 
                         <div class="merge">
 
-                            <asp:Button OnClick="btnCloseProject_Click" ID="btnCloseProject" Text="Close Project" runat="server" />
+                            <asp:Button ID="Button6" Text="Close Project" runat="server" />
                         </div>
                     </div>
                 </div>

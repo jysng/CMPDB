@@ -619,10 +619,32 @@
                     </div>
                     <div style="margin-left:-101px">
                        
-                        <asp:ImageButton style="display:none" CssClass="btnRefresh" OnClientClick="document.getElementById('btnRefresh').style.display='none';" OnClick="btnRefresh_Click" runat="server" ClientIDMode="Static" ID="btnRefresh" ImageUrl="~/images/Refresh.png" />
-                         <a runat="server" onclick="setCookie('CFlag','1',.01);" href="Practitioner.aspx" target="_blank">
+                        <asp:ImageButton style="display:none;" CssClass="btnRefresh" OnClientClick="document.getElementById('btnRefresh').style.display='none';" OnClick="btnRefresh_Click" runat="server" ClientIDMode="Static" ID="btnRefresh" ImageUrl="~/images/Refresh.png" />
+                         <a runat="server" onclick="setCookie('CFlag','1',.01,'btnRefresh');" href="Practitioner.aspx" target="_blank">
                         <img id="imgAdd" src="images/Add.png" class="btnRefresh" />
                         </a>
+                        <br />
+                        <div style="display:block;float:right;margin-right:551px">
+                         <asp:ImageButton style="display:none;" CssClass="btnRefresh" OnClientClick="document.getElementById('btnCoachRefresh').style.display='none';" OnClick="btnCoachRefresh_Click" runat="server" ClientIDMode="Static" ID="btnCoachRefresh" ImageUrl="~/images/Refresh.png" />
+                            </div>
+                         <a runat="server" onclick="setCookie('CFlag','1',.01,'btnCoachRefresh');" href="Practitioner.aspx" target="_blank">
+                        <img id="imgAddCoach" style="display:block" src="images/Add.png" class="btnRefresh" />
+                        </a>
+
+                        <div style="display:block;float:right;margin-right:551px">
+                          <asp:ImageButton style="display:none;" CssClass="btnRefresh" OnClientClick="document.getElementById('btnSNSIELRefresh').style.display='none';" OnClick="btnSNSIELRefresh_Click" runat="server" ClientIDMode="Static" ID="btnSNSIELRefresh" ImageUrl="~/images/Refresh.png" />
+                            </div>
+                         <a runat="server" onclick="setCookie('CFlag','1',.01,'btnSNSIELRefresh');" href="Practitioner.aspx" target="_blank">
+                        <img id="imgAddSNSIEL" style="display:block" src="images/Add.png" class="btnRefresh" />
+                        </a>
+                        <div style="display:block;float:right;margin-right:551px">
+                          <asp:ImageButton style="display:none;" CssClass="btnRefresh" OnClientClick="document.getElementById('btnPrjMgrRefresh').style.display='none';" OnClick="btnPrjMgrRefresh_Click" runat="server" ClientIDMode="Static" ID="btnPrjMgrRefresh" ImageUrl="~/images/Refresh.png" />
+                            </div>
+                         <a runat="server" onclick="setCookie('CFlag','1',.01,'btnPrjMgrRefresh');" href="Practitioner.aspx" target="_blank">
+                        <img id="imgAddPrjMgr" style="display:block" src="images/Add.png" class="btnRefresh" />
+                        </a>
+
+
                         <%--<asp:Button ID="btnplusSUL"  OnClientClick="aspnetForm.target ='_blank';" OnClick="btnplusSUL_Click" Style="display: block" AppendDataBoundItems="true" runat="server" Text="+" Width="30px" UseSubmitBehavior="False" />--%>
                         
                       <%--  <asp:Button ID="BtnplusSulCoach" Style="display: block" AppendDataBoundItems="true" runat="server" Text="+" Width="30px" />
@@ -649,12 +671,12 @@
     <script>
 
 
-        function setCookie(cname, cvalue, exdays) {
+        function setCookie(cname, cvalue, exdays,ele) {
             var d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
             var expires = "expires=" + d.toUTCString();
             document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            document.getElementById('btnRefresh').style.display = 'inline';
+            document.getElementById(ele).style.display = 'inline';
         }
 
 

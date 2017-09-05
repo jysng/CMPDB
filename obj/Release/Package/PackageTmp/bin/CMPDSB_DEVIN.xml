@@ -1511,6 +1511,33 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._btnCoachRefresh">
+<summary>
+btnCoachRefresh control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._btnSNSIELRefresh">
+<summary>
+btnSNSIELRefresh control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._btnPrjMgrRefresh">
+<summary>
+btnPrjMgrRefresh control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:CMPDSB_DEVIN.Admin_Project._BtnSetTargetsandMilestones">
 <summary>
 BtnSetTargetsandMilestones control.

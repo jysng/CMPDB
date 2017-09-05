@@ -1,8 +1,4 @@
 ﻿Imports System.Data.SqlClient
-Imports System.IO
-Imports Microsoft.SqlServer.Management.Sdk.Sfc
-
-Imports Microsoft.SqlServer.Management.Smo
 
 Public Class Dashboard
     Inherits System.Web.UI.Page
@@ -67,7 +63,7 @@ Public Class Dashboard
 
     Protected Sub BtnReports_Click(sender As Object, e As EventArgs)
 
-        Response.Redirect("Report.aspx")
+        Response.Redirect("Report.aspx?s=PTR")
     End Sub
 
     Protected Sub btnID_Click1(sender As Object, e As EventArgs)

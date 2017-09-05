@@ -122,15 +122,24 @@ Module App
     Dim previousSelected As Integer
     Public Sub HighlightRow(gridPractitioner As GridView, e As GridViewCommandEventArgs)
         Dim rows As GridViewRow = DirectCast(DirectCast(e.CommandSource, LinkButton).NamingContainer, GridViewRow)
-        If HttpContext.Current.Session("previousSelected") IsNot Nothing Then
-            previousSelected = Convert.ToInt32(HttpContext.Current.Session("previousSelected"))
+
+        'If HttpContext.Current.Session("previousSelected") IsNot Nothing Then
+        '    previousSelected = Convert.ToInt32(HttpContext.Current.Session("previousSelected"))
+        'End If
+        'Dim selectedRow As GridViewRow = gridPractitioner.Rows(previousSelected)
+        'selectedRow.Style.Add("background-color", "#f9f9f9") 'change it back to original color
+        'selectedRow = gridPractitioner.Rows(rows.RowIndex)
+        'selectedRow.Style.Add("background-color", "#dddddd") 'change the color of the new row
+        'HttpContext.Current.Session("previousSelected") = rows.RowIndex
+
+        If HttpContext.Current.Session(gridPractitioner.ID) IsNot Nothing Then
+            previousSelected = Convert.ToInt32(HttpContext.Current.Session(gridPractitioner.ID))
         End If
         Dim selectedRow As GridViewRow = gridPractitioner.Rows(previousSelected)
         selectedRow.Style.Add("background-color", "#f9f9f9") 'change it back to original color
         selectedRow = gridPractitioner.Rows(rows.RowIndex)
         selectedRow.Style.Add("background-color", "#dddddd") 'change the color of the new row
-        HttpContext.Current.Session("previousSelected") = rows.RowIndex
-
+        HttpContext.Current.Session(gridPractitioner.ID) = rows.RowIndex
     End Sub
 
 #End Region

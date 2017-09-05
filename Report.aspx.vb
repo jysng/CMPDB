@@ -92,23 +92,32 @@ Public Class Report
         Dim params As New List(Of SqlParameter)
         If ddlPlantList.SelectedValue > 0 Then
             params.Add(New SqlParameter("@plant", ddlPlantList.SelectedValue))
-        Else
-            params.Add(New SqlParameter("@plant", DBNull.Value))
         End If
-        params.Add(New SqlParameter("@gridtype", "E"))
+
+        If ddlProject.SelectedIndex > 0 Then
+            params.Add(New SqlParameter("@project", ddlProject.SelectedValue))
+        End If
+
+        If ddlDepartment.SelectedIndex > 0 Then
+            params.Add(New SqlParameter("@department", ddlDepartment.SelectedValue))
+        End If
+
+        If ddlSUL.SelectedIndex > 0 Then
+            params.Add(New SqlParameter("@practitioner", ddlSUL.SelectedValue))
+        End If
+
+        If ddlStartUpStatus.SelectedIndex > 0 Then
+            params.Add(New SqlParameter("@status", ddlStartUpStatus.SelectedValue))
+        End If
+
+        params.Add(New SqlParameter("@gridtype", "A"))
         Dim dt As DataTable = ExecuteProcedureForDataTable(ViewState("storedproc"), params)
+        grdReport.DataBind()
         If dt.Rows.Count > 0 Then
             grdReport.DataSource = dt
             grdReport.DataBind()
-            'gdvSrch.Columns(5).Visible = False
-            'gdvSrch.Columns(6).Visible = False
-            'gdvSrch.Columns(7).Visible = False
-            'gdvSrch.Columns(8).Visible = False
-            'gdvSrch.Columns(9).Visible = False
             Return dt
         Else
-            'ShowGridHeader()
-
         End If
     End Function
 
@@ -225,7 +234,6 @@ Public Class Report
             Dim strExcelTabName As String = ViewState("exceltabname")
             Dim strOutputFileExtension As String = ViewState("outputfileextension")
 
-            'Dim strFileName As String = strExcelTabName + ".xlsx"
             Dim strFileName As String = strExcelTabName + "." + strOutputFileExtension
 
             AppendToExcel(ReadFromDB(), strFileName, strExcelTabName)
