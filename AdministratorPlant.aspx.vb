@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 
 Public Class AdministratorPlant
     Inherits Page
@@ -726,8 +727,10 @@ Public Class AdministratorPlant
             Dim bytes() = CType(dt.Rows(0)("FileObject"), Byte())
             Dim mFileName = dt.Rows(0)("filename")
             Dim mBLOBFileID = dt.Rows(0)("BLOBFile_ID")
-            bytes = AppendCustomDataToExcel(bytes, mBLOBFileID, mFileName, "CMPDB_tblBLOBFiles")
-            download(bytes, dt.Rows(0)("filename").ToString())
+            Dim ms As New MemoryStream(bytes)
+            ' Append connection string and other BLOB_ID to the excel
+            ms = AppendCustomDataToExcel(ms, mBLOBFileID, mFileName, "CMPDB_tblBLOBFiles")
+            DownloadFileFromMemoryStream(ms, dt.Rows(0)("filename").ToString())
         End If
     End Sub
 #End Region

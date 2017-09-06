@@ -819,7 +819,7 @@ Module Functions
         Dim start = consh.Dimension.Start
         Dim [end] = consh.Dimension.[End]
         For row As Integer = 4 To [end].Row
-            ' Row by row...
+            ' Row by row...B
             For col As Integer = 18 To 35
                 ' ... Cell by cell...
                 ' This got me the actual value I needed.
@@ -828,6 +828,7 @@ Module Functions
                 Dim i = 0
                 For Each mText In textToFind
                     If cellValue.Contains(mText) Then
+                        'ex.Value = 
                         consh.Cells(cellAddress).Value = cellValue.Replace(mText, "")
                         consh.Cells(cellAddress).Style.Fill.PatternType = ExcelFillStyle.Solid
                         consh.Cells(cellAddress).Style.Fill.BackgroundColor.SetColor(color(mText.Substring(1, 1) - 1))
@@ -837,27 +838,26 @@ Module Functions
             Next
         Next
         'Dim exlpck1 As New ExcelPackage(e)
-        exlpck.Save()
-        Dim s = New MemoryStream(exlpck.GetAsByteArray())
-        Return s
+        Dim ms As New MemoryStream
+        exlpck.SaveAs(ms)
+        Return ms
     End Function
 
 
 
-    Public Function WriteToExcelCell1(excel As Byte(), cellContent As String, cellExcelTabName As String, contentAddress As String)
+    Public Function WriteToExcelCell1(excel As MemoryStream, cellContent As String, cellExcelTabName As String, contentAddress As String)
         Dim consh As ExcelWorksheet
-        Dim excelStream As New MemoryStream()
-        excelStream.Write(excel, 0, excel.Length)
-        Dim exlpck As New ExcelPackage(excelStream)
+
+        Dim exlpck As New ExcelPackage(excel)
         If exlpck.Workbook.Worksheets(cellExcelTabName) Is Nothing Then
             consh = exlpck.Workbook.Worksheets.Add(cellExcelTabName)
         Else
             consh = exlpck.Workbook.Worksheets(cellExcelTabName)
         End If
         consh.Cells(contentAddress).Value = cellContent
-        exlpck.Save()
-        Return exlpck.GetAsByteArray()
-
+        Dim ms As New MemoryStream
+        exlpck.SaveAs(ms)
+        Return ms
     End Function
 
     Public Function ReadCellValueFromWorkSheetNameAndAddContentToCell(excel As Byte(), dataAppendSheet As String, dataAppendCellAddress As String, excelTabName As String, excelCellAddress As String, cellContent As String)

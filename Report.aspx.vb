@@ -89,6 +89,7 @@ Public Class Report
     End Sub
 
     Private Function CreateGrid()
+
         Dim params As New List(Of SqlParameter)
         If ddlPlantList.SelectedValue > 0 Then
             params.Add(New SqlParameter("@plant", ddlPlantList.SelectedValue))
@@ -126,8 +127,7 @@ Public Class Report
         Using pck As New ExcelPackage(excel)
             Dim ws As ExcelWorksheet = pck.Workbook.Worksheets(excelTabName)
             If ws IsNot Nothing Then
-                Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                Response.AddHeader("content-disposition", "filename=" + HttpUtility.UrlEncode(filename, System.Text.Encoding.UTF8))
+
                 ws.Cells("A4").LoadFromDataTable(CreateGrid, False)
 
                 Dim a = ws.Cells("R3:AI3")
@@ -137,7 +137,6 @@ Public Class Report
                     i = i + 1
                 Next
                 Dim ms = New MemoryStream()
-
 
                 pck.SaveAs(ms)
                 Dim colors = New List(Of Color)
@@ -154,13 +153,12 @@ Public Class Report
                 textToFind.Add("^4")
                 textToFind.Add("^5")
                 ms = FindTextInSheet(ms, textToFind, mSheetName, colors)
-                '  ms = FindTextInSheet(ms, "2", mSheetName, Color.FromArgb(204, 192, 218))
-                'ms = FindTextInSheet(ms, "3", mSheetName, Color.FromArgb(204, 192, 218))
-                'ms = FindTextInSheet(ms, "4", mSheetName, Color.FromArgb(204, 192, 218))
-                'ms = FindTextInSheet(ms, "5", mSheetName, Color.FromArgb(204, 192, 218))
-                Response.Clear()
-                ms.WriteTo(Response.OutputStream)
-                Response.End()
+                DownloadFileFromMemoryStream(ms, filename)
+                'Response.Flush()
+                'Response.Clear()
+                'Response.BinaryWrite(ms.ToArray())
+                '' ms.WriteTo(Response.OutputStream)
+                'Response.End()
             Else
                 Response.Write("Cannot find the specified sheet.")
             End If
