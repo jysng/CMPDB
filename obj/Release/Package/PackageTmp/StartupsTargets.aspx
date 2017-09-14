@@ -196,23 +196,23 @@
                     </div>
 
                     <div class="col2" style="margin-top: 10px;">
-                        <asp:CheckBox ID="chkAdvancedMode" OnCheckedChanged="chkAdvancedMode_CheckedChanged" AutoPostBack="true" Checked="true" runat="server" Text="Advanced Mode" />
+                        <%--<asp:CheckBox ID="chkAdvancedMode" OnCheckedChanged="chkAdvancedMode_CheckedChanged" AutoPostBack="true" Checked="true" runat="server" Text="Advanced Mode" />--%>
                     </div>
-					<div class="ContainerOne">
+					<div  class="ContainerOne">
                         <div class="col1">
                             <asp:Label ID="lbltxtProject" CssClass="lbl" runat="server" Text="Project Name"></asp:Label>
                         </div>
                         <div class="col2">
-                            <asp:TextBox ID="txtProject" style="height:25px; width: 311px;" runat="server">                      
+                            <asp:TextBox ID="txtProject"  style="height:25px; width: 311px;" runat="server">                      
                             </asp:TextBox>
                         </div>
 						<div class="col3">
-							<asp:Button ID="btnSearch" OnClick ="btnearchProj_Click" style="width: 70px;margin-left: 190px; height: 30px;" runat="server" Text="Search" /> &nbsp;&nbsp;
+							<asp:Button ID="btnSearch" OnClick ="btnearchProj_Click" Visible="false" style="width: 70px;margin-left: 190px; height: 30px;" runat="server" Text="Search" /> &nbsp;&nbsp;
 						</div>
                     </div>
 
-                    <div class="ContainerOne">
-                        <div class="col1">
+                    <div style="display:none" class="ContainerOne">
+                        <div  class="col1">
                             <asp:Label ID="lblStartupName" CssClass="lbl" runat="server" Text="StartUp Name"></asp:Label>
                         </div>
                         <div class="col2">
@@ -242,7 +242,7 @@
 
                     <div class="ContainerOne" id="divCharacterApproved" runat="server">
                         <div class="col1">
-                            <asp:Label ID="lblCharacter" CssClass="lbl" runat="server" Text="*Charter Approved"></asp:Label>
+                            <asp:Label ID="lblCharacter" CssClass="lbl" runat="server" Text="Charter Approved"></asp:Label>
                         </div>
                         <div class="col2">
 

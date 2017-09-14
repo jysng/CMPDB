@@ -18,13 +18,14 @@ Public Class Startupstargets
         If Not Me.IsPostBack Then
 
             If Session("projectID") IsNot Nothing Then
-                Dim list As KeyValuePair(Of String, Integer) = Session("projectID")
-                Dim valueproj = list.Key
+
+                Dim valueproj = Session("projectID").ToString().Split(",")(0).Replace("[", "")
+                Dim value = Session("projectID").ToString().Split(",")(1).Replace("]", "")
 
                 Dim dt As DataTable = GetDataTableFromSQL("select startup_Name,Startup_ID from CMPDB_tblStartups_New where Project_Name like'%" + valueproj + "%'")
                 If dt.Rows.Count > 0 Then
                     Dim countrow = dt.Rows.Count
-                    txtProject.Text = list.Key
+                    txtProject.Text = valueproj
                     PopulateDDFromDataTable(ddlStartUpName, dt)
                     Dim ddlvalue = dt.Rows(0)("Startup_ID")
                     ddlStartUpName.SelectedValue = ddlvalue
@@ -33,16 +34,17 @@ Public Class Startupstargets
                 End If
                 If valueproj IsNot Nothing Then
                     txtProject.Enabled = False
+
+                    PopulateDD(lstboxEODate, xTableNameEODates, "EO_Date_ID", "DayDate", "Startup_ID", value)
+                    PopulateDD(lstboxConstructionDate, xTableNameConstructionDates, "Construction_Date_ID", "DayDate", "Startup_ID", value)
+                    PopulateDD(lstboxVATDate, xTableNameVatDates, "VAT_Date_ID", "DayDate", "Startup_ID", value)
+                    showtargets(value)
                     'ddlStartUpName.Enabled = False
                 End If
             End If
 
-            PopulateDD(lstboxEODate, xTableNameEODates, "EO_Date_ID", "DayDate", "Startup_ID", list.Value)
-            PopulateDD(lstboxConstructionDate, xTableNameConstructionDates, "Construction_Date_ID", "DayDate", "Startup_ID", list.Value)
-            PopulateDD(lstboxVATDate, xTableNameVatDates, "VAT_Date_ID", "DayDate", "Startup_ID", list.Value)
-            showtargets(list.Value)
 
-            chkAdvancedMode_CheckedChanged(sender, EventArgs.Empty)
+            ' chkAdvancedMode_CheckedChanged(sender, EventArgs.Empty)
 
             If Session("UserRole") = "1" Then
                 btnApprovedPCA.Enabled = True
@@ -93,64 +95,67 @@ Public Class Startupstargets
             txtPCAApprovedDate.Enabled = False
         End If
     End Sub
-
-    Protected Sub chkAdvancedMode_CheckedChanged(sender As Object, e As EventArgs)
-        If chkAdvancedMode.Checked = True Then
-            ResetControls(ddlStartUpStatus)
-            ResetControls(txtETCTarget, txtPRTarget, txtMlstnPCStrategy, txtMlstnStartupWorkProcess, txtMlstnStartupProduction)
-            ResetControls(chkCharacter)
-        End If
-        ShowHideControls(chkAdvancedMode.Checked, divStartupStatus,
-           divCharacterApproved,
-           divEtcTargetStatus,
-           diPrTargetStatus,
-           divtxtMlstnPCStrategy,
-           divtxtMlstnStartupWorkProcess,
-           divtxtMlstnStartupProduction,
-           divMlstnPCStrategy,
-           divMlstnStartupWorkProcess,
-           divlblMlstnStartupProduction, hr1)
-    End Sub
+#Region " Commnted On Ticket 100"
+    'Protected Sub chkAdvancedMode_CheckedChanged(sender As Object, e As EventArgs)
+    '    If chkAdvancedMode.Checked = True Then
+    '        ResetControls(ddlStartUpStatus)
+    '        ResetControls(txtETCTarget, txtPRTarget, txtMlstnPCStrategy, txtMlstnStartupWorkProcess, txtMlstnStartupProduction)
+    '        ResetControls(chkCharacter)
+    '    End If
+    '    ShowHideControls(chkAdvancedMode.Checked, divStartupStatus,
+    '       divCharacterApproved,
+    '       divEtcTargetStatus,
+    '       diPrTargetStatus,
+    '       divtxtMlstnPCStrategy,
+    '       divtxtMlstnStartupWorkProcess,
+    '       divtxtMlstnStartupProduction,
+    '       divMlstnPCStrategy,
+    '       divMlstnStartupWorkProcess,
+    '       divlblMlstnStartupProduction, hr1)
+    'End Sub
+#End Region
 
     Private Sub SaveStartupTargets(StartupType As String)
 
-        If chkAdvancedMode.Checked = False Then
-            If ddlStartUpStatus.SelectedValue = 0 Then
-                MessageBox("Please Select StartUp Status !!")
-                ddlStartUpStatus.Focus()
-                Exit Sub
-            End If
-            If chkCharacter.Checked = False Then
-                MessageBox("Please check Charter Approved !!")
-                Exit Sub
-            End If
-            If txtETCTarget.Text = "" Then
-                MessageBox("Please Insert ETC Target($M) !!")
-                txtETCTarget.Focus()
-                Exit Sub
-            End If
-            If txtPRTarget.Text = "" Then
-                MessageBox("Please Insert PR Target % !!")
-                txtPRTarget.Focus()
-                Exit Sub
-            End If
+        '    If chkAdvancedMode.Checked = False Then
+        '        If ddlStartUpStatus.SelectedValue = 0 Then
+        '            MessageBox("Please Select StartUp Status !!")
+        '            ddlStartUpStatus.Focus()
+        '            Exit Sub
+        '        End If
 
-            If txtMlstnPCStrategy.Text = "" Then
-                MessageBox("Please Select Date !!")
-                Exit Sub
-            End If
-
-            If txtMlstnStartupWorkProcess.Text = "" Then
-                MessageBox("Please Select Date !!")
-                Exit Sub
-            End If
-
-            If txtMlstnStartupProduction.Text = "" Then
-                MessageBox("Please Select Date !!")
-                Exit Sub
-            End If
-
+        ' Closed on ticket 98
+        'If chkCharacter.Checked = False Then
+        '    MessageBox("Please check Charter Approved !!")
+        '    Exit Sub
+        'End If
+        If txtETCTarget.Text = "" Then
+            MessageBox("Please Insert ETC Target($M) !!")
+            txtETCTarget.Focus()
+            Exit Sub
         End If
+        If txtPRTarget.Text = "" Then
+            MessageBox("Please Insert PR Target % !!")
+            txtPRTarget.Focus()
+            Exit Sub
+        End If
+
+        If txtMlstnPCStrategy.Text = "" Then
+            MessageBox("Please Select Date !!")
+            Exit Sub
+        End If
+
+        If txtMlstnStartupWorkProcess.Text = "" Then
+            MessageBox("Please Select Date !!")
+            Exit Sub
+        End If
+
+        If txtMlstnStartupProduction.Text = "" Then
+            MessageBox("Please Select Date !!")
+            Exit Sub
+        End If
+
+
 
         Dim list As KeyValuePair(Of String, Integer) = Session("projectID")
         Dim Startup_ID = list.Value
@@ -175,7 +180,7 @@ Public Class Startupstargets
         params.Add(New SqlParameter("@Mlstn_G2T_Day_1", IIf(txtMlstnG2TDay1.Text = "", DBNull.Value, txtMlstnG2TDay1.Text)))
         params.Add(New SqlParameter("@Mlstn_G2T_Construction_Completion", IIf(txtMlstnG2TConstructionCompletion.Text = "", DBNull.Value, txtMlstnG2TConstructionCompletion.Text)))
         params.Add(New SqlParameter("@Mlstn_G2T_End_of_PQ_Phase", IIf(txtMlstnG2TEndofPQPhase.Text = "", DBNull.Value, txtMlstnG2TEndofPQPhase.Text)))
-        params.Add(New SqlParameter("@Mlstn_G2T_End_of_Ininital_Verification_Completion_Phase", IIf(txtMlstnG2TEndofPQPhase.Text = "", DBNull.Value, txtMlstnG2TEndofPQPhase.Text)))
+        params.Add(New SqlParameter("@Mlstn_G2T_End_of_Ininital_Verification_Completion_Phase", IIf(txtMlstnG2T_End_of_Ininital_Verification.Text = "", DBNull.Value, txtMlstnG2T_End_of_Ininital_Verification.Text)))
         params.Add(New SqlParameter("@Comments", txtcomments.Text))
         ExecuteProcedure("CMPDB_sp_InsertUpdate_tblStartupTargets", params)
 

@@ -336,7 +336,7 @@
 
         </div>
 
-        <div class="ContainerOne">      
+    <%--    <div class="ContainerOne">      
                  <div class="col1">
                 <asp:Label ID="Label1" CssClass="lbl" runat="server" Text="Production Types"></asp:Label>
                 <asp:ListBox ID="ListBox1" CssClass="ddl ddlgLOBAL" OnSelectedIndexChanged="ListBoxProductionType_SelectedIndexChanged" AutoPostBack="true" runat="server" ></asp:ListBox>
@@ -352,7 +352,7 @@
             </div>
             <div class="col3">
             </div>
-        </div>
+        </div>--%>
 
         <div class="ContainerOne">      
                  <div class="col1">

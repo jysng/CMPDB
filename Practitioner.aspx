@@ -241,9 +241,9 @@
                                     <%#Eval("Practitioner_Role") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Full Name" SortExpression="FirstName" HeaderStyle-ForeColor="Gray">
+                            <asp:TemplateField HeaderText="Qualification Level" SortExpression="Qualification_Level" HeaderStyle-ForeColor="Gray">
                                 <ItemTemplate>
-                                    <%# Eval("FirstName") + " " + Eval("LastName")%>
+                                    <%# Eval("Qualification_Level")%>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Qualification Date" SortExpression="QualificationDate" HeaderStyle-ForeColor="Gray">

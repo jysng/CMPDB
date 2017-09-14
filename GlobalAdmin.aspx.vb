@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 
 Public Class GlobalAdmin
     Inherits System.Web.UI.Page
@@ -764,11 +765,12 @@ Public Class GlobalAdmin
 							inner join CMPDB_tblCorporateSources b  on a.BLOBFile_ID = b.BLOBFile_ID where a.FileName='" + lnkbtnFileName.Text + "' and b.Corporate_Cell_Location_For_Score ='" + txtCorporate_Cell_Location_For_Score.Text + "'	and b.Corporate_WS_Name='" + txtCorporate_WS_Name.Text + "' ")
         If dt.Rows.Count > 0 Then
             Dim mBLOBFile = dt.Rows(0)("BLOBFile_ID")
-            Dim File1 = dt.Rows(0)("FileObject")
+            Dim File1 = CType(dt.Rows(0)("FileObject"), Byte())
+            Dim ms As New MemoryStream(File1)
             'Append Table name BLOB ID and File Name to the template Excel File
             Dim FileName = dt.Rows(0)("FileName")
-            File1 = AppendCustomDataToExcel(File1, mBLOBFile, FileName, "CMPDB_tblCorporateSourcesBLOBFiles")
-            download(File1, dt.Rows(0)("FileName"))
+            ms = AppendCustomDataToExcel(ms, mBLOBFile, FileName, "CMPDB_tblCorporateSourcesBLOBFiles")
+            DownloadFileFromMemoryStream(ms, dt.Rows(0)("FileName"))
         End If
     End Sub
     Protected Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click

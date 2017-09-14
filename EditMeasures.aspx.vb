@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 
 Public Class EditMeasures
     Inherits System.Web.UI.Page
@@ -133,8 +134,9 @@ Public Class EditMeasures
         Dim dtMeasures As DataTable = ExecuteProcedureForDataTable("CMPDB_sp_GetProcessMeasures", params)
 
         If dtMeasures.Rows.Count > 0 Then
-            Dim bytes() As Byte = CType(dtMeasures.Rows(0)("FileObject"), Byte())
-            download(bytes, dtMeasures.Rows(0)("filename").ToString())
+            Dim bytes() As Byte = dtMeasures.Rows(0)("FileObject")
+            Dim ms As New MemoryStream(bytes)
+            DownloadFileFromMemoryStream(ms, dtMeasures.Rows(0)("filename").ToString())
         End If
     End Sub
     Protected Sub gridProjects_Sorting(ByVal sender As Object, ByVal e As GridViewSortEventArgs)
@@ -203,10 +205,11 @@ Public Class EditMeasures
     Private Sub PopulateOutputMeasuresData(StartupId As String)
         Dim params As New List(Of SqlParameter)
         params.Add(New SqlParameter("@Startup_ID", StartupId))
-        Dim dt As DataTable = ExecuteProcedureForDataTable("CMPDB_spGetOutputMeasures", params)
+        Dim dt As New DataTable
+        dt = ExecuteProcedureForDataTable("CMPDB_spGetOutputMeasures", params)
         If dt.Rows.Count > 0 Then
             Dim dr = dt.Rows(0)
-            txtETCTGT.Text = dr("ETC_TGT").ToString
+            txtETCTGT.Text = dt.Rows(0)("ETC_TGT").ToString
             txtETCActual.Text = dr("ETC_Actual").ToString
             ddlETC.SelectedValue = dr("ETC_Criteria_Met").ToString
             txtPRTGT.Text = dr("PR_TGT").ToString()
@@ -302,23 +305,26 @@ Public Class EditMeasures
                 Dim paramsNew As New List(Of SqlParameter)
 
                 For Each row In dtMeasures.Rows
-                    If (row("SWP_Tool_Name").ToString.Equals(em.mlblFileName.Text)) Then
+                    If row("SWP_Tool_Name").ToString.Equals(em.mlblFileName.Text) Then
 
                         list.Add(row("SWP_Tool_Name_ID"))
 
                         Session("SaveList") = list
                         ' Append Value in excel and using
+
                         Dim lst As List(Of Object) = ReadCellValueFromWorkSheetNameAndAddContentToCell(row("FileObject"),
                                                                                                        "ConnectSheet",
                                                                                                        "A2",
                                                                                                        row("Project_WS_Name"),
                                                                                                        row("Project_CellAddress"),
                                                                                                        row("BLOBFile_ID"))
+
                         em.mtxtBox.Text = lst(0)
 
                         paramsNew.Add(New SqlParameter("@Table_Name", "CMPDB_tblStartupBLOBFiles"))
                         paramsNew.Add(New SqlParameter("@BLOB_ID", row("BLOBFile_ID")))
-                        paramsNew.Add(New SqlParameter("@FileObject", lst(1)))
+
+                        paramsNew.Add(New SqlParameter("@FileObject", CType(lst(1), MemoryStream).ToArray))
                         'paramsNew.Add(New SqlParameter("@FileName", "jysng.xlsm"))
 
                         ExecuteProcedure("CMPDB_sp_InsertBLOBwithID", paramsNew)
@@ -331,7 +337,7 @@ Public Class EditMeasures
                             row("cellvalue") = ""
                         End If
                         em.mCellAddress.Text = row("Project_CellAddress")
-                        em.mtxtBox.Text = row("cellvalue")
+                        ' em.mtxtBox.Text = row("cellvalue")
 
                         em.mlnkbtnFileName.Visible = True
                         em.mlblFileName.Visible = False
@@ -359,7 +365,6 @@ Public Class EditMeasures
                     End If
 
                 Next
-
                 i = i + 1
             Next
         Catch ex As Exception

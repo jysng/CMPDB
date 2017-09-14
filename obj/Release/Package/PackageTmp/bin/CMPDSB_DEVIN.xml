@@ -3473,60 +3473,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:CMPDSB_DEVIN.GlobalAdmin._Label1">
-<summary>
-Label1 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:CMPDSB_DEVIN.GlobalAdmin._ListBox1">
-<summary>
-ListBox1 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:CMPDSB_DEVIN.GlobalAdmin._TextBox1">
-<summary>
-TextBox1 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:CMPDSB_DEVIN.GlobalAdmin._ImageButton1">
-<summary>
-ImageButton1 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:CMPDSB_DEVIN.GlobalAdmin._ImageButton2">
-<summary>
-ImageButton2 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:CMPDSB_DEVIN.GlobalAdmin._ImageButton3">
-<summary>
-ImageButton3 control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:CMPDSB_DEVIN.GlobalAdmin._Label2">
 <summary>
 Label2 control.
@@ -4553,15 +4499,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:CMPDSB_DEVIN.Startupstargets._upnl">
 <summary>
 upnl control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:CMPDSB_DEVIN.Startupstargets._chkAdvancedMode">
-<summary>
-chkAdvancedMode control.
 </summary>
 <remarks>
 Auto-generated field.

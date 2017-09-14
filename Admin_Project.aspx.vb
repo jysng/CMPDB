@@ -21,13 +21,9 @@ Public Class Admin_Project
     End Sub
 #End Region
 
-
-
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         GetParentSiteMapNode()
         If Not IsPostBack Then
-
             SetTools()
             'Throw New Exception()
             PopulateDD(DdlPlants, "CMPDB_tblPlants", "Plant_ID", "Plant")
@@ -40,12 +36,11 @@ Public Class Admin_Project
 
             PopulateDD(DdlLinktoCBn, "CMPDB_tblSite_CBNs", "Site_CBN_ID", "Site_CBN")
             PopulateDD(ddlSrchBusinessUnit, "CMPDB_vwBu_Dependent_Plants", "Business_Unit_ID", "Business_Unit", "Plant_ID", DdlPlants.SelectedValue)
-            ' PopulateDD(DdlBusinessUnit, "CMPDB_tblBusiness_Unit", "Business_Unit_ID", "Business_Unit")
-            'PopulateDD(ddlSrchBusinessUnit, "CMPDB_tblBusiness_Unit", "Business_Unit_ID", "Business_Unit")
-            'PopulateDD(ddlSrchBusinessUnit, "CMPDB_vwBu_Dependent_Plants", "Business_Unit_ID", "Business_Unit", "Plant_ID", DdlPlants.SelectedValue)
+            '  PopulateDD(DdlBusinessUnit, "CMPDB_tblBusiness_Unit", "Business_Unit_ID", "Business_Unit")
+            ' PopulateDD(ddlSrchBusinessUnit, "CMPDB_tblBusiness_Unit", "Business_Unit_ID", "Business_Unit")
             PopulateDD(DdlCOmplexityofStartup, "CMPDB_tblComplexityLevel", "Complexity_Situation_ID", "ComplexitySituation")
-            '  PopulateDD(DdlImpactDept, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
-            ' PopulateDD(DdlLeadingDept, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
+            'PopulateDD(DdlImpactDept, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
+            'PopulateDD(DdlLeadingDept, "CMPDB_tblSite_Departments", "Site_Department_ID", "Site_Department")
 
             InitialRadioButton()
             chkAdvancedMode.Checked = False
@@ -219,6 +214,7 @@ Public Class Admin_Project
                 txtProjectName.Text = dt.Rows(0)("Project_Name").ToString
                 txtstartupName.Text = dt.Rows(0)("Startup_Name").ToString
                 DdlPlantsInsert.SelectedValue = dt.Rows(0)("Plant").ToString
+                DdlPlantsInsert_SelectedIndexChanged(sender, EventArgs.Empty)
                 DdlProjectType.SelectedValue = dt.Rows(0)("Project_Type").ToString
                 DdlChangeType.SelectedValue = dt.Rows(0)("Change_Type").ToString
                 DdlCOmplexityofStartup.SelectedValue = dt.Rows(0)("Complexity_of_Startup").ToString
@@ -284,8 +280,11 @@ Public Class Admin_Project
                 End If
                 cblGSUM.ClearSelection()
                 For i As Integer = 0 To dt.Rows.Count - 1
-                    Dim j As Int16 = Convert.ToInt32(dt.Rows(i)("SWP_Tool_Name_ID"))
-                    cblGSUM.Items.FindByValue(j).Selected = True
+                    If dt.Rows(i)("SWP_Tool_Name_ID") IsNot DBNull.Value Then
+                        Dim j As Int16 = Convert.ToInt32(dt.Rows(i)("SWP_Tool_Name_ID"))
+                        cblGSUM.Items.FindByValue(j).Selected = True
+                    End If
+
                 Next
             End If
             Dim list As KeyValuePair(Of String, Integer) = New KeyValuePair(Of String, Integer)(txtstartupName.Text, Startup_ID)
@@ -624,7 +623,7 @@ Public Class Admin_Project
     End Sub
 
     Protected Sub DdlPlantsInsert_SelectedIndexChanged(sender As Object, e As EventArgs)
-        Dim SULConfigValues = {"CMPDB_tblPractitioner", "Practitioner_ID", "Email", "Plant_ID", DdlPlantsInsert.SelectedValue}
+        Dim SULConfigValues = {"CMPDB_tblPractitioner", "Practitioner_ID", "Email", " swp_role=2 and Plant_ID", DdlPlantsInsert.SelectedValue}
         PopulateDD(DdlSUL, SULConfigValues(0), SULConfigValues(1), SULConfigValues(2), SULConfigValues(3), SULConfigValues(4))
         PopulateDD(DdlSULCoach, SULConfigValues(0), SULConfigValues(1), SULConfigValues(2), SULConfigValues(3), SULConfigValues(4))
         PopulateDD(DdlSNSIEL, SULConfigValues(0), SULConfigValues(1), SULConfigValues(2), SULConfigValues(3), SULConfigValues(4))
@@ -646,6 +645,30 @@ Public Class Admin_Project
 
         Dim SULID = GetSingleValue("select max(Practitioner_ID) from CMPDB_tblPractitioner")
         DdlSUL.SelectedValue = SULID
+    End Sub
+
+    Protected Sub btnCoachRefresh_Click(sender As Object, e As ImageClickEventArgs)
+        Dim SULConfigValues = {"CMPDB_tblPractitioner", "Practitioner_ID", "Email", "Plant_ID", DdlPlantsInsert.SelectedValue}
+        PopulateDD(DdlSUL, SULConfigValues(0), SULConfigValues(1), SULConfigValues(2), SULConfigValues(3), SULConfigValues(4))
+
+        Dim SULID = GetSingleValue("select max(Practitioner_ID) from CMPDB_tblPractitioner")
+        DdlSULCoach.SelectedValue = SULID
+    End Sub
+
+    Protected Sub btnSNSIELRefresh_Click(sender As Object, e As ImageClickEventArgs)
+        Dim SULConfigValues = {"CMPDB_tblPractitioner", "Practitioner_ID", "Email", "Plant_ID", DdlPlantsInsert.SelectedValue}
+        PopulateDD(DdlSUL, SULConfigValues(0), SULConfigValues(1), SULConfigValues(2), SULConfigValues(3), SULConfigValues(4))
+
+        Dim SULID = GetSingleValue("select max(Practitioner_ID) from CMPDB_tblPractitioner")
+        DdlSNSIEL.SelectedValue = SULID
+    End Sub
+
+    Protected Sub btnPrjMgrRefresh_Click(sender As Object, e As ImageClickEventArgs)
+        Dim SULConfigValues = {"CMPDB_tblPractitioner", "Practitioner_ID", "Email", "Plant_ID", DdlPlantsInsert.SelectedValue}
+        PopulateDD(DdlSUL, SULConfigValues(0), SULConfigValues(1), SULConfigValues(2), SULConfigValues(3), SULConfigValues(4))
+
+        Dim SULID = GetSingleValue("select max(Practitioner_ID) from CMPDB_tblPractitioner")
+        DdlPrjMgr.SelectedValue = SULID
     End Sub
 
     Private Sub gdvSrch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gdvSrch.SelectedIndexChanged

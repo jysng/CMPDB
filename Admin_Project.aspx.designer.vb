@@ -338,15 +338,6 @@ Partial Public Class Admin_Project
     Protected WithEvents DdlLeadingDept As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''btnMileStone control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnMileStone As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
     '''spansulCoach control.
     '''</summary>
     '''<remarks>
@@ -419,6 +410,33 @@ Partial Public Class Admin_Project
     Protected WithEvents btnRefresh As Global.System.Web.UI.WebControls.ImageButton
     
     '''<summary>
+    '''btnCoachRefresh control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCoachRefresh As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''btnSNSIELRefresh control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSNSIELRefresh As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
+    '''btnPrjMgrRefresh control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnPrjMgrRefresh As Global.System.Web.UI.WebControls.ImageButton
+    
+    '''<summary>
     '''BtnSetTargetsandMilestones control.
     '''</summary>
     '''<remarks>
@@ -435,4 +453,13 @@ Partial Public Class Admin_Project
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnSave As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnMileStone control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnMileStone As Global.System.Web.UI.WebControls.Button
 End Class

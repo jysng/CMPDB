@@ -219,7 +219,7 @@ Public Class Practicioners
     Public Sub getdata(Editid As String)
         Dim dt = New DataTable
 
-        dt = GetDataTableFromSQL("select Practitioner_ID,plant.plant_id,p.Plant_Department,p.Business_Unit,r.Region,p.Region_ID,p.Department,convert(varchar(10), cast(DateAdded as date), 101)DateAdded,p.Email,swp.swp_ID,p.swp_role,pr.Practitioner_Role,convert(varchar(10), cast(QualificationDate as date), 101)QualificationDate,p.Qualifier,convert(varchar(10), cast(TargetedDate as date), 101)TargetedDate,convert(varchar(10), cast(ClassCompletedDate as date), 101)ClassCompletedDate,p.TechCoachEmail,p.Comments,p.FirstName,p.LastName,Qualification_Level  from CMPDB_tblPractitioner as P left join CMPDB_tblBusiness_Unit bU on bu.Business_Unit_ID=p.Business_Unit left  join CMPDB_tblPlants as plant on plant.Plant_ID=p.Plant_ID left join CMPDB_tblSite_Departments as dept on dept.Site_Department_ID=p.Department inner join CMPDB_tblSWP as swp on swp.SWP_ID=p.SWP_ID left join CMPDB_tblRegion r on r.Region_ID=p.Region_ID inner join CMPDB_tblPractitioner_Roles as pr on pr.Practitioner_Role_ID=p.SWP_Role  where Practitioner_id=" + Editid + "")
+        dt = GetDataTableFromSQL("select QL.Qualification_Level,Practitioner_ID,plant.plant_id,p.Plant_Department,p.Business_Unit,r.Region,p.Region_ID,p.Department,convert(varchar(10), cast(DateAdded as date), 101)DateAdded,p.Email,swp.swp_ID,p.swp_role,pr.Practitioner_Role,convert(varchar(10), cast(QualificationDate as date), 101)QualificationDate,p.Qualifier,convert(varchar(10), cast(TargetedDate as date), 101)TargetedDate,convert(varchar(10), cast(ClassCompletedDate as date), 101)ClassCompletedDate,p.TechCoachEmail,p.Comments,p.FirstName,p.LastName,QL.Qualification_Level_ID  from CMPDB_tblPractitioner as P left join CMPDB_tblBusiness_Unit bU on bu.Business_Unit_ID=p.Business_Unit left  join CMPDB_tblPlants as plant on plant.Plant_ID=p.Plant_ID left join CMPDB_tblSite_Departments as dept on dept.Site_Department_ID=p.Department inner join CMPDB_tblSWP as swp on swp.SWP_ID=p.SWP_ID left join CMPDB_tblRegion r on r.Region_ID=p.Region_ID inner join CMPDB_tblPractitioner_Roles as pr on pr.Practitioner_Role_ID=p.SWP_Role left join CMPDB_tblQualification_Level QL ON QL.Qualification_Level_ID=P.Qualification_Level where Practitioner_id=" + Editid + "")
         If dt.Rows.Count > 0 Then
             ddlPlant.SelectedValue = dt.Rows(0)("plant_id").ToString()
             populateBusinessUnit(dt.Rows(0)("plant_id").ToString(), "1")
@@ -251,6 +251,8 @@ Public Class Practicioners
             Else
                 ddlTechCoachEmail.SelectedValue = dt.Rows(0)("TechCoachEmail").ToString()
             End If
+
+            ddlQualificationLevel.SelectedValue = IIf(IsDBNull(dt.Rows(0)("Qualification_Level_ID")), "0", dt.Rows(0)("Qualification_Level_ID"))
             ' ddlQualifier.SelectedValue = dt.Rows(0)("Qualifier").ToString()
             txtTargetDate.Text = dt.Rows(0)("TargetedDate").ToString()
             txtClassCompletedDate.Text = dt.Rows(0)("ClassCompletedDate").ToString()
@@ -416,7 +418,7 @@ Public Class Practicioners
         params.Add(New SqlParameter("@Email", txtInsertEmail.Text))
         params.Add(New SqlParameter("@SWP_ID", ddlSWp.SelectedValue))
         params.Add(New SqlParameter("@SWP_Role", ddlSWPRole.SelectedValue))
-        If ddlQualificationLevel.SelectedValue = "-Select-" Then
+        If ddlQualificationLevel.SelectedValue = "0" Then
             params.Add(New SqlParameter("@Qualification_Level", DBNull.Value))
         Else
             params.Add(New SqlParameter("@Qualification_Level", ddlQualificationLevel.SelectedValue))

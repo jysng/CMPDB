@@ -342,7 +342,7 @@ Module Functions
             Else
                 HttpContext.Current.Response.ContentType = "application/vnd.ms-excel.sheet.macroEnabled.12"
             End If
-            HttpContext.Current.Response.AddHeader("content-disposition", "filename=" + HttpUtility.UrlEncode(filename, System.Text.Encoding.UTF8))
+            HttpContext.Current.Response.AddHeader("content-disposition", "attachment; filename=" + HttpUtility.UrlEncode(filename, System.Text.Encoding.UTF8))
             HttpContext.Current.Response.Clear()
             excel.WriteTo(HttpContext.Current.Response.OutputStream)
             HttpContext.Current.Response.End()
@@ -785,8 +785,8 @@ Module Functions
             consh = exlpck.Workbook.Worksheets(cellExcelTabName)
         End If
         consh.Cells(contentAddress).Value = cellContent
-        exlpck.Save()
-        Dim s = New MemoryStream(exlpck.GetAsByteArray())
+        Dim s As New MemoryStream
+        exlpck.SaveAs(s)
         Return s
     End Function
 

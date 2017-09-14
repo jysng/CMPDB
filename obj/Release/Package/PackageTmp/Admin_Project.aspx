@@ -601,6 +601,7 @@
                         <asp:DropDownList ID="DdlSUL" ViewStateMode="Enabled" Style="display: block" AppendDataBoundItems="true" runat="server" Width="250px" Height="25px">
                             <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
                         </asp:DropDownList>
+                        
                         <asp:DropDownList ID="DdlSULCoach" Style="display: block" AppendDataBoundItems="true" runat="server" Height="25px" Width="250px">
                             <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
                         </asp:DropDownList>
