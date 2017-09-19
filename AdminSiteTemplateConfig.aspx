@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/layout.Master" CodeBehind="AdministratorPlant.aspx.vb" Inherits="CMPDSB_DEVIN.AdministratorPlant" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/layout.Master" CodeBehind="AdminSiteTemplateConfig.aspx.vb" Inherits="CMPDSB_DEVIN.AdminSiteTemplateConfig" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="head">
     <style type="text/css">
@@ -228,38 +228,35 @@
             float: left;
             margin-bottom: 5px;
         }
-		/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-   
-}
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+        }
 
-/* Modal Content */
-.modal-content {
-  background-color: #8AE0F2;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #dff0d8;
-    width: 12%;
-    margin-top: 71px;
-    margin-left:23px;
-    /* margin-left: 1092px; */
-    position: absolute;
-    right: 30px;
-	text-align:center;
-	color:black;
- 
-}
-
-    </style>	 
+        /* Modal Content */
+        .modal-content {
+            background-color: #8AE0F2;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #dff0d8;
+            width: 12%;
+            margin-top: 71px;
+            margin-left: 23px;
+            /* margin-left: 1092px; */
+            position: absolute;
+            right: 30px;
+            text-align: center;
+            color: black;
+        }
+    </style>
     <script type="text/javascript">
         window.onload = function () {
             var a = document.getElementById("st9");
@@ -306,7 +303,7 @@
 
             document.getElementById("<%= lbl_file_fuGSUM_PRRA.ClientID %>").innerText = v;
             document.getElementById("<%= fuGSUM_PRRA.ClientID %>").style.display = "none";
-             document.getElementById('lnkfuGSUM_PRRA').style.display = "";
+            document.getElementById('lnkfuGSUM_PRRA').style.display = "";
 
 
         }
@@ -371,7 +368,7 @@
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
     <asp:UpdatePanel runat="server" ID="upnl">
         <ContentTemplate>
-				   
+
             <div class="container">
                 <div class="ContainerOne">
 
@@ -384,33 +381,37 @@
                         </asp:DropDownList>
                         <br />
                         <br />
-                        <asp:Label ID="lblBusinessUnit" CssClass="lbl" runat="server" Text="*Business Unit"></asp:Label>
-                        <asp:DropDownList ID="DropDownListBusinessUnit" AppendDataBoundItems="true" OnSelectedIndexChanged="DropDownListBusinessUnit_SelectedIndexChanged" AutoPostBack="true" Width="343px" runat="server">
-                            <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
-                        </asp:DropDownList>
-                        <br />
-                        <br />
-                        <asp:Label ID="lblPlatform" CssClass="lbl" runat="server" Text="Platform">
-                        </asp:Label>
-                        <asp:DropDownList ID="DropDownListPlatform" AutoPostBack="true" OnSelectedIndexChanged="DropDownListPlatform_SelectedIndexChanged" AppendDataBoundItems="true" Width="343px" runat="server">
-                            <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
-                        </asp:DropDownList>
-                        <br />
-                        <br />
-                        <asp:Label ID="lblProductionType" CssClass="lbl" runat="server" Text="*Production Type"></asp:Label>
-                        <asp:DropDownList ID="DropDownListProductionType" AutoPostBack="true" OnSelectedIndexChanged="DropDownListProductionType_SelectedIndexChanged" AppendDataBoundItems="true" Width="343px" runat="server">
-                            <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
-                        </asp:DropDownList>
-                    </div>
-                    <div class="img">
-                        <asp:Image ID="Image1" ImageUrl="~/images/arrow.png" runat="server" Height="32px" Width="32px" />
+                        <div style="display: none">
+                            <asp:Label ID="lblBusinessUnit" CssClass="lbl" runat="server" Text="*Business Unit"></asp:Label>
+                            <asp:DropDownList ID="DropDownListBusinessUnit" AppendDataBoundItems="true" OnSelectedIndexChanged="DropDownListBusinessUnit_SelectedIndexChanged" AutoPostBack="true" Width="343px" runat="server">
+                                <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
+                            </asp:DropDownList>
+                            <br />
+                            <br />
+                            <asp:Label ID="lblPlatform" CssClass="lbl" runat="server" Text="Platform">
+                            </asp:Label>
+                            <asp:DropDownList ID="DropDownListPlatform" AutoPostBack="true" OnSelectedIndexChanged="DropDownListPlatform_SelectedIndexChanged" AppendDataBoundItems="true" Width="343px" runat="server">
+                                <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
+                            </asp:DropDownList>
+                            <br />
+                            <br />
+                            <asp:Label ID="lblProductionType" CssClass="lbl" runat="server" Text="*Production Type"></asp:Label>
+                            <asp:DropDownList ID="DropDownListProductionType" AutoPostBack="true" OnSelectedIndexChanged="DropDownListProductionType_SelectedIndexChanged" AppendDataBoundItems="true" Width="343px" runat="server">
+                                <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
+                            </asp:DropDownList>
+
+
+                            <div class="img">
+                                <asp:Image ID="Image1" ImageUrl="~/images/arrow.png" runat="server" Height="32px" Width="32px" />
+                            </div>
+                        </div>
                     </div>
                     <div class="col2">
                     </div>
-                    <div class="col3">
+                    <div style="display: none" class="col3">
                         <div id="DivProductionLines" runat="server">
                             <asp:Label ID="lblProductionLineOrArea" CssClass="lbl" runat="server" Text="*Production Line^ or Area "></asp:Label>
-                            <asp:ListBox ID="ListBoxProductionLine" CssClass="ddl ddlgLOBAL" runat="server" OnSelectedIndexChanged="ListBoxProductionLine_SelectedIndexChanged" AutoPostBack="true" ></asp:ListBox>
+                            <asp:ListBox ID="ListBoxProductionLine" CssClass="ddl ddlgLOBAL" runat="server" OnSelectedIndexChanged="ListBoxProductionLine_SelectedIndexChanged" AutoPostBack="true"></asp:ListBox>
                             <div class="midbox">
                                 <asp:TextBox MaxLength="50" ID="txtProductionLine" runat="server" CssClass="txtgLOBAL" />
                                 <asp:ImageButton Text="Add" runat="server" ID="btnAddProductionLine" ImageUrl="~/images/Add.png" OnClick="btnAddProductionLine_Click" CssClass="btngLOBAL" />
@@ -420,7 +421,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="ContainerOne">
+                <div style="display: none" class="ContainerOne">
                     <div class="col1">
                         <div id="DivDepartments" runat="server">
                             <asp:Label ID="lbldepartment" CssClass="lbl" runat="server" Text="Departments"></asp:Label>
@@ -440,7 +441,7 @@
                     </div>
                 </div>
 
-                <div class="ContainerOne">
+                <div style="display: none" class="ContainerOne">
                     <div class="col1">
                         <div id="DivCBN" runat="server">
                             <asp:Label ID="lblCBN" CssClass="lbl" runat="server" Text="CBN"></asp:Label>
@@ -460,7 +461,7 @@
                 <asp:CheckBox ID="CheckBoxEnableAuto" Visible="false" AutoPostBack="true" runat="server" Text="Enable Auto Create Folder Structure and Links for New Startups" />
                 <br />
                 <br />
-                <div style="display:none;" runat="server" id="divEnableDisable">
+                <div runat="server" id="divEnableDisable">
                     <div class="ContainerBottom" style="display: none">
                         <div class="col1">
                             <b>Directory (on TCC or Shared Drive, NOT LOCAL)</b>
@@ -472,12 +473,12 @@
                         </div>
                     </div>
                     <div class="ContainerBottom extra_bottom_margin">
-                        <div class="col1">
+                        <div style="display:none;" class="col1">
 
                             <asp:RadioButton ID="RadioButtonUseCorporate" AutoPostBack="true" GroupName="FileSource" runat="server" Text="Use Corporate Standards" />
                             <br />
                             <br />
-                            <asp:RadioButton STYLE="display:none" ID="RadioButtonSingleSource" OnCheckedChanged="RadioButtonSingleSource_CheckedChanged" AutoPostBack="true" Checked="true" GroupName="FileSource" runat="server" Text="Single Source File" />
+                            <asp:RadioButton Style="display: none" ID="RadioButtonSingleSource" OnCheckedChanged="RadioButtonSingleSource_CheckedChanged" AutoPostBack="true" Checked="true" GroupName="FileSource" runat="server" Text="Single Source File" />
 
                         </div>
                         <div class="col11">

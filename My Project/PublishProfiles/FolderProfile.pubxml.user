@@ -11,7 +11,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdministratorPlant.aspx">
-      <publishTime>08/11/2017 14:59:53</publishTime>
+      <publishTime>09/15/2017 12:32:10</publishTime>
+    </File>
+    <File Include="AdminSiteTemplateConfig.aspx">
+      <publishTime>09/15/2017 12:39:44</publishTime>
     </File>
     <File Include="Admin_Project.aspx">
       <publishTime>09/08/2017 14:39:40</publishTime>
@@ -26,16 +29,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/05/2017 09:09:42</publishTime>
     </File>
     <File Include="bin/CMPDSB_DEVIN.dll">
-      <publishTime>09/14/2017 18:10:39</publishTime>
+      <publishTime>09/15/2017 17:15:10</publishTime>
     </File>
     <File Include="bin/CMPDSB_DEVIN.dll.config">
       <publishTime>07/28/2017 21:10:49</publishTime>
     </File>
     <File Include="bin/CMPDSB_DEVIN.pdb">
-      <publishTime>09/14/2017 18:10:39</publishTime>
+      <publishTime>09/15/2017 17:15:10</publishTime>
     </File>
     <File Include="bin/CMPDSB_DEVIN.xml">
-      <publishTime>09/14/2017 18:10:39</publishTime>
+      <publishTime>09/15/2017 17:15:10</publishTime>
     </File>
     <File Include="bin/DocumentFormat.OpenXml.dll">
       <publishTime>07/05/2017 09:09:44</publishTime>
@@ -209,7 +212,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/05/2017 09:09:42</publishTime>
     </File>
     <File Include="SM GlobalAdmin.sitemap">
-      <publishTime>07/31/2017 18:17:43</publishTime>
+      <publishTime>09/15/2017 12:28:41</publishTime>
     </File>
     <File Include="StartupMeasuresReview.aspx">
       <publishTime>07/05/2017 09:09:42</publishTime>

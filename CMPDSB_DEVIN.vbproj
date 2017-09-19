@@ -98,6 +98,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminSiteTemplateConfig.aspx" />
     <Content Include="AdministratorPlant.aspx" />
     <Content Include="Admin_Project.aspx" />
     <Content Include="bin\CMPDSB_DEVIN.dll" />
@@ -137,6 +138,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminSiteTemplateConfig.aspx.designer.vb">
+      <DependentUpon>AdminSiteTemplateConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSiteTemplateConfig.aspx.vb">
+      <DependentUpon>AdminSiteTemplateConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="AdministratorPlant.aspx.designer.vb">
       <DependentUpon>AdministratorPlant.aspx</DependentUpon>
     </Compile>

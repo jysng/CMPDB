@@ -22,6 +22,7 @@
       </siteMapNode>
       <siteMapNode title="Bulk Update" url="~/BLOBUpdate.aspx"></siteMapNode>
       <siteMapNode title="Bulk Master Data Upload" url="~/BulkDataUpload.aspx"></siteMapNode>
+      <siteMapNode url="~/AdminSiteTemplateConfig.aspx" title="Admin Site Template Config" ></siteMapNode>
 
     </siteMapNode>
     <!--<siteMapNode title="Masters">

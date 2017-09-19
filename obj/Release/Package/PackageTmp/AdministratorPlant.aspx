@@ -460,7 +460,7 @@
                 <asp:CheckBox ID="CheckBoxEnableAuto" Visible="false" AutoPostBack="true" runat="server" Text="Enable Auto Create Folder Structure and Links for New Startups" />
                 <br />
                 <br />
-                <div runat="server" id="divEnableDisable">
+                <div style="display:none;" runat="server" id="divEnableDisable">
                     <div class="ContainerBottom" style="display: none">
                         <div class="col1">
                             <b>Directory (on TCC or Shared Drive, NOT LOCAL)</b>
