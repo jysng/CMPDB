@@ -23,6 +23,24 @@ Partial Public Class Practicioners
     Protected WithEvents upnl As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
+    '''hfGridView1SV control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hfGridView1SV As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''hfGridView1SH control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hfGridView1SH As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
     '''btnSerach control.
     '''</summary>
     '''<remarks>

@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿
+Imports System.Data.SqlClient
 
 Public Class Admin_Project
     Inherits System.Web.UI.Page
@@ -218,17 +219,25 @@ Public Class Admin_Project
                 DdlProjectType.SelectedValue = dt.Rows(0)("Project_Type").ToString
                 DdlChangeType.SelectedValue = dt.Rows(0)("Change_Type").ToString
                 DdlCOmplexityofStartup.SelectedValue = dt.Rows(0)("Complexity_of_Startup").ToString
-
-                DdlLinktoCBn.SelectedValue = dt.Rows(0)("Link_to_CBN").ToString
+                Dim CBN = IIf(dt.Rows(0)("Link_to_CBN").Equals(DBNull.Value), "0", dt.Rows(0)("Link_to_CBN"))
+                'Dim var = dt.Rows(0)("Link_to_CBN")
+                DdlLinktoCBn.SelectedValue = CBN
                 DdlPriority.SelectedValue = dt.Rows(0)("Priority").ToString
                 DdlBusinessUnit.SelectedValue = dt.Rows(0)("Business_Unit_ID").ToString
                 DdlProductionLine.SelectedValue = dt.Rows(0)("Production_Line").ToString
-                DdlImpactDept.SelectedValue = dt.Rows(0)("Impacted_Dept").ToString
-                DdlLeadingDept.SelectedValue = dt.Rows(0)("Leading_Dept").ToString
+                Dim ImpactDepartment = IIf(dt.Rows(0)("Impacted_Dept").Equals(DBNull.Value), "0", dt.Rows(0)("Impacted_Dept"))
+
+                DdlImpactDept.SelectedValue = ImpactDepartment
+                Dim LeadingDepartment = IIf(dt.Rows(0)("Leading_Dept").Equals(DBNull.Value), "0", dt.Rows(0)("Leading_Dept"))
+
+                DdlLeadingDept.SelectedValue = LeadingDepartment
                 DdlSUL.SelectedValue = dt.Rows(0)("SUL_ID").ToString
-                DdlSULCoach.SelectedValue = dt.Rows(0)("SUL_Coach_ID").ToString
-                DdlSNSIEL.SelectedValue = dt.Rows(0)("SN_SIEL_ID").ToString
-                DdlPrjMgr.SelectedValue = dt.Rows(0)("Proj_Mgr_ID").ToString
+                Dim SULCoach = IIf(dt.Rows(0)("SUL_Coach_ID").Equals(DBNull.Value), "0", dt.Rows(0)("SUL_Coach_ID"))
+                DdlSULCoach.SelectedValue = SULCoach
+                Dim SNSIEL = IIf(dt.Rows(0)("SN_SIEL_ID").Equals(DBNull.Value), "0", dt.Rows(0)("SN_SIEL_ID"))
+                DdlSNSIEL.SelectedValue = SNSIEL
+                Dim PrjMgr = IIf(dt.Rows(0)("Proj_Mgr_ID").Equals(DBNull.Value), "0", dt.Rows(0)("Proj_Mgr_ID"))
+                DdlPrjMgr.SelectedValue = PrjMgr
 
                 cblGSUM.Items(0).Attributes.Add("style", "display:none")
                 cblGSUM.Items(1).Attributes.Add("style", "display:none")
@@ -291,6 +300,7 @@ Public Class Admin_Project
             Session("projectID") = list
             btnMileStone.Enabled = True
             btnSave.Text = "Update"
+            btnDeleteProject.Enabled = True
         End If
     End Sub
 
@@ -354,6 +364,7 @@ Public Class Admin_Project
     End Sub
 
     Protected Sub btnSave_Click(sender As Object, e As EventArgs)
+
         If DdlPlantsInsert.SelectedItem.Value = 0 Then
             MessageBox("Please select Plant !!")
             DdlPlantsInsert.Focus()
@@ -402,6 +413,20 @@ Public Class Admin_Project
             DdlSUL.Focus()
             Exit Sub
         End If
+        '
+        Dim IsStartupNameExists = GetSingleValue($"select count(*) from CMPDB_tblStartups_New WHERE Startup_Name='{txtstartupName.Text}'")
+        Dim IsProjectNameExists = GetSingleValue($"select count(*) from CMPDB_tblStartups_New WHERE Project_Name='{txtProjectName.Text}'")
+
+        If IsStartupNameExists <> "0" Then
+            MessageBox("Duplicate Startup Name !!")
+            Exit Sub
+        End If
+
+        If IsProjectNameExists <> "0" Then
+            MessageBox("Duplicate Project Name !!")
+            Exit Sub
+        End If
+
         If btnSave.Text = "Save" Then
             AddUpdateRecordsStartUpProject("I")
             AddUpdateRecordsGSUMCBAProject("I")
@@ -416,7 +441,7 @@ Public Class Admin_Project
         cblGSUM.ClearSelection()
         ResetControls(DdlPlantsInsert, DdlBusinessUnit, DdlCOmplexityofStartup, DdlProjectType, DdlChangeType, DdlLinktoCBn, DdlPriority, ddlSrchBusinessUnit, DdlProductionLine, DdlImpactDept, DdlLeadingDept, DdlSUL, DdlSULCoach, DdlSNSIEL, DdlPrjMgr)
         ResetControls(txtstartupName, txtProjectName)
-
+        btnDeleteProject.Enabled = False
 
     End Sub
 
@@ -717,4 +742,14 @@ Public Class Admin_Project
         Return sortDirection
 
     End Function
+
+    Protected Sub btnDeleteProject_Click(sender As Object, e As EventArgs)
+        'Dim Startup_ID As Int32 = gdvSrch.SelectedRow.Cells(11).Text
+        RunSQLQuery($"delete from CMPDB_tblStartups_New Where Startup_ID={ ViewState("Startup_ID")}")
+        MessageBox("Record Delted !!")
+        btnDeleteProject.Enabled = False
+        BtnSrchExistingStartup_Click(sender, EventArgs.Empty)
+        btnSave.Text = "Save"
+        btnMileStone.Enabled = False
+    End Sub
 End Class

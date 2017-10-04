@@ -350,7 +350,7 @@
                         </div>
                         <br />
                         <br />
-                        <asp:GridView ID="gridProjects" Width="100%" AutoGenerateColumns="False" OnRowCommand="gridProjects_RowCommand" runat="server" AllowSorting="true" OnSorting="gridProjects_Sorting" ShowHeaderWhenEmpty="true">
+                        <asp:GridView style="float:left" ID="gridProjects" Width="100%" AutoGenerateColumns="False" OnRowCommand="gridProjects_RowCommand" runat="server" AllowSorting="true" OnSorting="gridProjects_Sorting" ShowHeaderWhenEmpty="true">
                             <Columns>
 
 

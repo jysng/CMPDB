@@ -2186,6 +2186,24 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._hfGridView1SV">
+<summary>
+hfGridView1SV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._hfGridView1SH">
+<summary>
+hfGridView1SH control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:CMPDSB_DEVIN.Admin_Project._chkAdvancedMode">
 <summary>
 chkAdvancedMode control.
@@ -2621,6 +2639,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:CMPDSB_DEVIN.Admin_Project._btnMileStone">
 <summary>
 btnMileStone control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Admin_Project._btnDeleteProject">
+<summary>
+btnDeleteProject control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -4808,6 +4835,24 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:CMPDSB_DEVIN.Practicioners._upnl">
 <summary>
 upnl control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._hfGridView1SV">
+<summary>
+hfGridView1SV control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:CMPDSB_DEVIN.Practicioners._hfGridView1SH">
+<summary>
+hfGridView1SH control.
 </summary>
 <remarks>
 Auto-generated field.

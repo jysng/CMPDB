@@ -128,14 +128,39 @@ Public Class EditMeasures
         Dim Fileid As [String] = btn.CommandArgument
 
         Dim params As New List(Of SqlParameter)
+        Dim paramsNew As New List(Of SqlParameter)
         params.Add(New SqlParameter("@Startup_ID", ""))
         params.Add(New SqlParameter("@startupsBLOBFilesID", Fileid))
         params.Add(New SqlParameter("@Type", "D"))
         Dim dtMeasures As DataTable = ExecuteProcedureForDataTable("CMPDB_sp_GetProcessMeasures", params)
 
         If dtMeasures.Rows.Count > 0 Then
+
+            ' Append Value in excel and using
+
+            Dim lst As List(Of Object) = ReadCellValueFromWorkSheetNameAndAddContentToCell(dtMeasures.Rows(0)("FileObject"),
+                                                                                           "ConnectSheet",
+                                                                                           "A2",
+                                                                                           dtMeasures.Rows(0)("Project_WS_Name"),
+                                                                                           dtMeasures.Rows(0)("Project_CellAddress"),
+                                                                                           dtMeasures.Rows(0)("BLOBFile_ID"))
+
+
+
+
+            paramsNew.Add(New SqlParameter("@Table_Name", "CMPDB_tblStartupBLOBFiles"))
+            paramsNew.Add(New SqlParameter("@BLOB_ID", dtMeasures.Rows(0)("BLOBFile_ID")))
+
+            paramsNew.Add(New SqlParameter("@FileObject", CType(lst(1), MemoryStream).ToArray))
+            'paramsNew.Add(New SqlParameter("@FileName", "jysng.xlsm"))
+
+            ExecuteProcedure("CMPDB_sp_InsertBLOBwithID", paramsNew)
+
+
+
             Dim bytes() As Byte = dtMeasures.Rows(0)("FileObject")
             Dim ms As New MemoryStream(bytes)
+            ms = AppendCustomDataToExcel(ms, Fileid, dtMeasures.Rows(0)("filename").ToString(), "CMPDB_tblStartupBLOBFiles")
             DownloadFileFromMemoryStream(ms, dtMeasures.Rows(0)("filename").ToString())
         End If
     End Sub
@@ -187,6 +212,7 @@ Public Class EditMeasures
 
     Protected Sub gridProjects_RowCommand(sender As Object, e As GridViewCommandEventArgs)
         If e.CommandName = "EditDetails" Then
+            MessageBox("Loading Files")
             MeasuresEditid = Integer.Parse(e.CommandArgument.ToString())
             Session("Startup_ID") = MeasuresEditid
             HighlightRow(gridProjects, e)
@@ -312,22 +338,25 @@ Public Class EditMeasures
                         Session("SaveList") = list
                         ' Append Value in excel and using
 
-                        Dim lst As List(Of Object) = ReadCellValueFromWorkSheetNameAndAddContentToCell(row("FileObject"),
-                                                                                                       "ConnectSheet",
-                                                                                                       "A2",
-                                                                                                       row("Project_WS_Name"),
-                                                                                                       row("Project_CellAddress"),
-                                                                                                       row("BLOBFile_ID"))
+                        'Dim lst As List(Of Object) = ReadCellValueFromWorkSheetNameAndAddContentToCell(row("FileObject"),
+                        '                                                                               "ConnectSheet",
+                        '                                                                               "A2",
+                        '                                                                               row("Project_WS_Name"),
+                        '                                                                               row("Project_CellAddress"),
+                        '                                                                               row("BLOBFile_ID"))
 
-                        em.mtxtBox.Text = lst(0)
 
-                        paramsNew.Add(New SqlParameter("@Table_Name", "CMPDB_tblStartupBLOBFiles"))
-                        paramsNew.Add(New SqlParameter("@BLOB_ID", row("BLOBFile_ID")))
 
-                        paramsNew.Add(New SqlParameter("@FileObject", CType(lst(1), MemoryStream).ToArray))
-                        'paramsNew.Add(New SqlParameter("@FileName", "jysng.xlsm"))
 
-                        ExecuteProcedure("CMPDB_sp_InsertBLOBwithID", paramsNew)
+                        'em.mtxtBox.Text = lst(0)
+
+                        'paramsNew.Add(New SqlParameter("@Table_Name", "CMPDB_tblStartupBLOBFiles"))
+                        'paramsNew.Add(New SqlParameter("@BLOB_ID", row("BLOBFile_ID")))
+
+                        'paramsNew.Add(New SqlParameter("@FileObject", CType(lst(1), MemoryStream).ToArray))
+                        ''paramsNew.Add(New SqlParameter("@FileName", "jysng.xlsm"))
+
+                        'ExecuteProcedure("CMPDB_sp_InsertBLOBwithID", paramsNew)
                         em.mDateLable.Text = row("FileUploadeddate")
                         em.mDateLable.Visible = True
                         em.mlnkbtnFileName.Text = row("SWP_Tool_Name")
@@ -337,7 +366,7 @@ Public Class EditMeasures
                             row("cellvalue") = ""
                         End If
                         em.mCellAddress.Text = row("Project_CellAddress")
-                        ' em.mtxtBox.Text = row("cellvalue")
+                        em.mtxtBox.Text = row("cellvalue")
 
                         em.mlnkbtnFileName.Visible = True
                         em.mlblFileName.Visible = False
@@ -352,7 +381,7 @@ Public Class EditMeasures
                         em.mWorkSheetName.Style.Add("display", "block")
 
 
-                        lst = Nothing
+                        ' lst = Nothing
                         Exit For
                     Else
                         em.mCellAddress.Style.Add("display", "none")
@@ -597,6 +626,5 @@ Public Class EditMeasures
         End If
     End Function
 #End Region
-
 
 End Class

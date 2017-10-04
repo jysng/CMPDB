@@ -23,6 +23,24 @@ Partial Public Class Admin_Project
     Protected WithEvents upnl As Global.System.Web.UI.UpdatePanel
     
     '''<summary>
+    '''hfGridView1SV control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hfGridView1SV As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''hfGridView1SH control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hfGridView1SH As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
     '''chkAdvancedMode control.
     '''</summary>
     '''<remarks>
@@ -462,4 +480,13 @@ Partial Public Class Admin_Project
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnMileStone As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''btnDeleteProject control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnDeleteProject As Global.System.Web.UI.WebControls.Button
 End Class

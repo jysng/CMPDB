@@ -5,8 +5,6 @@ Imports OfficeOpenXml
 
 Public Class Report
     Inherits System.Web.UI.Page
-
-
 #Region "Variables"
 
     Dim xTblPlants = "CMPDB_tblPlants"

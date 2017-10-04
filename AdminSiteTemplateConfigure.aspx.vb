@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.IO
 
-Public Class AdminSiteTemplateConfig
+Public Class AdminSiteTemplateConfigure
     Inherits Page
 
 #Region "Variables"
@@ -423,7 +423,7 @@ Public Class AdminSiteTemplateConfig
             Else
                 LoadAllDependents()
                 ResetControls(DropDownListBusinessUnit, DropDownListPlatform, DropDownListProductionType)
-                LoadSourceFilesSection()
+                'LoadSourceFilesSection()
 
             End If
         Catch ex As Exception
@@ -469,13 +469,13 @@ Public Class AdminSiteTemplateConfig
         Dim str As String = String.Join(",", list1)
 
         Dim mQuery = "select * from " + xTblNametableSource + " c join CMPDB_tblBLOBFiles b on b.BLOBFile_ID= c.BLOBFile_ID where Site_ID=" +
-                      DropDownListPlant.SelectedItem.Value + " and SWP_Tool_Name_ID in(" + str + ") and c.BLOBFile_ID in(select BLOBFile_ID from CMPDB_tblBLOBFiles where IsActive=1) order by SWP_Tool_Name_ID"
+                      DropDownListPlant.SelectedItem.Value + " and SWP_Tool_Name_ID in(" + str + ") and c.BLOBFile_ID in(select BLOBFile_ID from CMPDB_tblBLOBFiles where IsActive=1)"
 
         dtBLOBDetails = GetDataTableFromSQL(mQuery)
         If dtBLOBDetails.Rows.Count = 0 Then
             mQuery = $"select * from  {xTblNametableSource}  c join CMPDB_tblCorporateSourcesBLOBFiles b on c.BLOBFile_ID= b.BLOBFile_ID  where Site_ID=
             {DropDownListPlant.SelectedItem.Value}  And SWP_Tool_Name_ID in( {str} ) And c.BLOBFile_ID in(select BLOBFile_ID 
-            from CMPDB_tblCorporateSourcesBLOBFiles where IsActive=1) order by SWP_Tool_Name_ID"
+            from CMPDB_tblCorporateSourcesBLOBFiles where IsActive=1)"
             dtBLOBDetails = GetDataTableFromSQL(mQuery)
             If dtBLOBDetails.Rows.Count = 0 Then
                 Return 0

@@ -128,12 +128,43 @@
             color: black;
         }
     </style>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/gridviewScroll.min.js"></script>
+    <%--<script src="Scripts/jquery.keynavigation.js"></script>--%>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            gridviewScroll();
+            //keynav();
+        });
+        function gridviewScroll() {
+            $('#<%=gridPractitioner.ClientID%>').gridviewScroll({
+                width: '99%',
+                height: 300,
+                startVertical: $("#<%=hfGridView1SV.ClientID%>").val(),
+                startHorizontal: $("#<%=hfGridView1SH.ClientID%>").val(),
+                onScrollVertical: function (delta) {
+                    $("#<%=hfGridView1SV.ClientID%>").val(delta);
+                },
+                onScrollHorizontal: function (delta) {
+                    $("#<%=hfGridView1SH.ClientID%>").val(delta);
+                }
+            });
+        }
+        $(function () {
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(gridviewScroll);
+            //Sys.WebForms.PageRequestManager.getInstance().add_endRequest(keynav);
+
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
    
         <asp:UpdatePanel UpdateMode="Always" runat="server" ID="upnl">
             <ContentTemplate>
-
+                <asp:HiddenField runat="server" id ="hfGridView1SV"/>
+                <asp:HiddenField runat="server" id ="hfGridView1SH"/>
                  <div class="container">
                 <div class="ContainerOne">
 
@@ -185,7 +216,7 @@
                     <div class="col1new">
                         <h2>Search Results</h2>
                     </div>
-                    <asp:GridView ID="gridPractitioner" Width="100%" DataKeyNames="Practitioner_ID" AllowSorting="true" OnSorting="gridPractitioner_Sorting" OnRowCommand="gridPractitioner_RowCommand" AutoGenerateColumns="False" runat="server" ShowHeaderWhenEmpty="true">
+                    <asp:GridView ID="gridPractitioner" Width="95%" DataKeyNames="Practitioner_ID" AllowSorting="true" OnSorting="gridPractitioner_Sorting" OnRowCommand="gridPractitioner_RowCommand" AutoGenerateColumns="False" runat="server" ShowHeaderWhenEmpty="true">
                         <Columns>
 
                             <asp:TemplateField HeaderText="Check">
@@ -419,13 +450,15 @@
                         <asp:Label ID="lblQualificationLevel" CssClass="lbl" runat="server" Text="Qualification Level"></asp:Label>
                     </div>
                     <div class="col2">
-                        <asp:DropDownList ID="ddlQualificationLevel" Height="25px" Width="200px" runat="server" class="txtgLOBAL">
+                        <asp:DropDownList ID="ddlQualificationLevel" AppendDataBoundItems="true" Height="25px" Width="200px" runat="server" class="txtgLOBAL">
                             <asp:ListItem Text="-Select-" Value="0"></asp:ListItem>
                             <%--<asp:ListItem Text="PS Basic" Value ="1"></asp:ListItem>
                                 <asp:ListItem Text="PS Intermediate" Value="2"></asp:ListItem>
                                 <asp:ListItem Text="PS Advanced" Value ="3"></asp:ListItem>
                                 <asp:ListItem Text=" PS Expert" Value ="4"></asp:ListItem>--%>
                         </asp:DropDownList>
+
+                         
                     </div>
                     <%--  <cc:CalendarExtender ID="CalendarExtender2" Enabled="True" Format="MM/dd/yyyy" TargetControlID="txtQualificationDate" runat="server"></cc:CalendarExtender>--%>
                 </div>
